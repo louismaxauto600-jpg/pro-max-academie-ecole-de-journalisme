@@ -3,10 +3,11 @@
 <html lang="ht">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090301">
 <title>PRO-MAX ACADÉMIE | ÉCOLE DE JOURNALISME</title>
-<meta name="description" content="PRO-MAX ACADÉMIE — École de Journalisme. Radio, télévision et médias numériques.">
+<meta name="description" content="PRO-MAX ACADÉMIE — École de Journalisme: Radio, télévision et médias numériques.">
+<link rel="icon" type="image/png" href="school-of-jounalism.png">
 <style>
 :root{
  --orange:#ff7900;
@@ -59,10 +60,10 @@ header{
  border-radius:50%;
  background:#120500;
  padding:3px;
+ object-fit:contain;
  flex-shrink:0;
  filter:drop-shadow(0 0 7px #ff790077);
 }
-.logo svg{width:100%;height:100%}
 nav{display:flex;flex-wrap:wrap;gap:12px}
 nav a{
  font-size:13px;font-weight:bold;
@@ -154,6 +155,13 @@ h3{margin-top:5px}
 }
 .media-icon{font-size:75px;color:var(--orange)}
 .media-note{font-size:13px;color:var(--apricot)}
+.hero-logo{
+ width:110px;height:110px;
+ object-fit:contain;
+ border-radius:50%;
+ border:2px solid var(--orange);
+ margin-bottom:15px;
+}
 .formgrid{
  display:grid;
  grid-template-columns:1fr 1fr;
@@ -235,37 +243,12 @@ footer .logo{
 </head>
 <body>
 
-<!-- LOGO ENTEGRE: LI PA BEZWEN PNG POU PARÈT -->
-<svg xmlns="http://www.w3.org/2000/svg"
- style="position:absolute;width:0;height:0;overflow:hidden">
-<defs>
-<symbol id="schoolLogo" viewBox="0 0 120 120">
- <circle cx="60" cy="60" r="56" fill="#100401"
- stroke="#ff7900" stroke-width="5"/>
- <circle cx="60" cy="60" r="46" fill="#371205"
- stroke="#ffb56b" stroke-width="2"/>
- <path d="M22 46 L60 28 L98 46 L60 64 Z"
- fill="#ff7900"/>
- <path d="M38 57 V74 Q60 88 82 74 V57"
- fill="none" stroke="#ffb56b" stroke-width="6"/>
- <path d="M98 46 V77" stroke="#ff7900"
- stroke-width="4"/>
- <circle cx="98" cy="80" r="5" fill="#ffb56b"/>
- <text x="60" y="101" text-anchor="middle"
- font-family="Arial" font-weight="900"
- font-size="13" fill="#ffb56b">PRO-MAX</text>
-</symbol>
-</defs>
-</svg>
-
 <header>
 <div class="header-inner">
  <a class="brand" href="#home">
-  <div class="logo">
-   <svg role="img" aria-label="PRO-MAX ACADÉMIE logo">
-    <use href="#schoolLogo"></use>
-   </svg>
-  </div>
+  <img class="logo"
+   src="school-of-jounalism.png"
+   alt="Logo ofisyèl PRO-MAX ACADÉMIE">
   <div class="brand-title">
    PRO-MAX ACADÉMIE
    <small>ÉCOLE DE JOURNALISME</small>
@@ -294,6 +277,9 @@ footer .logo{
 <section id="home" class="hero">
  <div>
   <div class="eyebrow">BSS1815 PRO-MAX DMP</div>
+  <img class="hero-logo"
+   src="school-of-jounalism.png"
+   alt="Logo École de Journalisme">
   <h1>PRO-MAX ACADÉMIE</h1>
   <h3>ÉCOLE DE JOURNALISME</h3>
   <p data-i18n="hero">
@@ -312,8 +298,7 @@ footer .logo{
  <div class="card">
   <div class="media">
    <video id="newsVideo" controls playsinline
-    preload="metadata"
-    style="display:none">
+    preload="metadata" style="display:none">
     <source src="assets/videos/journalist-news.mp4"
      type="video/mp4">
    </video>
@@ -377,8 +362,7 @@ footer .logo{
  <div class="split">
   <div class="media">
    <video id="profVideo" controls playsinline
-    preload="metadata"
-    style="display:none">
+    preload="metadata" style="display:none">
     <source src="assets/videos/ai-professor.mp4"
      type="video/mp4">
    </video>
@@ -604,11 +588,9 @@ footer .logo{
 </main>
 
 <footer>
- <div class="logo">
-  <svg role="img" aria-label="PRO-MAX ACADÉMIE logo">
-   <use href="#schoolLogo"></use>
-  </svg>
- </div>
+ <img class="logo"
+  src="school-of-jounalism.png"
+  alt="Logo ofisyèl PRO-MAX ACADÉMIE">
  <h3>PRO-MAX ACADÉMIE</h3>
  <p>ÉCOLE DE JOURNALISME</p>
  <p>BSS1815 PRO-MAX DMP</p>
@@ -783,8 +765,7 @@ function setLanguage(lang){
   btn.setAttribute("aria-pressed",String(active));
  });
 
- const status=document.getElementById("formStatus");
- status.textContent="";
+ document.getElementById("formStatus").textContent="";
 }
 
 document.querySelectorAll("[data-lang]").forEach(btn=>{
@@ -803,16 +784,17 @@ function setupVideo(videoId,placeholderId){
 
  if(!source)return;
 
- fetch(source.getAttribute("src"),{method:"HEAD"})
- .then(response=>{
-  if(!response.ok)throw new Error("Media unavailable");
+ video.addEventListener("loadedmetadata",()=>{
   video.style.display="block";
   placeholder.style.display="none";
- })
- .catch(()=>{
+ });
+
+ video.addEventListener("error",()=>{
   video.style.display="none";
   placeholder.style.display="block";
  });
+
+ video.load();
 }
 
 setupVideo("newsVideo","newsPlaceholder");
@@ -841,16 +823,14 @@ document.getElementById("registrationForm")
  const subject=encodeURIComponent(
   "Journalism School Registration Request"
  );
-
  const body=encodeURIComponent(lines.join("\n"));
 
- // Destinasyon imèl la dwe konfime anvan
- // nou kapab voye enskripsyon reyèl.
+ // Mete adrès ofisyèl ki pral resevwa
+ // enskripsyon yo lè li konfime.
  const emailAddress="";
 
  if(!emailAddress){
-  const status=document.getElementById("formStatus");
-  status.textContent=
+  document.getElementById("formStatus").textContent=
    currentLang==="fr"
    ?"L'adresse de réception des inscriptions doit être configurée."
    :currentLang==="en"
