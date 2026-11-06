@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080300">
+<meta name="description" content="PRO-MAX Académie — Professional School of Journalism. Radio, Television and Digital Media.">
+<title>PRO-MAX ACADÉMIE | École de Journalisme</title>
+<style>
+:root{
+ --orange:#ff7900;
+ --apricot:#ffb36a;
+ --black:#080300;
+ --panel:#190b04;
+ --line:#a84a08;
+ --text:#ffca92;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;font-family:Arial,sans-serif;
+ color:var(--text);
+ background:
+ radial-gradient(ellipse at 15% 8%,#75300d 0%,transparent 42%),
+ radial-gradient(ellipse at 85% 45%,#3c1807 0%,transparent 38%),
+ linear-gradient(135deg,#080300,#180900 60%,#080300);
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+header{
+ position:sticky;top:0;z-index:100;
+ background:#080300f5;
+ border-bottom:2px solid var(--orange);
+ box-shadow:0 0 22px #ff790044;
+}
+.header-inner{
+ max-width:1250px;margin:auto;
+ padding:14px 20px;
+ display:flex;align-items:center;
+ justify-content:space-between;gap:16px;
+ flex-wrap:wrap;
+}
+.brand{
+ font-size:21px;font-weight:900;
+ color:var(--apricot);letter-spacing:1px;
+}
+.brand small{
+ display:block;font-size:10px;
+ letter-spacing:2px;color:var(--orange);
+}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{font-size:12px;font-weight:800}
+nav a:hover{color:var(--orange)}
+.languages{display:flex;gap:5px}
+.languages button{
+ border:1px solid var(--orange);
+ border-radius:20px;background:#120600;
+ color:var(--apricot);padding:8px 11px;
+ font-weight:900;
+}
+.languages button.active{
+ background:var(--orange);color:var(--black);
+}
+section{scroll-margin-top:110px}
+.hero{
+ max-width:1250px;margin:auto;
+ min-height:570px;padding:70px 20px;
+ display:grid;grid-template-columns:1.1fr .9fr;
+ gap:35px;align-items:center;
+}
+.eyebrow{
+ color:var(--orange);font-size:13px;
+ letter-spacing:3px;font-weight:900;
+}
+h1{
+ font-size:clamp(42px,6vw,79px);
+ line-height:1.05;margin:16px 0;
+ color:var(--apricot);
+ text-shadow:0 0 28px #ff790055;
+}
+h2{
+ color:var(--apricot);font-size:35px;
+ margin:0 0 14px;
+}
+h3{color:var(--apricot)}
+.hero p{font-size:17px;line-height:1.8}
+.actions{
+ display:flex;gap:12px;flex-wrap:wrap;
+ margin-top:27px;
+}
+.btn{
+ display:inline-block;padding:13px 23px;
+ border:1px solid var(--orange);
+ border-radius:30px;
+ background:linear-gradient(135deg,var(--apricot),var(--orange));
+ color:var(--black);font-weight:900;
+}
+.btn.outline{
+ background:#110600;color:var(--apricot);
+}
+.btn:hover{filter:brightness(1.12)}
+.professor{
+ min-height:430px;
+ background:linear-gradient(145deg,#502008,#090300 75%);
+ border:2px solid var(--orange);
+ border-radius:24px;
+ box-shadow:0 0 38px #ff79004a;
+ padding:25px;display:flex;
+ flex-direction:column;align-items:center;
+ justify-content:center;text-align:center;
+}
+.professor-photo{
+ width:220px;height:260px;
+ border-radius:110px 110px 22px 22px;
+ border:3px solid var(--orange);
+ background:radial-gradient(circle at 50% 20%,#b86627,#180700 80%);
+ overflow:hidden;display:grid;place-items:center;
+}
+.professor-photo img{
+ width:100%;height:100%;
+ object-fit:cover;
+}
+.professor-placeholder{font-size:105px}
+.professor h3{margin-bottom:4px}
+.professor p{font-size:13px}
+.professor .status{
+ font-size:11px;color:var(--orange);
+ border:1px solid var(--line);
+ border-radius:20px;padding:7px 12px;
+}
+.content{
+ max-width:1250px;margin:auto;
+ padding:65px 20px;
+ border-top:1px solid #71300c;
+}
+.section-intro{
+ max-width:780px;line-height:1.7;
+ margin-bottom:28px;
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:18px;
+}
+.card{
+ background:linear-gradient(145deg,#271006,#0b0401);
+ border:1px solid var(--line);
+ border-radius:19px;padding:25px;
+ box-shadow:0 8px 25px #0006;
+}
+.card:hover{
+ border-color:var(--apricot);
+ box-shadow:0 0 22px #ff790033;
+}
+.card .symbol{
+ font-size:35px;color:var(--orange);
+}
+.card p{
+ line-height:1.7;font-size:14px;
+}
+.course-grid{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:12px;
+}
+.course{
+ padding:16px;
+ background:#140700;
+ border:1px solid #873808;
+ border-radius:13px;
+ display:flex;gap:14px;align-items:center;
+}
+.course span{
+ color:var(--orange);
+ font-size:23px;font-weight:900;
+}
+.course strong{font-size:14px}
+.portal-grid{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:14px;
+}
+.portal-link{
+ display:block;text-align:center;
+ background:#160800;
+ border:1px solid var(--line);
+ padding:25px 12px;border-radius:16px;
+}
+.portal-link .symbol{
+ display:block;font-size:29px;
+ margin-bottom:10px;
+}
+.portal-link strong{font-size:13px}
+.portal-link:hover{
+ background:#43200b;
+ border-color:var(--orange);
+}
+.notice{
+ margin-top:20px;
+ border-left:3px solid var(--orange);
+ padding:13px 17px;
+ background:#170900;
+ font-size:13px;line-height:1.6;
+}
+.cta{
+ text-align:center;
+ background:linear-gradient(135deg,#532006,#120600);
+ border:1px solid var(--orange);
+ border-radius:22px;padding:40px 20px;
+}
+footer{
+ border-top:2px solid var(--orange);
+ text-align:center;padding:45px 20px;
+ background:#080300;
+}
+footer strong{
+ color:var(--orange);
+ letter-spacing:3px;
+}
+footer p{font-size:13px}
+@media(max-width:850px){
+ .hero{grid-template-columns:1fr;padding:45px 18px}
+ .grid{grid-template-columns:1fr}
+ .portal-grid{grid-template-columns:repeat(2,1fr)}
+ .course-grid{grid-template-columns:1fr}
+ nav{order:3;width:100%;justify-content:center}
+ .header-inner{justify-content:center}
+}
+@media(max-width:420px){
+ .portal-grid{grid-template-columns:1fr 1fr}
+ .brand{font-size:17px}
+ h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="header-inner">
+  <a class="brand" href="#home">
+   PRO-MAX ACADÉMIE
+   <small>BSS1815 PRO-MAX DMP</small>
+  </a>
+  <nav>
+   <a href="#home" data-i18n="navHome">HOME</a>
+   <a href="#departments" data-i18n="navDepartments">DEPARTMENTS</a>
+   <a href="#courses" data-i18n="navCourses">COURSES</a>
+   <a href="#portal" data-i18n="navPortal">STUDENT PORTAL</a>
+   <a href="#professor" data-i18n="navProfessor">AI PROFESSOR</a>
+  </nav>
+  <div class="languages">
+   <button class="active" data-lang="en">ENG</button>
+   <button data-lang="fr">FRA</button>
+   <button data-lang="ht">KRE</button>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+ <div>
+  <div class="eyebrow">PRO-MAX ACADÉMIE</div>
+  <h1 data-i18n="heroTitle">SCHOOL OF JOURNALISM</h1>
+  <h3 data-i18n="heroSub">RADIO • TELEVISION • DIGITAL MEDIA</h3>
+  <p data-i18n="heroDesc">
+   Develop the skills to research, report, interview,
+   produce and present professional journalism.
+   Learn through structured courses and practical projects.
+  </p>
+  <div class="actions">
+   <a class="btn" href="#courses" data-i18n="explore">
+    EXPLORE COURSES
+   </a>
+   <a class="btn outline" href="#portal" data-i18n="student">
+    STUDENT PORTAL
+   </a>
+  </div>
+ </div>
+
+ <div id="professor" class="professor">
+  <div class="professor-photo">
+   <img
+    src="assets/images/journalism-ai-professor.png"
+    alt="Haitian female journalism professor"
+    onerror="this.remove();document.getElementById('professorFallback').hidden=false"
+   >
+   <span id="professorFallback"
+    class="professor-placeholder" hidden>👩🏽‍🏫</span>
+  </div>
+  <h3 data-i18n="profName">AI JOURNALISM PROFESSOR</h3>
+  <p data-i18n="profDesc">
+   Your future virtual instructor for journalism training.
+  </p>
+  <div class="status" data-i18n="comingSoon">
+   AI VOICE CLASSROOM — COMING SOON
+  </div>
+ </div>
+</section>
+
+<section id="departments" class="content">
+ <h2 data-i18n="departmentsTitle">OUR THREE DEPARTMENTS</h2>
+ <p class="section-intro" data-i18n="departmentsDesc">
+  Professional journalism education across broadcasting,
+  television production and digital media.
+ </p>
+ <div class="grid">
+  <article class="card">
+   <div class="symbol">🎙</div>
+   <h3 data-i18n="radioTitle">RADIO JOURNALISM</h3>
+   <p data-i18n="radioDesc">
+    Voice training, interviews, radio news,
+    live broadcasting and podcast production.
+   </p>
+  </article>
+  <article class="card">
+   <div class="symbol">▣</div>
+   <h3 data-i18n="tvTitle">TELEVISION JOURNALISM</h3>
+   <p data-i18n="tvDesc">
+    Camera presentation, teleprompter,
+    field reporting and video production.
+   </p>
+  </article>
+  <article class="card">
+   <div class="symbol">◉</div>
+   <h3 data-i18n="digitalTitle">DIGITAL JOURNALISM</h3>
+   <p data-i18n="digitalDesc">
+    Online reporting, fact-checking,
+    mobile journalism and social media.
+   </p>
+  </article>
+ </div>
+</section>
+
+<section id="courses" class="content">
+ <h2 data-i18n="coursesTitle">10 PROFESSIONAL COURSES</h2>
+ <p class="section-intro" data-i18n="coursesDesc">
+  A complete learning path from journalism fundamentals
+  to a final production project.
+ </p>
+ <div id="courseGrid" class="course-grid"></div>
+</section>
+
+<section id="portal" class="content">
+ <h2 data-i18n="portalTitle">ACADEMIC CENTER</h2>
+ <p class="section-intro" data-i18n="portalDesc">
+  The future home for enrollment, learning,
+  assessments and certificates.
+ </p>
+ <div class="portal-grid">
+  <a class="portal-link" href="#registration">
+   <span class="symbol">✎</span>
+   <strong data-i18n="registration">REGISTRATION</strong>
+  </a>
+  <a class="portal-link" href="#courses">
+   <span class="symbol">▤</span>
+   <strong data-i18n="dashboard">STUDENT DASHBOARD</strong>
+  </a>
+  <a class="portal-link" href="#professor">
+   <span class="symbol">◉</span>
+   <strong data-i18n="askProfessor">ASK PROFESSOR AI</strong>
+  </a>
+  <a class="portal-link" href="#courses">
+   <span class="symbol">✓</span>
+   <strong data-i18n="exam">FINAL EXAM</strong>
+  </a>
+  <a class="portal-link" href="#registration">
+   <span class="symbol">★</span>
+   <strong data-i18n="certificate">CERTIFICATE CENTER</strong>
+  </a>
+  <a class="portal-link" href="#departments">
+   <span class="symbol">▣</span>
+   <strong data-i18n="studio">PRACTICAL STUDIO</strong>
+  </a>
+  <a class="portal-link" href="#courses">
+   <span class="symbol">▥</span>
+   <strong data-i18n="library">COURSE LIBRARY</strong>
+  </a>
+  <a class="portal-link" href="#registration">
+   <span class="symbol">✉</span>
+   <strong data-i18n="support">STUDENT SUPPORT</strong>
+  </a>
+ </div>
+ <div class="notice" data-i18n="portalNotice">
+  Academic portal services are planned.
+  Student accounts, enrollment and certification
+  are not active yet.
+ </div>
+</section>
+
+<section id="registration" class="content">
+ <div class="cta">
+  <h2 data-i18n="readyTitle">YOUR JOURNALISM JOURNEY STARTS HERE</h2>
+  <p data-i18n="readyDesc">
+   Prepare for professional journalism training
+   in radio, television and digital media.
+  </p>
+  <a href="#courses" class="btn" data-i18n="viewProgram">
+   VIEW TRAINING PROGRAM
+  </a>
+ </div>
+</section>
+</main>
+
+<footer>
+ <h3>PRO-MAX ACADÉMIE</h3>
+ <p>ÉCOLE PROFESSIONNELLE DE JOURNALISME</p>
+ <p>BSS1815 PRO-MAX DMP</p>
+ <p data-i18n="motto">Built for Today, Ready for Tomorrow.</p>
+ <strong>DEVAN DEVAN NÈT!</strong>
+ <p>© <span id="year"></span> PRO-MAX ACADÉMIE</p>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+const translations={
+ en:{
+ navHome:"HOME",navDepartments:"DEPARTMENTS",
+ navCourses:"COURSES",navPortal:"STUDENT PORTAL",
+ navProfessor:"AI PROFESSOR",
+ heroTitle:"SCHOOL OF JOURNALISM",
+ heroSub:"RADIO • TELEVISION • DIGITAL MEDIA",
+ heroDesc:"Develop the skills to research, report, interview, produce and present professional journalism. Learn through structured courses and practical projects.",
+ explore:"EXPLORE COURSES",student:"STUDENT PORTAL",
+ profName:"AI JOURNALISM PROFESSOR",
+ profDesc:"Your future virtual instructor for journalism training.",
+ comingSoon:"AI VOICE CLASSROOM — COMING SOON",
+ departmentsTitle:"OUR THREE DEPARTMENTS",
+ departmentsDesc:"Professional journalism education across broadcasting, television production and digital media.",
+ radioTitle:"RADIO JOURNALISM",
+ radioDesc:"Voice training, interviews, radio news, live broadcasting and podcast production.",
+ tvTitle:"TELEVISION JOURNALISM",
+ tvDesc:"Camera presentation, teleprompter, field reporting and video production.",
+ digitalTitle:"DIGITAL JOURNALISM",
+ digitalDesc:"Online reporting, fact-checking, mobile journalism and social media.",
+ coursesTitle:"10 PROFESSIONAL COURSES",
+ coursesDesc:"A complete learning path from journalism fundamentals to a final production project.",
+ portalTitle:"ACADEMIC CENTER",
+ portalDesc:"The future home for enrollment, learning, assessments and certificates.",
+ registration:"REGISTRATION",dashboard:"STUDENT DASHBOARD",
+ askProfessor:"ASK PROFESSOR AI",exam:"FINAL EXAM",
+ certificate:"CERTIFICATE CENTER",studio:"PRACTICAL STUDIO",
+ library:"COURSE LIBRARY",support:"STUDENT SUPPORT",
+ portalNotice:"Academic portal services are planned. Student accounts, enrollment and certification are not active yet.",
+ readyTitle:"YOUR JOURNALISM JOURNEY STARTS HERE",
+ readyDesc:"Prepare for professional journalism training in radio, television and digital media.",
+ viewProgram:"VIEW TRAINING PROGRAM",
+ motto:"Built for Today, Ready for Tomorrow.",
+ courses:[
+ "Journalism Fundamentals",
+ "Journalism Ethics",
+ "Research and Fact-Checking",
+ "Interview Techniques",
+ "News Writing and Reporting",
+ "Radio Journalism",
+ "Television Journalism",
+ "Digital Journalism",
+ "Investigative Journalism and Safety",
+ "Production and Final Project"
+ ]
+ },
+ fr:{
+ navHome:"ACCUEIL",navDepartments:"DÉPARTEMENTS",
+ navCourses:"COURS",navPortal:"PORTAIL ÉTUDIANT",
+ navProfessor:"PROFESSEURE IA",
+ heroTitle:"ÉCOLE DE JOURNALISME",
+ heroSub:"RADIO • TÉLÉVISION • MÉDIAS NUMÉRIQUES",
+ heroDesc:"Développez vos compétences en recherche, reportage, interview, production et présentation journalistique grâce à des cours structurés et des projets pratiques.",
+ explore:"DÉCOUVRIR LES COURS",student:"PORTAIL ÉTUDIANT",
+ profName:"PROFESSEURE IA DE JOURNALISME",
+ profDesc:"Votre future formatrice virtuelle en journalisme.",
+ comingSoon:"COURS AVEC VOIX IA — BIENTÔT",
+ departmentsTitle:"NOS TROIS DÉPARTEMENTS",
+ departmentsDesc:"Une formation professionnelle en radio, télévision et médias numériques.",
+ radioTitle:"JOURNALISME RADIOPHONIQUE",
+ radioDesc:"Formation vocale, interviews, journaux radio, diffusion en direct et podcasts.",
+ tvTitle:"JOURNALISME TÉLÉVISUEL",
+ tvDesc:"Présentation devant caméra, téléprompteur, reportage et production vidéo.",
+ digitalTitle:"JOURNALISME NUMÉRIQUE",
+ digitalDesc:"Reportages en ligne, vérification des faits, journalisme mobile et réseaux sociaux.",
+ coursesTitle:"10 COURS PROFESSIONNELS",
+ coursesDesc:"Un parcours complet, des bases du journalisme au projet final.",
+ portalTitle:"CENTRE ACADÉMIQUE",
+ portalDesc:"Le futur espace des inscriptions, cours, évaluations et certificats.",
+ registration:"INSCRIPTION",dashboard:"TABLEAU DE BORD",
+ askProfessor:"QUESTION À LA PROFESSEURE IA",
+ exam:"EXAMEN FINAL",certificate:"CENTRE DE CERTIFICATS",
+ studio:"STUDIO PRATIQUE",library:"BIBLIOTHÈQUE",
+ support:"ASSISTANCE ÉTUDIANTS",
+ portalNotice:"Les services du portail académique sont en préparation. Les comptes étudiants, inscriptions et certificats ne sont pas encore actifs.",
+ readyTitle:"VOTRE PARCOURS JOURNALISTIQUE COMMENCE ICI",
+ readyDesc:"Préparez votre formation en radio, télévision et médias numériques.",
+ viewProgram:"VOIR LE PROGRAMME",
+ motto:"Bâtir pour aujourd'hui, prêts pour demain.",
+ courses:[
+ "Fondements du journalisme",
+ "Éthique et déontologie",
+ "Recherche et vérification des faits",
+ "Techniques d'interview",
+ "Rédaction et reportage",
+ "Journalisme radiophonique",
+ "Journalisme télévisuel",
+ "Journalisme numérique",
+ "Investigation et sécurité",
+ "Production et projet final"
+ ]
+ },
+ ht:{
+ navHome:"AKÈY",navDepartments:"DEPATMAN",
+ navCourses:"KOU",navPortal:"PÒTAL ELÈV",
+ navProfessor:"PWOFESÈ AI",
+ heroTitle:"LEKÒL JOUNALIS",
+ heroSub:"RADYO • TELEVIZYON • MEDYA DIJITAL",
+ heroDesc:"Aprann chèche enfòmasyon, fè repòtaj, entèvyou, pwodiksyon ak prezantasyon nouvèl atravè kou ak egzèsis pratik.",
+ explore:"DEKOUVRI KOU YO",student:"PÒTAL ELÈV",
+ profName:"PWOFESÈ AI JOUNALIS",
+ profDesc:"Pwochen pwofesè vityèl ou pou fòmasyon jounalis.",
+ comingSoon:"KLAS AK VWA AI — AP VINI",
+ departmentsTitle:"TWA DEPATMAN NOU YO",
+ departmentsDesc:"Fòmasyon pwofesyonèl nan radyo, televizyon ak medya dijital.",
+ radioTitle:"JOUNALIS RADYO",
+ radioDesc:"Teknik vwa, entèvyou, nouvèl radyo, emisyon an dirèk ak podcast.",
+ tvTitle:"JOUNALIS TELEVIZYON",
+ tvDesc:"Prezantasyon devan kamera, teleprompter, repòtaj ak pwodiksyon videyo.",
+ digitalTitle:"JOUNALIS DIJITAL",
+ digitalDesc:"Repòtaj sou entènèt, verifikasyon enfòmasyon, jounalis mobil ak rezo sosyal.",
+ coursesTitle:"10 KOU PWOFESYONÈL",
+ coursesDesc:"Yon pwogram konplè depi baz jounalis rive nan pwojè final.",
+ portalTitle:"SANT AKADEMIK",
+ portalDesc:"Espas n ap prepare pou enskripsyon, kou, evalyasyon ak sètifika.",
+ registration:"ENSKRIPSYON",dashboard:"TABLO ELÈV",
+ askProfessor:"MANDE PWOFESÈ AI",
+ exam:"EGZAMEN FINAL",certificate:"SANT SÈTIFIKA",
+ studio:"ESTIDYO PRATIK",library:"BIBLIYOTÈK KOU",
+ support:"ASISTANS ELÈV",
+ portalNotice:"Sèvis pòtal akademik yo poko aktive. Kont elèv, enskripsyon ak sètifika yo ap vini nan pwochen etap yo.",
+ readyTitle:"KÒMANSE CHEMEN JOUNALIS OU",
+ readyDesc:"Prepare w pou fòmasyon nan radyo, televizyon ak medya dijital.",
+ viewProgram:"GADE PWOGRAM NAN",
+ motto:"Bati pou Jodi a, Pare pou Demen.",
+ courses:[
+ "Fondasyon jounalis",
+ "Etik ak responsablite",
+ "Rechèch ak verifikasyon enfòmasyon",
+ "Teknik entèvyou",
+ "Ekriti nouvèl ak repòtaj",
+ "Jounalis radyo",
+ "Jounalis televizyon",
+ "Jounalis dijital",
+ "Ankèt jounalistik ak sekirite",
+ "Pwodiksyon ak pwojè final"
+ ]
+ }
+};
+
+function changeLanguage(lang){
+ const t=translations[lang];
+ if(!t)return;
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+  const key=el.dataset.i18n;
+  if(typeof t[key]==="string")el.textContent=t[key];
+ });
+ document.querySelectorAll("[data-lang]").forEach(btn=>{
+  const active=btn.dataset.lang===lang;
+  btn.classList.toggle("active",active);
+  btn.setAttribute("aria-pressed",String(active));
+ });
+ const grid=document.getElementById("courseGrid");
+ grid.replaceChildren();
+ t.courses.forEach((name,index)=>{
+  const item=document.createElement("article");
+  item.className="course";
+  const number=document.createElement("span");
+  number.textContent=String(index+1).padStart(2,"0");
+  const title=document.createElement("strong");
+  title.textContent=name;
+  item.append(number,title);
+  grid.appendChild(item);
+ });
+ try{localStorage.setItem("journalismLang",lang)}catch(e){}
+}
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+ btn.addEventListener("click",()=>changeLanguage(btn.dataset.lang));
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+let saved="en";
+try{saved=localStorage.getItem("journalismLang")||"en"}catch(e){}
+changeLanguage(translations[saved]?saved:"en");
+})();
+</script>
+</body>
+</html>
