@@ -5,603 +5,630 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090301">
+<meta name="description" content="PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME. Formation en radio, télévision et médias numériques.">
 <title>PRO-MAX ACADÉMIE | ÉCOLE DE JOURNALISME</title>
-<meta name="description" content="PRO-MAX ACADÉMIE — École de Journalisme: Radio, télévision et médias numériques.">
-<link rel="icon" type="image/png" href="school-of-jounalism.png">
+<link rel="icon" type="image/png" href="school-of-journalism.png">
+
 <style>
 :root{
- --orange:#ff7900;
- --apricot:#ffb56b;
- --black:#090301;
- --panel:#1c0904;
- --line:#a84b15;
- --text:#ffd09b;
+  --orange:#ff7900;
+  --apricot:#ffb56b;
+  --black:#090301;
+  --panel:#1c0904;
+  --line:#a84b15;
+  --text:#ffd09b;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
- margin:0;
- font-family:Arial,Helvetica,sans-serif;
- background:
- radial-gradient(ellipse at 10% 5%,#6c230d,transparent 48%),
- linear-gradient(135deg,#170603,#090301 65%);
- color:var(--text);
- line-height:1.55;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(ellipse at 10% 5%,#6c230d,transparent 48%),
+    linear-gradient(135deg,#170603,#090301 65%);
+  color:var(--text);
+  line-height:1.55;
 }
 a{color:inherit}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
 header{
- position:sticky;top:0;z-index:50;
- background:#090301f5;
- border-bottom:2px solid var(--orange);
- box-shadow:0 0 22px #ff790033;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#090301f5;
+  border-bottom:2px solid var(--orange);
+  box-shadow:0 0 22px #ff790033;
 }
 .header-inner{
- max-width:1300px;margin:auto;
- display:flex;align-items:center;
- justify-content:space-between;
- flex-wrap:wrap;gap:14px;
- padding:12px 20px;
+  max-width:1300px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
+  padding:12px 20px;
 }
 .brand{
- display:flex;align-items:center;
- gap:12px;text-decoration:none;
- color:var(--orange);font-weight:900;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--orange);
+  font-weight:900;
 }
 .brand-title{font-size:18px;line-height:1.2}
 .brand-title small{
- display:block;font-size:11px;
- letter-spacing:1px;color:var(--apricot)
+  display:block;
+  font-size:11px;
+  letter-spacing:1px;
+  color:var(--apricot);
 }
 .logo{
- width:65px;height:65px;
- border:2px solid var(--orange);
- border-radius:50%;
- background:#120500;
- padding:3px;
- object-fit:contain;
- flex-shrink:0;
- filter:drop-shadow(0 0 7px #ff790077);
+  width:65px;
+  height:65px;
+  border:2px solid var(--orange);
+  border-radius:50%;
+  background:#120500;
+  padding:3px;
+  object-fit:contain;
+  flex-shrink:0;
+  filter:drop-shadow(0 0 7px #ff790077);
 }
 nav{display:flex;flex-wrap:wrap;gap:12px}
 nav a{
- font-size:13px;font-weight:bold;
- text-decoration:none;
- color:var(--apricot);
+  font-size:13px;
+  font-weight:bold;
+  text-decoration:none;
+  color:var(--apricot);
 }
 nav a:hover{color:var(--orange)}
 .languages{display:flex;gap:5px}
 .languages button{
- background:#190702;
- border:1px solid var(--orange);
- color:var(--apricot);
- border-radius:9px;
- padding:9px 12px;
- font-weight:900;
+  background:#190702;
+  border:1px solid var(--orange);
+  color:var(--apricot);
+  border-radius:9px;
+  padding:9px 12px;
+  font-weight:900;
 }
 .languages button.active{
- background:var(--orange);
- color:var(--black);
+  background:var(--orange);
+  color:var(--black);
 }
 section{
- max-width:1300px;
- margin:auto;
- padding:55px 22px;
- border-bottom:1px solid #8d350e;
+  max-width:1300px;
+  margin:auto;
+  padding:55px 22px;
+  border-bottom:1px solid #8d350e;
 }
 h1,h2,h3{color:var(--orange)}
 h1{
- font-size:clamp(38px,6vw,75px);
- line-height:1.05;
- margin:15px 0;
+  font-size:clamp(38px,6vw,75px);
+  line-height:1.05;
+  margin:15px 0;
 }
-h2{text-align:center;font-size:clamp(25px,3vw,38px)}
+h2{
+  text-align:center;
+  font-size:clamp(25px,3vw,38px);
+}
 h3{margin-top:5px}
 .hero,.split{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:28px;align-items:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:center;
 }
 .eyebrow{
- color:var(--apricot);
- font-weight:900;letter-spacing:2px;
+  color:var(--apricot);
+  font-weight:900;
+  letter-spacing:2px;
 }
 .card{
- background:linear-gradient(145deg,#341007,#100401);
- border:1px solid var(--line);
- border-radius:18px;
- padding:24px;
- box-shadow:0 10px 35px #0008;
+  background:linear-gradient(145deg,#341007,#100401);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 10px 35px #0008;
 }
 .grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 .btn{
- display:inline-block;
- background:linear-gradient(135deg,#ffb56b,#ff7900);
- color:#090301;
- border:1px solid var(--orange);
- padding:13px 20px;
- border-radius:10px;
- text-decoration:none;
- font-weight:900;
- margin:7px 7px 7px 0;
+  display:inline-block;
+  background:linear-gradient(135deg,#ffb56b,#ff7900);
+  color:#090301;
+  border:1px solid var(--orange);
+  padding:13px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:900;
+  margin:7px 7px 7px 0;
 }
 .btn-outline{
- background:#160602;
- color:var(--apricot);
+  background:#160602;
+  color:var(--apricot);
 }
 .media{
- min-height:250px;
- border:2px solid var(--orange);
- border-radius:16px;
- background:radial-gradient(circle,#4c1707,#090301 75%);
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- padding:20px;
- overflow:hidden;
+  min-height:250px;
+  border:2px solid var(--orange);
+  border-radius:16px;
+  background:radial-gradient(circle,#4c1707,#090301 75%);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  overflow:hidden;
 }
 .media video,.media img{
- max-width:100%;
- width:100%;
- max-height:360px;
- object-fit:contain;
+  max-width:100%;
+  width:100%;
+  max-height:360px;
+  object-fit:contain;
 }
 .media-icon{font-size:75px;color:var(--orange)}
 .media-note{font-size:13px;color:var(--apricot)}
 .hero-logo{
- width:110px;height:110px;
- object-fit:contain;
- border-radius:50%;
- border:2px solid var(--orange);
- margin-bottom:15px;
+  width:110px;
+  height:110px;
+  object-fit:contain;
+  border-radius:50%;
+  border:2px solid var(--orange);
+  margin-bottom:15px;
 }
 .formgrid{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:15px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
 }
-label{display:block;font-weight:bold;margin-bottom:5px}
+label{
+  display:block;
+  font-weight:bold;
+  margin-bottom:5px;
+}
 input,select,textarea{
- width:100%;
- padding:12px;
- border:1px solid var(--orange);
- border-radius:8px;
- background:#100502;
- color:var(--apricot);
+  width:100%;
+  padding:12px;
+  border:1px solid var(--orange);
+  border-radius:8px;
+  background:#100502;
+  color:var(--apricot);
 }
 input:focus,select:focus,textarea:focus{
- outline:2px solid var(--apricot);
+  outline:2px solid var(--apricot);
 }
 .field{margin-bottom:12px}
 .social{
- display:grid;
- grid-template-columns:repeat(5,1fr);
- gap:12px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
 }
 .social a{
- text-decoration:none;
- border:2px solid var(--accent);
- border-radius:12px;
- padding:15px 6px;
- text-align:center;
- color:var(--accent);
- background:#100502;
- font-weight:bold;
+  text-decoration:none;
+  border:2px solid var(--accent);
+  border-radius:12px;
+  padding:15px 6px;
+  text-align:center;
+  color:var(--accent);
+  background:#100502;
+  font-weight:bold;
 }
 .social .symbol{
- display:block;
- font-size:27px;
- font-weight:900;
+  display:block;
+  font-size:27px;
+  font-weight:900;
 }
 .contacts{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:12px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
 }
 .contacts a{
- text-decoration:none;
- text-align:center;
- border:1px solid var(--orange);
- border-radius:10px;
- padding:16px 8px;
- font-weight:bold;
+  text-decoration:none;
+  text-align:center;
+  border:1px solid var(--orange);
+  border-radius:10px;
+  padding:16px 8px;
+  font-weight:bold;
 }
 footer{
- text-align:center;
- background:#090301;
- border-top:2px solid var(--orange);
- padding:38px 15px;
+  text-align:center;
+  background:#090301;
+  border-top:2px solid var(--orange);
+  padding:38px 15px;
 }
 footer .logo{
- width:95px;height:95px;
- margin:auto;
+  width:95px;
+  height:95px;
+  margin:auto;
 }
 .status{
- margin-top:12px;
- color:var(--apricot);
- font-weight:bold;
+  margin-top:12px;
+  color:var(--apricot);
+  font-weight:bold;
 }
 @media(max-width:900px){
- .hero,.split{grid-template-columns:1fr}
- .grid{grid-template-columns:1fr}
- .social{grid-template-columns:repeat(2,1fr)}
- .contacts{grid-template-columns:repeat(2,1fr)}
+  .hero,.split{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .social{grid-template-columns:repeat(2,1fr)}
+  .contacts{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
- .formgrid,.contacts{grid-template-columns:1fr}
- .header-inner{justify-content:center}
- section{padding:35px 16px}
+  .formgrid,.contacts{grid-template-columns:1fr}
+  .header-inner{justify-content:center}
+  section{padding:35px 16px}
 }
 </style>
 </head>
+
 <body>
 
 <header>
 <div class="header-inner">
- <a class="brand" href="#home">
-  <img class="logo"
-   src="school-of-jounalism.png"
-   alt="Logo ofisyèl PRO-MAX ACADÉMIE">
-  <div class="brand-title">
-   PRO-MAX ACADÉMIE
-   <small>ÉCOLE DE JOURNALISME</small>
+  <a class="brand" href="#home">
+    <img class="logo"
+      src="school-of-journalism.png"
+      alt="Logo ofisyèl PRO-MAX ACADÉMIE">
+    <div class="brand-title">
+      PRO-MAX ACADÉMIE
+      <small>ÉCOLE DE JOURNALISME</small>
+    </div>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="#home" data-i18n="home">Akèy</a>
+    <a href="#programs" data-i18n="programs">Pwogram</a>
+    <a href="#professor" data-i18n="professor">Pwofesè AI</a>
+    <a href="#registration" data-i18n="registration">Enskripsyon</a>
+    <a href="#social" data-i18n="social">Rezo sosyal</a>
+    <a href="#contact" data-i18n="contact">Kontak</a>
+  </nav>
+
+  <div class="languages" aria-label="Language">
+    <button type="button" data-lang="ht" class="active">KRE</button>
+    <button type="button" data-lang="fr">FRA</button>
+    <button type="button" data-lang="en">ENG</button>
   </div>
- </a>
-
- <nav aria-label="Main navigation">
-  <a href="#home" data-i18n="home">Akèy</a>
-  <a href="#programs" data-i18n="programs">Pwogram</a>
-  <a href="#professor" data-i18n="professor">Pwofesè AI</a>
-  <a href="#registration" data-i18n="registration">Enskripsyon</a>
-  <a href="#social" data-i18n="social">Rezo sosyal</a>
-  <a href="#contact" data-i18n="contact">Kontak</a>
- </nav>
-
- <div class="languages" aria-label="Language">
-  <button type="button" data-lang="ht" class="active">KRE</button>
-  <button type="button" data-lang="fr">FRA</button>
-  <button type="button" data-lang="en">ENG</button>
- </div>
 </div>
 </header>
 
 <main>
 
 <section id="home" class="hero">
- <div>
-  <div class="eyebrow">BSS1815 PRO-MAX DMP</div>
-  <img class="hero-logo"
-   src="school-of-jounalism.png"
-   alt="Logo École de Journalisme">
-  <h1>PRO-MAX ACADÉMIE</h1>
-  <h3>ÉCOLE DE JOURNALISME</h3>
-  <p data-i18n="hero">
-   Fòmasyon pwofesyonèl nan jounalis radyo,
-   televizyon ak medya dijital.
-  </p>
-  <a href="#registration" class="btn" data-i18n="apply">
-   ENSKRI KOUNYE A
-  </a>
-  <a href="#programs" class="btn btn-outline"
-     data-i18n="explore">
-   DEKOUVRI PWOGRAM YO
-  </a>
- </div>
+  <div>
+    <div class="eyebrow">BSS1815 PRO-MAX DMP</div>
 
- <div class="card">
-  <div class="media">
-   <video id="newsVideo" controls playsinline
-    preload="metadata" style="display:none">
-    <source src="assets/videos/journalist-news.mp4"
-     type="video/mp4">
-   </video>
-   <div id="newsPlaceholder">
-    <div class="media-icon">📻</div>
-    <h3 data-i18n="newsStudio">ESTIDYO NOUVÈL</h3>
-    <p data-i18n="newsPending">
-     Videyo jounalis la ap parèt isit la
-     lè fichye a disponib.
+    <img class="hero-logo"
+      src="school-of-journalism.png"
+      alt="Logo ofisyèl École de Journalisme">
+
+    <h1>PRO-MAX ACADÉMIE</h1>
+    <h3>ÉCOLE DE JOURNALISME</h3>
+
+    <p data-i18n="hero">
+      Fòmasyon pwofesyonèl nan jounalis radyo,
+      televizyon ak medya dijital.
     </p>
-   </div>
+
+    <a href="#registration" class="btn" data-i18n="apply">
+      ENSKRI KOUNYE A
+    </a>
+    <a href="#programs" class="btn btn-outline"
+      data-i18n="explore">
+      DEKOUVRI PWOGRAM YO
+    </a>
   </div>
-  <p class="media-note" data-i18n="mediaAreas">
-   RADYO • TELEVIZYON • MEDYA DIJITAL
-  </p>
- </div>
+
+  <div class="card">
+    <div class="media">
+      <video id="newsVideo" controls playsinline
+        preload="metadata" style="display:none">
+        <source src="assets/videos/journalist-news.mp4"
+          type="video/mp4">
+      </video>
+
+      <div id="newsPlaceholder">
+        <div class="media-icon">📻</div>
+        <h3 data-i18n="newsStudio">ESTIDYO NOUVÈL</h3>
+        <p data-i18n="newsPending">
+          Videyo jounalis la ap parèt isit la
+          lè fichye a disponib.
+        </p>
+      </div>
+    </div>
+    <p class="media-note" data-i18n="mediaAreas">
+      RADYO • TELEVIZYON • MEDYA DIJITAL
+    </p>
+  </div>
 </section>
 
 <section id="about">
- <h2 data-i18n="welcome">
-  BYENVINI NAN LEKÒL JOUNALIS LA
- </h2>
- <p style="text-align:center" data-i18n="about">
-  Aprann prensip etik jounalis, rechèch,
-  verifikasyon enfòmasyon, entèvyou,
-  repòtaj ak kominikasyon pwofesyonèl.
- </p>
+  <h2 data-i18n="welcome">
+    BYENVINI NAN LEKÒL JOUNALIS LA
+  </h2>
+  <p style="text-align:center" data-i18n="about">
+    Aprann prensip etik jounalis, rechèch,
+    verifikasyon enfòmasyon, entèvyou,
+    repòtaj ak kominikasyon pwofesyonèl.
+  </p>
 </section>
 
 <section id="programs">
- <h2 data-i18n="training">3 GWO DOMÈN FÒMASYON</h2>
- <div class="grid">
-  <article class="card">
-   <h3 data-i18n="radio">JOUNALIS RADYO</h3>
-   <p data-i18n="radioDesc">
-    Teknik mikwofòn, diksyon, entèvyou,
-    nouvèl ak emisyon an dirèk.
-   </p>
-  </article>
-  <article class="card">
-   <h3 data-i18n="tv">JOUNALIS TELEVIZYON</h3>
-   <p data-i18n="tvDesc">
-    Prezantasyon devan kamera,
-    repòtaj, pwodiksyon ak montaj.
-   </p>
-  </article>
-  <article class="card">
-   <h3 data-i18n="digital">MEDYA DIJITAL</h3>
-   <p data-i18n="digitalDesc">
-    Podcast, verifikasyon nouvèl,
-    medya sosyal ak piblikasyon dijital.
-   </p>
-  </article>
- </div>
+  <h2 data-i18n="training">3 GWO DOMÈN FÒMASYON</h2>
+  <div class="grid">
+    <article class="card">
+      <h3 data-i18n="radio">Jounalis Radyo</h3>
+      <p data-i18n="radioDesc">
+        Teknik mikwofòn, diksyon, entèvyou,
+        nouvèl ak emisyon an dirèk.
+      </p>
+    </article>
+    <article class="card">
+      <h3 data-i18n="tv">Jounalis Televizyon</h3>
+      <p data-i18n="tvDesc">
+        Prezantasyon devan kamera,
+        repòtaj, pwodiksyon ak montaj.
+      </p>
+    </article>
+    <article class="card">
+      <h3 data-i18n="digital">Medya Dijital</h3>
+      <p data-i18n="digitalDesc">
+        Podcast, verifikasyon nouvèl,
+        medya sosyal ak piblikasyon dijital.
+      </p>
+    </article>
+  </div>
 </section>
 
 <section id="professor">
- <h2 data-i18n="profTitle">
-  PWOFESÈ AI AYISYÈN
- </h2>
- <div class="split">
-  <div class="media">
-   <video id="profVideo" controls playsinline
-    preload="metadata" style="display:none">
-    <source src="assets/videos/ai-professor.mp4"
-     type="video/mp4">
-   </video>
-   <div id="profPlaceholder">
-    <div class="media-icon">🎓</div>
-    <h3 data-i18n="profAvatar">AVATAR PWOFESÈ AI</h3>
-    <p data-i18n="profPending">
-     Espas pou pwofesè AI fanm ayisyèn
-     marabou a.
-    </p>
-   </div>
+  <h2 data-i18n="profTitle">PWOFESÈ AI AYISYÈN</h2>
+  <div class="split">
+    <div class="media">
+      <video id="profVideo" controls playsinline
+        preload="metadata" style="display:none">
+        <source src="assets/videos/ai-professor.mp4"
+          type="video/mp4">
+      </video>
+
+      <div id="profPlaceholder">
+        <div class="media-icon">🎓</div>
+        <h3 data-i18n="profAvatar">
+          AVATAR PWOFESÈ AI
+        </h3>
+        <p data-i18n="profPending">
+          Espas pou pwofesè AI fanm ayisyèn
+          marabou a.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 data-i18n="profHeading">
+        RANKONTRE PWOFESÈ A
+      </h3>
+      <p data-i18n="profText">
+        Yon pwofesè AI fanm ayisyèn
+        pou gide elèv yo nan aprantisaj
+        radyo, televizyon ak medya dijital.
+      </p>
+      <p data-i18n="profNote">
+        Videyo pwofesè a bezwen ajoute
+        pou avatar la kapab pale.
+      </p>
+    </div>
   </div>
-  <div class="card">
-   <h3 data-i18n="profHeading">
-    RANKONTRE PWOFESÈ A
-   </h3>
-   <p data-i18n="profText">
-    Yon pwofesè AI fanm ayisyèn
-    pou gide elèv yo nan aprantisaj
-    radyo, televizyon ak medya dijital.
-   </p>
-   <p data-i18n="profNote">
-    Videyo pwofesè a bezwen ajoute
-    pou avatar la kapab pale.
-   </p>
-  </div>
- </div>
 </section>
 
 <section id="registration">
- <h2 data-i18n="regTitle">
-  SANT ENSKRIPSYON
- </h2>
+  <h2 data-i18n="regTitle">SANT ENSKRIPSYON</h2>
 
- <div class="card" style="max-width:900px;margin:auto">
-  <form id="registrationForm">
-   <div class="formgrid">
-    <div class="field">
-     <label for="studentName" data-i18n="name">
-      Non konplè
-     </label>
-     <input id="studentName" name="name"
-      autocomplete="name" required>
-    </div>
+  <div class="card" style="max-width:900px;margin:auto">
+    <form id="registrationForm">
+      <div class="formgrid">
 
-    <div class="field">
-     <label for="studentEmail" data-i18n="email">
-      Imèl
-     </label>
-     <input id="studentEmail" name="email"
-      type="email" autocomplete="email" required>
-    </div>
+        <div class="field">
+          <label for="studentName" data-i18n="name">
+            Non konplè
+          </label>
+          <input id="studentName" name="name"
+            autocomplete="name" required>
+        </div>
 
-    <div class="field">
-     <label for="studentPhone" data-i18n="phone">
-      Telefòn
-     </label>
-     <input id="studentPhone" name="phone"
-      type="tel" autocomplete="tel" required>
-    </div>
+        <div class="field">
+          <label for="studentEmail" data-i18n="email">
+            Imèl
+          </label>
+          <input id="studentEmail" name="email"
+            type="email" autocomplete="email" required>
+        </div>
 
-    <div class="field">
-     <label for="country" data-i18n="country">
-      Peyi
-     </label>
-     <select id="country" name="country" required>
-      <option value="" data-i18n="choose">
-       Chwazi...
-      </option>
-      <option value="Haiti">Haïti</option>
-      <option value="USA">USA</option>
-      <option value="Other" data-i18n="other">
-       Lòt peyi
-      </option>
-     </select>
-    </div>
+        <div class="field">
+          <label for="studentPhone" data-i18n="phone">
+            Telefòn
+          </label>
+          <input id="studentPhone" name="phone"
+            type="tel" autocomplete="tel" required>
+        </div>
 
-    <div class="field">
-     <label for="program" data-i18n="program">
-      Pwogram
-     </label>
-     <select id="program" name="program" required>
-      <option value="" data-i18n="choose">
-       Chwazi...
-      </option>
-      <option value="Radio" data-i18n="radio">
-       Jounalis Radyo
-      </option>
-      <option value="Television" data-i18n="tv">
-       Jounalis Televizyon
-      </option>
-      <option value="Digital" data-i18n="digital">
-       Medya Dijital
-      </option>
-     </select>
-    </div>
+        <div class="field">
+          <label for="country" data-i18n="country">
+            Peyi
+          </label>
+          <select id="country" name="country" required>
+            <option value="" data-i18n="choose">Chwazi...</option>
+            <option value="Haiti">Haïti</option>
+            <option value="USA">USA</option>
+            <option value="Other" data-i18n="other">
+              Lòt peyi
+            </option>
+          </select>
+        </div>
 
-    <div class="field">
-     <label for="level" data-i18n="level">
-      Nivo eksperyans
-     </label>
-     <select id="level" name="level" required>
-      <option value="" data-i18n="choose">
-       Chwazi...
-      </option>
-      <option value="Beginner" data-i18n="beginner">
-       Debitan
-      </option>
-      <option value="Intermediate"
-       data-i18n="intermediate">
-       Entèmedyè
-      </option>
-      <option value="Advanced" data-i18n="advanced">
-       Avanse
-      </option>
-     </select>
-    </div>
-   </div>
+        <div class="field">
+          <label for="program" data-i18n="program">
+            Pwogram
+          </label>
+          <select id="program" name="program" required>
+            <option value="" data-i18n="choose">Chwazi...</option>
+            <option value="Radio" data-i18n="radio">
+              Jounalis Radyo
+            </option>
+            <option value="Television" data-i18n="tv">
+              Jounalis Televizyon
+            </option>
+            <option value="Digital" data-i18n="digital">
+              Medya Dijital
+            </option>
+          </select>
+        </div>
 
-   <div class="field">
-    <label for="studentMessage" data-i18n="message">
-     Mesaj (opsyonèl)
-    </label>
-    <textarea id="studentMessage"
-     name="message" rows="4"></textarea>
-   </div>
+        <div class="field">
+          <label for="level" data-i18n="level">
+            Nivo eksperyans
+          </label>
+          <select id="level" name="level" required>
+            <option value="" data-i18n="choose">Chwazi...</option>
+            <option value="Beginner" data-i18n="beginner">
+              Debitan
+            </option>
+            <option value="Intermediate"
+              data-i18n="intermediate">
+              Entèmedyè
+            </option>
+            <option value="Advanced" data-i18n="advanced">
+              Avanse
+            </option>
+          </select>
+        </div>
+      </div>
 
-   <button type="submit" class="btn"
-    data-i18n="submit">
-    PREPARE DEMANN ENSKRIPSYON
-   </button>
+      <div class="field">
+        <label for="studentMessage" data-i18n="message">
+          Mesaj (opsyonèl)
+        </label>
+        <textarea id="studentMessage"
+          name="message" rows="4"></textarea>
+      </div>
 
-   <p id="formStatus" class="status"
-    role="status" aria-live="polite"></p>
+      <button type="submit" class="btn" data-i18n="submit">
+        PREPARE DEMANN ENSKRIPSYON
+      </button>
 
-   <p class="media-note" data-i18n="formNote">
-    Bouton an ap prepare yon imèl
-    ak enfòmasyon enskripsyon an.
-    Ou dwe konfime voye imèl la.
-   </p>
-  </form>
- </div>
+      <p id="formStatus" class="status"
+        role="status" aria-live="polite"></p>
+
+      <p class="media-note" data-i18n="formNote">
+        Bouton an ap prepare yon imèl
+        ak enfòmasyon enskripsyon an.
+        Ou dwe konfime voye imèl la.
+      </p>
+    </form>
+  </div>
 </section>
 
 <section id="social">
- <h2 data-i18n="socialTitle">
-  REZO SOSYAL
- </h2>
- <div class="social">
-  <a style="--accent:#4388ff"
-   href="https://www.facebook.com/"
-   target="_blank" rel="noopener">
-   <span class="symbol">f</span>Facebook
-  </a>
-  <a style="--accent:#25d366"
-   href="https://wa.me/14076405166"
-   target="_blank" rel="noopener">
-   <span class="symbol">☎</span>WhatsApp
-  </a>
-  <a style="--accent:#ff2929"
-   href="https://www.youtube.com/@BSS1815PROMAXDMP"
-   target="_blank" rel="noopener">
-   <span class="symbol">▶</span>YouTube
-  </a>
-  <a style="--accent:#1ed760"
-   href="https://open.spotify.com/"
-   target="_blank" rel="noopener">
-   <span class="symbol">≋</span>Spotify
-  </a>
-  <a style="--accent:#61e7e5"
-   href="https://www.tiktok.com/@y_me11"
-   target="_blank" rel="noopener">
-   <span class="symbol">♪</span>TikTok
-  </a>
-  <a style="--accent:#dc65cf"
-   href="https://www.instagram.com/lebaron072/"
-   target="_blank" rel="noopener">
-   <span class="symbol">◎</span>Instagram
-  </a>
-  <a style="--accent:#40b8ed"
-   href="https://t.me/bss1815dmp"
-   target="_blank" rel="noopener">
-   <span class="symbol">➤</span>Telegram
-  </a>
-  <a style="--accent:#b48afa"
-   href="https://truthsocial.com/"
-   target="_blank" rel="noopener">
-   <span class="symbol">T</span>Truth Social
-  </a>
-  <a style="--accent:#328ed8"
-   href="https://www.linkedin.com/"
-   target="_blank" rel="noopener">
-   <span class="symbol">in</span>LinkedIn
-  </a>
-  <a style="--accent:#ffb56b"
-   href="https://x.com/"
-   target="_blank" rel="noopener">
-   <span class="symbol">𝕏</span>X / Twitter
-  </a>
- </div>
+  <h2 data-i18n="socialTitle">REZO SOSYAL</h2>
+  <div class="social">
+    <a style="--accent:#4388ff"
+      href="https://www.facebook.com/"
+      target="_blank" rel="noopener">
+      <span class="symbol">f</span>Facebook
+    </a>
+    <a style="--accent:#25d366"
+      href="https://wa.me/14076405166"
+      target="_blank" rel="noopener">
+      <span class="symbol">☎</span>WhatsApp
+    </a>
+    <a style="--accent:#ff2929"
+      href="https://www.youtube.com/@BSS1815PROMAXDMP"
+      target="_blank" rel="noopener">
+      <span class="symbol">▶</span>YouTube
+    </a>
+    <a style="--accent:#1ed760"
+      href="https://open.spotify.com/"
+      target="_blank" rel="noopener">
+      <span class="symbol">≋</span>Spotify
+    </a>
+    <a style="--accent:#61e7e5"
+      href="https://www.tiktok.com/@y_me11"
+      target="_blank" rel="noopener">
+      <span class="symbol">♪</span>TikTok
+    </a>
+    <a style="--accent:#dc65cf"
+      href="https://www.instagram.com/lebaron072/"
+      target="_blank" rel="noopener">
+      <span class="symbol">◎</span>Instagram
+    </a>
+    <a style="--accent:#40b8ed"
+      href="https://t.me/bss1815dmp"
+      target="_blank" rel="noopener">
+      <span class="symbol">➤</span>Telegram
+    </a>
+    <a style="--accent:#b48afa"
+      href="https://truthsocial.com/"
+      target="_blank" rel="noopener">
+      <span class="symbol">T</span>Truth Social
+    </a>
+    <a style="--accent:#328ed8"
+      href="https://www.linkedin.com/"
+      target="_blank" rel="noopener">
+      <span class="symbol">in</span>LinkedIn
+    </a>
+    <a style="--accent:#ffb56b"
+      href="https://x.com/"
+      target="_blank" rel="noopener">
+      <span class="symbol">𝕏</span>X / Twitter
+    </a>
+  </div>
 </section>
 
 <section id="contact">
- <h2 data-i18n="contactTitle">
-  KONTAK PRO-MAX ACADÉMIE
- </h2>
- <div class="contacts">
-  <a href="tel:+14076405166">
-   🇺🇸 (407) 640-5166
-  </a>
-  <a href="tel:+13175381150">
-   🇺🇸 (317) 538-1150
-  </a>
-  <a href="tel:+50942544447">
-   🇭🇹 +509 4254-4447
-  </a>
-  <a href="tel:+50944829869">
-   🇭🇹 +509 4482-9869
-  </a>
- </div>
+  <h2 data-i18n="contactTitle">
+    KONTAK PRO-MAX ACADÉMIE
+  </h2>
+
+  <div class="contacts">
+    <a href="tel:+14076405166">
+      🇺🇸 (407) 640-5166
+    </a>
+    <a href="tel:+13175381150">
+      🇺🇸 (317) 538-1150
+    </a>
+    <a href="tel:+50942544447">
+      🇭🇹 +509 4254-4447
+    </a>
+    <a href="tel:+50944829869">
+      🇭🇹 +509 4482-9869
+    </a>
+    <a href="tel:+50943437488">
+      🇭🇹 +509 4343-7488
+    </a>
+  </div>
 </section>
 
 </main>
 
 <footer>
- <img class="logo"
-  src="school-of-jounalism.png"
-  alt="Logo ofisyèl PRO-MAX ACADÉMIE">
- <h3>PRO-MAX ACADÉMIE</h3>
- <p>ÉCOLE DE JOURNALISME</p>
- <p>BSS1815 PRO-MAX DMP</p>
- <strong>DEVAN DEVAN NÈT!</strong>
- <p>© <span id="year"></span></p>
+  <img class="logo"
+    src="school-of-journalism.png"
+    alt="Logo ofisyèl PRO-MAX ACADÉMIE">
+
+  <h3>PRO-MAX ACADÉMIE</h3>
+  <p>ÉCOLE DE JOURNALISME</p>
+  <p>BSS1815 PRO-MAX DMP</p>
+  <strong>DEVAN DEVAN NÈT!</strong>
+  <p>© <span id="year"></span></p>
 </footer>
 
 <script>
 "use strict";
 
-const T = {
+const T={
 ht:{
  home:"Akèy",
  programs:"Pwogram",
@@ -748,53 +775,53 @@ en:{
 let currentLang="ht";
 
 function setLanguage(lang){
- if(!T[lang])return;
- currentLang=lang;
- document.documentElement.lang=lang;
+  if(!T[lang])return;
+  currentLang=lang;
+  document.documentElement.lang=lang;
 
- document.querySelectorAll("[data-i18n]").forEach(el=>{
-  const key=el.getAttribute("data-i18n");
-  if(Object.prototype.hasOwnProperty.call(T[lang],key)){
-   el.textContent=T[lang][key];
-  }
- });
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key=el.getAttribute("data-i18n");
+    if(Object.prototype.hasOwnProperty.call(T[lang],key)){
+      el.textContent=T[lang][key];
+    }
+  });
 
- document.querySelectorAll("[data-lang]").forEach(btn=>{
-  const active=btn.dataset.lang===lang;
-  btn.classList.toggle("active",active);
-  btn.setAttribute("aria-pressed",String(active));
- });
+  document.querySelectorAll("[data-lang]").forEach(btn=>{
+    const active=btn.dataset.lang===lang;
+    btn.classList.toggle("active",active);
+    btn.setAttribute("aria-pressed",String(active));
+  });
 
- document.getElementById("formStatus").textContent="";
+  document.getElementById("formStatus").textContent="";
 }
 
 document.querySelectorAll("[data-lang]").forEach(btn=>{
- btn.addEventListener("click",()=>{
-  setLanguage(btn.dataset.lang);
- });
+  btn.addEventListener("click",()=>{
+    setLanguage(btn.dataset.lang);
+  });
 });
 
 document.getElementById("year").textContent=
- new Date().getFullYear();
+  new Date().getFullYear();
 
 function setupVideo(videoId,placeholderId){
- const video=document.getElementById(videoId);
- const placeholder=document.getElementById(placeholderId);
- const source=video.querySelector("source");
+  const video=document.getElementById(videoId);
+  const placeholder=document.getElementById(placeholderId);
+  const source=video.querySelector("source");
 
- if(!source)return;
+  if(!source)return;
 
- video.addEventListener("loadedmetadata",()=>{
-  video.style.display="block";
-  placeholder.style.display="none";
- });
+  video.addEventListener("loadedmetadata",()=>{
+    video.style.display="block";
+    placeholder.style.display="none";
+  });
 
- video.addEventListener("error",()=>{
-  video.style.display="none";
-  placeholder.style.display="block";
- });
+  video.addEventListener("error",()=>{
+    video.style.display="none";
+    placeholder.style.display="block";
+  });
 
- video.load();
+  video.load();
 }
 
 setupVideo("newsVideo","newsPlaceholder");
@@ -802,49 +829,49 @@ setupVideo("profVideo","profPlaceholder");
 
 document.getElementById("registrationForm")
 .addEventListener("submit",function(event){
- event.preventDefault();
+  event.preventDefault();
 
- if(!this.reportValidity())return;
+  if(!this.reportValidity())return;
 
- const data=new FormData(this);
+  const data=new FormData(this);
 
- const lines=[
-  "PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME",
-  "",
-  "Name: "+data.get("name"),
-  "Email: "+data.get("email"),
-  "Phone: "+data.get("phone"),
-  "Country: "+data.get("country"),
-  "Program: "+data.get("program"),
-  "Experience: "+data.get("level"),
-  "Message: "+(data.get("message")||"")
- ];
+  const lines=[
+    "PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME",
+    "",
+    "Name: "+data.get("name"),
+    "Email: "+data.get("email"),
+    "Phone: "+data.get("phone"),
+    "Country: "+data.get("country"),
+    "Program: "+data.get("program"),
+    "Experience: "+data.get("level"),
+    "Message: "+(data.get("message")||"")
+  ];
 
- const subject=encodeURIComponent(
-  "Journalism School Registration Request"
- );
- const body=encodeURIComponent(lines.join("\n"));
+  const subject=encodeURIComponent(
+    "Journalism School Registration Request"
+  );
+  const body=encodeURIComponent(lines.join("\n"));
 
- // Mete adrès ofisyèl ki pral resevwa
- // enskripsyon yo lè li konfime.
- const emailAddress="";
+  // Mete adrès ofisyèl ki pral resevwa
+  // enskripsyon yo lè li konfime.
+  const emailAddress="";
 
- if(!emailAddress){
-  document.getElementById("formStatus").textContent=
-   currentLang==="fr"
-   ?"L'adresse de réception des inscriptions doit être configurée."
-   :currentLang==="en"
-   ?"The registration receiving email must be configured."
-   :"Fòk nou mete adrès imèl ki pral resevwa enskripsyon yo.";
-  return;
- }
+  if(!emailAddress){
+    document.getElementById("formStatus").textContent=
+      currentLang==="fr"
+      ?"L'adresse de réception des inscriptions doit être configurée."
+      :currentLang==="en"
+      ?"The registration receiving email must be configured."
+      :"Fòk nou mete adrès imèl ki pral resevwa enskripsyon yo.";
+    return;
+  }
 
- window.location.href=
-  "mailto:"+emailAddress+
-  "?subject="+subject+"&body="+body;
+  window.location.href=
+    "mailto:"+emailAddress+
+    "?subject="+subject+"&body="+body;
 
- document.getElementById("formStatus")
- .textContent=T[currentLang].ready;
+  document.getElementById("formStatus")
+    .textContent=T[currentLang].ready;
 });
 
 setLanguage("ht");
