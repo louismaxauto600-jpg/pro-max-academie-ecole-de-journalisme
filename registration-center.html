@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRO-MAX Académie | Registration Center</title>
+<style>
+:root {
+  --orange:#ff7900;
+  --apricot:#ffb46b;
+  --black:#080400;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--apricot);
+  background:
+    radial-gradient(circle at 15% 10%,#913508,#2b1007 45%,#080400 85%);
+  min-height:100vh;
+}
+header,main,footer {
+  max-width:1100px;
+  margin:auto;
+  padding:22px;
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+  border-bottom:2px solid var(--orange);
+}
+.brand {font-size:22px;font-weight:900}
+.brand small {display:block;font-size:12px}
+nav {display:flex;gap:8px}
+.lang {
+  background:#170800;
+  border:1px solid var(--orange);
+  color:var(--apricot);
+  border-radius:20px;
+  padding:9px 13px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.lang.active {
+  background:var(--orange);
+  color:var(--black);
+}
+h1 {font-size:clamp(28px,5vw,50px)}
+p {line-height:1.6}
+.panel {
+  background:linear-gradient(135deg,#2a100a,#090400);
+  border:1px solid #a54d13;
+  border-radius:20px;
+  padding:25px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.field {display:flex;flex-direction:column;gap:8px}
+.full {grid-column:1/-1}
+label {font-weight:bold}
+input,select,textarea {
+  width:100%;
+  padding:13px;
+  background:#120805;
+  color:var(--apricot);
+  border:1px solid #b76324;
+  border-radius:10px;
+  font:inherit;
+}
+input:focus,select:focus,textarea:focus {
+  outline:2px solid var(--orange);
+}
+option {background:#120805}
+.submit {
+  background:linear-gradient(90deg,var(--orange),var(--apricot));
+  color:var(--black);
+  border:0;
+  border-radius:25px;
+  padding:15px 26px;
+  font-weight:900;
+  cursor:pointer;
+}
+.note {
+  padding:15px;
+  border-left:3px solid var(--orange);
+  background:#251007;
+  margin:20px 0;
+}
+#status {
+  display:none;
+  padding:15px;
+  border:1px solid var(--orange);
+  border-radius:10px;
+  margin-top:15px;
+}
+footer {text-align:center}
+@media(max-width:650px) {
+  .grid {grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    PRO-MAX ACADÉMIE
+    <small>ÉCOLE DE JOURNALISME</small>
+  </div>
+  <nav aria-label="Language">
+    <button class="lang active" data-lang="en">ENG</button>
+    <button class="lang" data-lang="fr">FRA</button>
+    <button class="lang" data-lang="ht">KRE</button>
+  </nav>
+</header>
+
+<main>
+  <h1 data-t="title">STUDENT REGISTRATION</h1>
+  <p data-t="intro">
+    Apply to study radio, television or digital journalism.
+  </p>
+
+  <section class="panel">
+    <form id="registrationForm">
+      <div class="grid">
+
+        <div class="field">
+          <label for="first" data-t="first">First name *</label>
+          <input id="first" name="firstName" required>
+        </div>
+
+        <div class="field">
+          <label for="last" data-t="last">Last name *</label>
+          <input id="last" name="lastName" required>
+        </div>
+
+        <div class="field">
+          <label for="email" data-t="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone" data-t="phone">Phone *</label>
+          <input id="phone" name="phone" type="tel" required>
+        </div>
+
+        <div class="field">
+          <label for="country" data-t="country">
+            Country of residence *
+          </label>
+          <input id="country" name="country" required>
+        </div>
+
+        <div class="field">
+          <label for="department" data-t="department">
+            Department *
+          </label>
+          <select id="department" name="department" required>
+            <option value="" data-t="choose">
+              Select a department
+            </option>
+            <option value="radio" data-t="radio">
+              Radio Journalism
+            </option>
+            <option value="television" data-t="television">
+              Television Journalism
+            </option>
+            <option value="digital" data-t="digital">
+              Digital Journalism
+            </option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="motivation" data-t="motivation">
+            Why do you want to study journalism?
+          </label>
+          <textarea id="motivation" rows="4"></textarea>
+        </div>
+
+        <div class="field full">
+          <label>
+            <input type="checkbox" id="consent"
+              style="width:auto" required>
+            <span data-t="consent">
+              I agree to the processing of my application.
+            </span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="note" data-t="notice">
+        Preview mode: applications are not yet saved.
+      </div>
+
+      <button type="submit" class="submit" data-t="submit">
+        CHECK APPLICATION
+      </button>
+
+      <div id="status" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span>
+  PRO-MAX ACADÉMIE
+  <p>BSS1815 PRO-MAX DMP</p>
+  <strong>DEVAN DEVAN NÈT!</strong>
+</footer>
+
+<script>
+const translations = {
+  en:{
+    title:"STUDENT REGISTRATION",
+    intro:"Apply to study radio, television or digital journalism.",
+    first:"First name *",
+    last:"Last name *",
+    email:"Email *",
+    phone:"Phone *",
+    country:"Country of residence *",
+    department:"Department *",
+    choose:"Select a department",
+    radio:"Radio Journalism",
+    television:"Television Journalism",
+    digital:"Digital Journalism",
+    motivation:"Why do you want to study journalism?",
+    consent:"I agree to the processing of my application.",
+    notice:"Preview mode: applications are not yet saved.",
+    submit:"CHECK APPLICATION",
+    valid:"Form complete. Not yet submitted or saved.",
+    invalid:"Complete all required fields."
+  },
+  fr:{
+    title:"INSCRIPTION DES ÉTUDIANTS",
+    intro:"Étudiez le journalisme radio, télévisé ou numérique.",
+    first:"Prénom *",
+    last:"Nom *",
+    email:"E-mail *",
+    phone:"Téléphone *",
+    country:"Pays de résidence *",
+    department:"Département *",
+    choose:"Choisir un département",
+    radio:"Journalisme radio",
+    television:"Journalisme télévisé",
+    digital:"Journalisme numérique",
+    motivation:"Pourquoi étudier le journalisme ?",
+    consent:"J'accepte le traitement de ma candidature.",
+    notice:"Mode aperçu : aucune candidature enregistrée.",
+    submit:"VÉRIFIER LA CANDIDATURE",
+    valid:"Formulaire complet, mais non envoyé ni enregistré.",
+    invalid:"Remplissez tous les champs obligatoires."
+  },
+  ht:{
+    title:"ENSKRIPSYON ELÈV",
+    intro:"Etidye jounalis radyo, televizyon oswa medya dijital.",
+    first:"Prenon *",
+    last:"Non fanmi *",
+    email:"Imèl *",
+    phone:"Telefòn *",
+    country:"Peyi kote w rete *",
+    department:"Depatman *",
+    choose:"Chwazi yon depatman",
+    radio:"Jounalis Radyo",
+    television:"Jounalis Televizyon",
+    digital:"Jounalis Medya Dijital",
+    motivation:"Poukisa ou vle etidye jounalis?",
+    consent:"Mwen dakò pou yo trete aplikasyon mwen an.",
+    notice:"Mòd demonstrasyon: aplikasyon yo poko anrejistre.",
+    submit:"VERIFYE APLIKASYON AN",
+    valid:"Fòm nan konplè, men li poko voye ni anrejistre.",
+    invalid:"Ranpli tout chan obligatwa yo."
+  }
+};
+
+let language="en";
+
+function setLanguage(lang) {
+  language=lang;
+  document.documentElement.lang=lang;
+
+  document.querySelectorAll("[data-t]").forEach(el=>{
+    el.textContent=translations[lang][el.dataset.t];
+  });
+
+  document.querySelectorAll(".lang").forEach(btn=>{
+    btn.classList.toggle("active",btn.dataset.lang===lang);
+  });
+
+  document.getElementById("status").style.display="none";
+}
+
+document.querySelectorAll(".lang").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    setLanguage(btn.dataset.lang);
+  });
+});
+
+document.getElementById("registrationForm")
+.addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const status=document.getElementById("status");
+  const valid=this.checkValidity();
+
+  status.textContent=translations[language][
+    valid ? "valid" : "invalid"
+  ];
+  status.style.display="block";
+
+  if(!valid) this.reportValidity();
+});
+
+document.getElementById("year").textContent=
+  new Date().getFullYear();
+
+setLanguage("en");
+</script>
+
+</body>
+</html>
