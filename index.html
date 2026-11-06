@@ -3,655 +3,850 @@
 <html lang="ht">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#100502">
-<title>PRO-MAX ACADÉMIE | Cours 01 - Journalisme Radio</title>
-<link rel="icon" href="school-of-journalism.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090401">
+<title>PRO-MAX ACADÉMIE | École de Journalisme</title>
+<meta name="description" content="PRO-MAX ACADÉMIE — École de Journalisme. Radio, télévision et médias numériques.">
+
 <style>
 :root{
- --orange:#ff8500;
- --apricot:#ffc18a;
- --black:#090302;
+  --orange:#ff7900;
+  --apricot:#ffb35e;
+  --black:#090401;
+  --border:#a94a12;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
- margin:0;
- font-family:Arial,sans-serif;
- color:var(--apricot);
- background:linear-gradient(125deg,#72210e,#230b05 48%,#090302);
- min-height:100vh;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--apricot);
+  background:
+    radial-gradient(ellipse at 5% 12%,#74200d,transparent 48%),
+    radial-gradient(ellipse at 92% 45%,#41140a,transparent 52%),
+    linear-gradient(145deg,#140603,#090401 75%);
+  min-height:100vh;
 }
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1160px,94%);margin:auto}
 header{
- position:sticky;top:0;z-index:20;
- background:#100502f5;
- border-bottom:2px solid var(--orange);
+  position:sticky;top:0;z-index:20;
+  background:#100602f5;
+  border-bottom:2px solid var(--orange);
 }
-nav{
- max-width:1200px;margin:auto;
- padding:12px 18px;
- display:flex;justify-content:space-between;
- align-items:center;gap:15px;flex-wrap:wrap;
+.header{
+  display:flex;align-items:center;gap:18px;
+  justify-content:space-between;
+  flex-wrap:wrap;padding:10px 0;
 }
 .brand{
- display:flex;align-items:center;gap:12px;
- color:var(--orange);text-decoration:none;
- font-weight:900;
+  display:flex;gap:10px;align-items:center;
+  text-decoration:none;font-weight:900;
 }
-.brand img{
- width:60px;height:60px;object-fit:contain;
- border-radius:50%;
+.logo{
+  width:60px;height:60px;object-fit:contain;
+  border-radius:50%;background:#1d0903;
+  border:2px solid var(--orange);
 }
-.langs{display:flex;gap:6px}
-button,.button{
- background:var(--black);
- border:1px solid var(--orange);
- color:var(--orange);
- padding:11px 15px;border-radius:9px;
- font-weight:bold;cursor:pointer;
- text-decoration:none;font-family:inherit;
+.brand small{
+  display:block;font-size:11px;
+  letter-spacing:1px;color:var(--orange);
 }
-button.active,.primary{
- background:var(--orange);
- color:var(--black);
+nav{display:flex;gap:13px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:700;font-size:12px}
+nav a:hover{color:var(--orange)}
+.langs{display:flex;gap:5px}
+.langs button{
+  background:#1b0904;border:1px solid var(--orange);
+  border-radius:20px;padding:8px 11px;
+  color:var(--apricot);font-weight:900;
 }
-main{max-width:1100px;margin:auto;padding:25px 18px}
+.langs button.active{
+  background:var(--orange);color:var(--black);
+}
+section{padding:56px 0;border-bottom:1px solid #76320c}
 .hero{
- display:grid;grid-template-columns:1.5fr 1fr;
- gap:25px;align-items:center;padding:35px 0;
+  display:grid;grid-template-columns:1.1fr .9fr;
+  gap:30px;align-items:center;min-height:410px;
 }
-h1{font-size:clamp(34px,5vw,60px)}
-h1,h2,h3{color:var(--orange)}
-h2{margin-top:12px}
-.card{
- border:1px solid #b65c27;
- background:linear-gradient(140deg,#381308,#100502);
- border-radius:15px;padding:23px;
- margin-bottom:18px;
+.eyebrow{
+  color:var(--orange);font-weight:900;
+  letter-spacing:3px;font-size:12px;
 }
-.logo-big{width:125px;max-width:100%}
-.stats{
- display:grid;grid-template-columns:repeat(3,1fr);
- gap:10px;text-align:center;
+.hero h1{
+  font-size:clamp(43px,7vw,82px);
+  line-height:.96;color:var(--apricot);
+  margin:16px 0;
 }
-.stat{
- background:#190803;border-radius:10px;
- padding:15px;border:1px solid #874018;
+.hero h2{
+  font-size:clamp(21px,3vw,34px);
+  margin:0 0 18px;color:var(--orange);
 }
-.stat strong{
- display:block;color:var(--orange);
- font-size:26px;
+p{line-height:1.65}
+.btn{
+  display:inline-block;text-decoration:none;
+  background:linear-gradient(100deg,var(--orange),var(--apricot));
+  color:#100501;border:0;border-radius:24px;
+  font-weight:900;padding:12px 22px;
+  margin:7px 8px 7px 0;
 }
-.lesson{
- margin-bottom:14px;border:1px solid #a34e22;
- border-radius:12px;overflow:hidden;
- background:#170803;
+.btn.secondary{
+  background:#160804;border:1px solid var(--orange);
+  color:var(--apricot);
 }
-.lesson-head{
- display:flex;align-items:center;
- justify-content:space-between;
- padding:18px;cursor:pointer;
- color:var(--orange);font-weight:bold;
+.panel,.tile{
+  background:linear-gradient(145deg,#381307,#110602);
+  border:1px solid var(--border);
+  border-radius:19px;padding:22px;
+  box-shadow:0 0 24px #a942101f;
 }
-.lesson-body{
- display:none;padding:20px;
- border-top:1px solid #713619;
- line-height:1.75;
+.hero-panel{
+  text-align:center;border:3px solid var(--orange);
 }
-.lesson.open .lesson-body{display:block}
-.lesson-body li{margin:8px 0}
-.exercise{
- padding:16px;
- border-left:4px solid var(--orange);
- background:#321308;border-radius:8px;
- margin-top:18px;
+.hero-panel .logo{
+  width:115px;height:115px;margin:auto;
 }
-textarea,input{
- width:100%;background:#0d0402;
- color:var(--apricot);
- border:1px solid var(--orange);
- border-radius:8px;padding:12px;
- font:inherit;
+.hero-panel h3{font-size:25px;color:var(--orange)}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px;margin-top:24px;
 }
-textarea{min-height:95px;margin-top:10px}
-.checkrow{display:flex;gap:10px;align-items:center}
-.checkrow input{width:auto}
-.progress{
- height:12px;background:#38180c;
- border-radius:20px;overflow:hidden;
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.section-title{
+  text-align:center;font-size:clamp(26px,4vw,37px);
+  color:var(--orange);margin:0 0 12px;
 }
-#progressBar{
- height:100%;width:0;
- background:var(--orange);
- transition:width .2s;
+.intro{text-align:center;max-width:760px;margin:0 auto}
+.tile h3{color:var(--orange);margin:10px 0}
+.tile .symbol{font-size:35px}
+.media{
+  min-height:235px;border:2px solid var(--orange);
+  border-radius:14px;
+  background:radial-gradient(circle,#70300e,#110602 72%);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:10px;overflow:hidden;
 }
-.question{
- padding:18px 0;
- border-bottom:1px solid #74351a;
+.media img,.media video{
+  width:100%;height:235px;object-fit:cover;
 }
-.question label{
- display:block;padding:9px;
- margin:6px 0;border:1px solid #68301b;
- border-radius:8px;cursor:pointer;
+.placeholder{
+  text-align:center;padding:15px;font-weight:900;
 }
-.question input{width:auto}
-#result{
- font-size:22px;font-weight:bold;
- color:var(--orange);padding:18px 0;
+.split{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:24px;align-items:center;
 }
+.form{max-width:850px;margin:25px auto 0}
+.fields{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+label{
+  display:block;font-weight:700;
+  font-size:13px;margin-bottom:6px;
+}
+input,select,textarea{
+  width:100%;padding:13px;border-radius:10px;
+  background:#130602;border:1px solid var(--orange);
+  color:var(--apricot);
+}
+input::placeholder,textarea::placeholder{color:#a85c2b}
+select option{background:#130602}
+.status{margin-top:15px;font-weight:700}
+.social{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:12px;margin-top:24px;
+}
+.social a{
+  text-decoration:none;text-align:center;
+  border:2px solid var(--social-color,var(--orange));
+  border-radius:12px;padding:14px 7px;
+  color:var(--social-color,var(--apricot));
+  background:#100603;font-weight:900;
+}
+.social svg{
+  width:27px;height:27px;
+  display:block;margin:0 auto 7px;
+  fill:currentColor;
+}
+.social .symbol{
+  font-size:26px;display:block;margin-bottom:5px;
+}
+.contacts{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:12px;margin-top:20px;
+}
+.contacts a{
+  text-align:center;text-decoration:none;
+  background:#160702;border:1px solid var(--orange);
+  padding:17px 9px;border-radius:12px;font-weight:900;
+}
+.contacts span{
+  display:block;font-size:24px;margin-bottom:7px;
+}
+.course-list{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:14px;margin-top:22px;
+}
+.course{
+  display:block;text-decoration:none;
+  border:1px solid var(--orange);
+  background:#180803;border-radius:14px;padding:19px;
+}
+.course strong{display:block;color:var(--orange);margin-bottom:8px}
+.course:hover{background:#351207}
 footer{
- text-align:center;padding:35px 15px;
- border-top:2px solid var(--orange);
- background:var(--black);
+  text-align:center;padding:40px 12px;
+  background:#080301;
 }
-footer img{width:90px}
-@media(max-width:750px){
- .hero{grid-template-columns:1fr}
- .stats{grid-template-columns:repeat(3,1fr)}
- nav{justify-content:center}
+footer .logo{width:100px;height:100px}
+footer strong{
+  display:block;color:var(--orange);margin-top:10px;
+}
+footer p{margin:8px 0}
+@media(max-width:900px){
+  .hero,.split{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .social{grid-template-columns:repeat(3,1fr)}
+  .contacts{grid-template-columns:repeat(2,1fr)}
+  nav{width:100%;justify-content:center;order:3}
+  .header{justify-content:center}
+}
+@media(max-width:550px){
+  .grid,.grid.two,.fields,.course-list{
+    grid-template-columns:1fr;
+  }
+  .social{grid-template-columns:repeat(2,1fr)}
+  .contacts{grid-template-columns:1fr}
+  .hero{min-height:0}
+  .brand{font-size:13px}
+  .logo{width:46px;height:46px}
+  section{padding:38px 0}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<nav>
-<a class="brand" href="index.html">
-<img src="school-of-journalism.png"
- alt="PRO-MAX ACADÉMIE Logo">
-<span>PRO-MAX ACADÉMIE<br>
+<div class="wrap header">
+<a class="brand" href="#home">
+<img class="logo" src="school-of-journalism.png"
+alt="Logo officiel École de Journalisme">
+<span>PRO-MAX ACADÉMIE
 <small>ÉCOLE DE JOURNALISME</small></span>
 </a>
-<a class="button" href="index.html" id="homeLink">
-AKÈY
-</a>
-<div class="langs">
-<button data-lang="ht">KRE</button>
-<button data-lang="fr">FRA</button>
-<button data-lang="en">ENG</button>
-</div>
+
+<nav>
+<a href="#home" data-t="navHome">Akèy</a>
+<a href="#about" data-t="navAbout">Lekòl la</a>
+<a href="#programs" data-t="navPrograms">Pwogram</a>
+<a href="#courses" data-t="navCourses">Kou yo</a>
+<a href="#professor" data-t="navProfessor">Pwofesè AI</a>
+<a href="#registration" data-t="navRegister">Enskripsyon</a>
+<a href="#contact" data-t="navContact">Kontak</a>
 </nav>
+
+<div class="langs">
+<button type="button" data-lang="ht" class="active">KRE</button>
+<button type="button" data-lang="fr">FRA</button>
+<button type="button" data-lang="en">ENG</button>
+</div>
+</div>
 </header>
 
 <main>
-<section class="hero">
+
+<section id="home">
+<div class="wrap hero">
 <div>
-<p><strong>BSS1815 PRO-MAX DMP</strong></p>
-<h1>JOURNALISME RADIO 📻</h1>
-<h2 id="courseTitle">KOU 01 — FONDASYON JOUNALIS</h2>
-<p id="intro"></p>
-<a href="#lessons" class="button primary" id="startBtn">
-KÒMANSE KOU A
+<div class="eyebrow">BSS1815 PRO-MAX DMP</div>
+<h1>PRO-MAX<br>ACADÉMIE</h1>
+<h2 data-t="school">ÉCOLE DE JOURNALISME</h2>
+<p data-t="heroText">
+Yon lekòl modèn pou fòme jounalis pwofesyonèl nan radyo,
+televizyon ak medya dijital.
+</p>
+<a class="btn" href="#registration" data-t="registerNow">
+ENSKRI KOUNYE A
+</a>
+<a class="btn secondary" href="#programs" data-t="explore">
+DEKOUVRI PWOGRAM YO
 </a>
 </div>
-<div class="card" style="text-align:center">
-<img class="logo-big"
- src="school-of-journalism.png"
- alt="Logo École de Journalisme">
-<h3>PRO-MAX FM</h3>
-<p id="studioText"></p>
-<div class="stats">
-<div class="stat"><strong>6</strong><small>LESON</small></div>
-<div class="stat"><strong>10</strong><small>EGZAMEN</small></div>
-<div class="stat"><strong>70%</strong><small>PASS</small></div>
+
+<div class="panel hero-panel">
+<img class="logo" src="school-of-journalism.png"
+alt="Logo ofisyèl lekòl la">
+<h3 data-t="mediaHeadline">
+RADYO • TELEVIZYON • MEDYA DIJITAL
+</h3>
+<p data-t="mediaText">Aprann • Pratike • Kominike</p>
+
+<div class="media">
+<video controls playsinline preload="metadata"
+poster="school-of-journalism.png">
+<source src="assets/videos/journalist-news.mp4"
+type="video/mp4">
+</video>
+</div>
+<p data-t="videoNote">
+Espas pou jounalis k ap prezante nouvèl yo.
+</p>
 </div>
 </div>
 </section>
 
-<section id="lessons">
-<h2 id="lessonHeading">SIS LESON YO</h2>
-<p id="lessonIntro"></p>
-<div id="lessonList"></div>
-<div class="card">
-<h3 id="progressTitle">PWOGRÈ ELÈV LA</h3>
-<div class="progress"><div id="progressBar"></div></div>
-<p id="progressText">0 / 6</p>
+<section id="about">
+<div class="wrap">
+<h2 class="section-title" data-t="welcome">
+BYENVINI NAN ÉCOLE DE JOURNALISME
+</h2>
+<p class="intro" data-t="aboutText">
+PRO-MAX ACADÉMIE prepare yon nouvo jenerasyon jounalis
+atravè etik, rechèch, kominikasyon, teknoloji ak
+eksperyans pratik.
+</p>
 </div>
 </section>
 
-<section id="workshop" class="card">
-<h2 id="workshopTitle">ATELYE PRATIK — PRO-MAX FM</h2>
-<p id="workshopText"></p>
-<textarea id="script" aria-label="Script"></textarea>
-<p id="workshopHint"></p>
-<button id="saveScript">SOVE SCRIPT LA</button>
-<p id="saveStatus" role="status"></p>
+<section id="programs">
+<div class="wrap">
+<h2 class="section-title" data-t="areas">
+3 GWO DOMÈN FÒMASYON
+</h2>
+<div class="grid">
+
+<article class="tile">
+<div class="symbol">📻</div>
+<h3 data-t="radio">Jounalis Radyo</h3>
+<p data-t="radioDesc">
+Prezantasyon nouvèl, entèvyou, diksyon,
+pwodiksyon odyo ak emisyon an dirèk.
+</p>
+</article>
+
+<article class="tile">
+<div class="symbol">📺</div>
+<h3 data-t="tv">Jounalis Televizyon</h3>
+<p data-t="tvDesc">
+Prezantasyon devan kamera, repòtaj,
+montaj videyo ak pwodiksyon emisyon.
+</p>
+</article>
+
+<article class="tile">
+<div class="symbol">🌐</div>
+<h3 data-t="digital">Medya Dijital</h3>
+<p data-t="digitalDesc">
+Verifikasyon enfòmasyon, medya sosyal,
+ekriti dijital ak etik sou entènèt.
+</p>
+</article>
+
+</div>
+</div>
 </section>
 
-<section id="exam" class="card">
-<h2 id="examTitle">EGZAMEN FINAL — KOU 01</h2>
-<p id="examIntro"></p>
-<form id="examForm">
-<div id="questions"></div>
-<button class="primary" type="submit" id="submitExam">
-KORIJE EGZAMEN AN
+<section id="courses">
+<div class="wrap">
+<h2 class="section-title" data-t="coursesTitle">
+6 KOU JOURNALISME RADIO
+</h2>
+<p class="intro" data-t="coursesIntro">
+Pwogram fòmasyon radyo a, san retire lòt pwogram lekòl la.
+</p>
+
+<div class="course-list">
+<a class="course" href="course-01-radio.html">
+<strong data-t="c1">KOU 01 — Fondements du journalisme</strong>
+<span data-t="c1d">Prensip, wòl ak responsabilite jounalis la.</span>
+</a>
+
+<a class="course" href="course-02-radio.html">
+<strong data-t="c2">KOU 02 — Éthique et déontologie</strong>
+<span data-t="c2d">Verite, endepandans, presizyon ak etik.</span>
+</a>
+
+<a class="course" href="course-03-radio.html">
+<strong data-t="c3">KOU 03 — Recherche et vérification</strong>
+<span data-t="c3d">Sous, verifikasyon ak analiz enfòmasyon.</span>
+</a>
+
+<a class="course" href="course-04-radio.html">
+<strong data-t="c4">KOU 04 — Interview et reportage</strong>
+<span data-t="c4d">Prepare entèvyou ak reyalize repòtaj.</span>
+</a>
+
+<a class="course" href="course-05-radio.html">
+<strong data-t="c5">KOU 05 — Présentation radiophonique</strong>
+<span data-t="c5d">Diksyon, vwa, ekriti ak prezantasyon nouvèl.</span>
+</a>
+
+<a class="course" href="course-06-radio.html">
+<strong data-t="c6">KOU 06 — Production et diffusion</strong>
+<span data-t="c6d">Pwodiksyon emisyon, odyo ak difizyon.</span>
+</a>
+</div>
+
+<p class="intro" style="margin-top:20px" data-t="courseNotice">
+Lyen sa yo ouvri fichye kou yo lè yo ajoute nan GitHub.
+</p>
+</div>
+</section>
+
+<section id="professor">
+<div class="wrap">
+<h2 class="section-title" data-t="profTitle">
+PWOFESÈ AI & JOUNALIS VITYÈL
+</h2>
+<p class="intro" data-t="profIntro">
+Yon pwofesè AI fanm ayisyèn marabou pou akonpaye elèv yo.
+</p>
+
+<div class="split" style="margin-top:25px">
+<div class="panel">
+<div class="media">
+<img src="assets/images/ai-haitian-professor.png"
+alt="Avatar pwofesè AI fanm ayisyèn marabou"
+onerror="this.style.display='none';document.getElementById('avatarFallback').hidden=false">
+<div id="avatarFallback" class="placeholder" hidden>
+PROFESÈ AI • AVATAR MARABOU
+</div>
+</div>
+<h3 data-t="askProf">MANDE PWOFESÈ A</h3>
+<p data-t="profNote">
+Avatar ak vwa a ap disponib lè sèvis AI yo konekte.
+</p>
+</div>
+
+<div class="panel">
+<h3 data-t="learning">APRANN PA ETAP</h3>
+<div class="grid two">
+<div class="tile" data-t="step1">Etik ak prensip jounalis</div>
+<div class="tile" data-t="step2">Rechèch ak verifikasyon</div>
+<div class="tile" data-t="step3">Entèvyou ak repòtaj</div>
+<div class="tile" data-t="step4">Pratik radyo ak televizyon</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="registration">
+<div class="wrap">
+<h2 class="section-title" data-t="regTitle">
+SANT ENSKRIPSYON
+</h2>
+<p class="intro" data-t="regIntro">
+Ranpli fòm nan pou prepare demann enskripsyon ou.
+</p>
+
+<form id="registrationForm" class="panel form">
+<div class="fields">
+
+<div>
+<label for="fullname" data-t="name">Non konplè</label>
+<input id="fullname" name="fullname"
+autocomplete="name" required minlength="2">
+</div>
+
+<div>
+<label for="email" data-t="email">Imèl</label>
+<input id="email" type="email" name="email"
+autocomplete="email" required>
+</div>
+
+<div>
+<label for="phone" data-t="phone">Telefòn</label>
+<input id="phone" type="tel" name="phone"
+autocomplete="tel" required>
+</div>
+
+<div>
+<label for="country" data-t="country">Peyi</label>
+<select id="country" name="country" required>
+<option value="" data-t="chooseCountry">Chwazi peyi</option>
+<option value="Haiti">🇭🇹 Haiti</option>
+<option value="United States">🇺🇸 United States</option>
+<option value="Other">Other</option>
+</select>
+</div>
+
+<div>
+<label for="program" data-t="program">Pwogram</label>
+<select id="program" name="program" required>
+<option value="" data-t="chooseProgram">Chwazi pwogram</option>
+<option value="Radio" data-t="radio">Jounalis Radyo</option>
+<option value="Television" data-t="tv">Jounalis Televizyon</option>
+<option value="Digital Media" data-t="digital">Medya Dijital</option>
+</select>
+</div>
+
+<div>
+<label for="level" data-t="level">Nivo eksperyans</label>
+<select id="level" name="level" required>
+<option value="" data-t="chooseLevel">Chwazi nivo</option>
+<option value="Beginner" data-t="beginner">Debitan</option>
+<option value="Intermediate" data-t="intermediate">Entèmedyè</option>
+<option value="Advanced" data-t="advanced">Avanse</option>
+</select>
+</div>
+</div>
+
+<button class="btn" type="submit" data-t="submit">
+PREPARE ENSKRIPSYON
 </button>
-<button type="button" id="resetExam">
-REKÒMANSE
-</button>
+<p id="formStatus" class="status" role="status"
+aria-live="polite"></p>
+<p data-t="formNotice">
+Fòm sa a prepare yon demann ou ka kopye.
+Pou voye enskripsyon otomatikman, yon sèvis backend nesesè.
+</p>
 </form>
-<div id="result" role="status"></div>
+</div>
 </section>
+
+<section id="social">
+<div class="wrap">
+<h2 class="section-title" data-t="social">REZO SOSYAL</h2>
+<div class="social">
+
+<a style="--social-color:#1877f2"
+href="https://www.facebook.com/" target="_blank" rel="noopener">
+<span class="symbol">f</span>Facebook</a>
+
+<a style="--social-color:#25d366"
+href="https://wa.me/14076405166" target="_blank" rel="noopener">
+<span class="symbol">◉</span>WhatsApp</a>
+
+<a style="--social-color:#ff2929"
+href="https://www.youtube.com/@BSS1815PROMAXDMP"
+target="_blank" rel="noopener">
+<span class="symbol">▶</span>YouTube</a>
+
+<a style="--social-color:#1ed760"
+href="https://open.spotify.com/" target="_blank" rel="noopener">
+<span class="symbol">≋</span>Spotify</a>
+
+<a style="--social-color:#62e8dc"
+href="https://www.tiktok.com/@y_me11"
+target="_blank" rel="noopener">
+<span class="symbol">♪</span>TikTok</a>
+
+<a style="--social-color:#e568b5"
+href="https://www.instagram.com/lebaron072/"
+target="_blank" rel="noopener">
+<span class="symbol">◎</span>Instagram</a>
+
+<a style="--social-color:#42baff"
+href="https://t.me/bss1815dmp"
+target="_blank" rel="noopener">
+<span class="symbol">➤</span>Telegram</a>
+
+<a style="--social-color:#ac74ff"
+href="https://truthsocial.com/" target="_blank" rel="noopener">
+<span class="symbol">T</span>Truth Social</a>
+
+<a style="--social-color:#4ba6ed"
+href="https://www.linkedin.com/" target="_blank" rel="noopener">
+<span class="symbol">in</span>LinkedIn</a>
+
+<a style="--social-color:#f4a261"
+href="https://x.com/" target="_blank" rel="noopener">
+<span class="symbol">𝕏</span>X / Twitter</a>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<h2 class="section-title" data-t="contactTitle">
+KONTAK PRO-MAX ACADÉMIE
+</h2>
+<div class="contacts">
+<a href="tel:+14076405166">
+<span>🇺🇸</span>(407) 640-5166</a>
+<a href="tel:+13175381150">
+<span>🇺🇸</span>(317) 538-1150</a>
+<a href="tel:+50942544447">
+<span>🇭🇹</span>+509 4254-4447</a>
+<a href="tel:+50944829869">
+<span>🇭🇹</span>+509 4482-9869</a>
+</div>
+</div>
+</section>
+
 </main>
 
 <footer>
-<img src="school-of-journalism.png"
- alt="Logo PRO-MAX ACADÉMIE">
+<img class="logo" src="school-of-journalism.png"
+alt="Logo PRO-MAX ACADÉMIE">
 <h3>PRO-MAX ACADÉMIE</h3>
-<p>ÉCOLE DE JOURNALISME</p>
-<p>BSS1815 PRO-MAX DMP</p>
+<p>ÉCOLE DE JOURNALISME • BSS1815 PRO-MAX DMP</p>
 <strong>DEVAN DEVAN NÈT!</strong>
+<p>© <span id="year"></span> PRO-MAX ACADÉMIE</p>
 </footer>
 
 <script>
-const content={
+const dict = {
 ht:{
-home:"AKÈY",
-title:"KOU 01 — FONDASYON JOUNALIS",
-intro:"Aprann prensip jounalis pwofesyonèl, etik, verifikasyon nouvèl, ekriti radyo ak prezantasyon.",
-start:"KÒMANSE KOU A",
-studio:"Fòmasyon pratik pou radyo, televizyon ak medya dijital.",
-heading:"SIS LESON FONDAMANTAL",
-lessonIntro:"Ouvri chak leson, etidye li, fè egzèsis la epi make li kòm fini.",
-progress:"PWOGRÈ ELÈV LA",
-done:"Mwen fini leson sa a",
-exercise:"EGZÈSIS PRATIK",
-workshop:"ATELYE PRATIK — PRO-MAX FM",
-workshopText:"Ekri yon bilten nouvèl 60 segonn sou yon evènman reyèl ou verifye. Reponn kesyon kilès, kisa, kote, kilè, poukisa ak kijan.",
-workshopHint:"Lè script la pare, pratike li avèk mikwofòn epi anrejistre yon bilten 60 segonn. Pa envante enfòmasyon.",
-save:"SOVE SCRIPT LA",
-saved:"Script la sove sou aparèy sa a.",
-exam:"EGZAMEN FINAL — KOU 01",
-examIntro:"10 kesyon, 10 pwen chak. Ou bezwen omwen 70/100 pou pase egzamen konesans lan.",
-submit:"KORIJE EGZAMEN AN",
-reset:"REKÒMANSE",
-missing:"Reponn tout 10 kesyon yo.",
-pass:"OU PASE EGZAMEN AN!",
-fail:"REVIZE LESON YO EPI ESEYE ANKÒ.",
-lessons:[
-["Kisa jounalis ye?",
-"Jounalis se aktivite chèche, verifye, òganize epi kominike enfòmasyon ki gen enterè piblik. Travay yon jounalis se ede moun konprann sa k ap pase, pa envante nouvèl ni sèvi ak rimè kòm reyalite.",
-["Diferans ant nouvèl ak opinyon: nouvèl baze sou enfòmasyon verifyab; opinyon eksprime yon jijman.",
-"Jounalis la dwe fè rechèch, tande sous ki enpòtan yo epi bay kontèks.",
-"Yon enfòmasyon dwe klè, egzak, itil epi prezante san manipilasyon."],
-"Ekri yon nouvèl, yon opinyon ak yon piblisite. Eksplike diferans yo."],
-["Sis kesyon fondamantal yo",
-"Yon nouvèl dwe chèche reponn sis kesyon: Kilès? Kisa? Ki kote? Kilè? Poukisa? Kijan? Se baz pou prepare yon rapò konplè. Si yon repons poko konfime, jounalis la dwe di sa.",
-["Kilès: moun oswa òganizasyon ki konsène.",
-"Kisa: evènman ki rive.",
-"Ki kote ak kilè: kote ak moman.",
-"Poukisa ak kijan: rezon ak sikonstans, lè yo verifye."],
-"Chwazi yon evènman reyèl epi ekri repons sis kesyon yo."],
-["Etik ak responsablite",
-"Etik jounalis egzije onètete, endepandans, presizyon, ekite ak respè pou moun. Yon akizasyon pa dwe prezante kòm yon reyalite pwouve.",
-["Pa aksepte avantaj pou manipile yon nouvèl.",
-"Pwoteje vi prive moun ki vilnerab yo.",
-"Chèche repons moun yon akizasyon konsène.",
-"Korije erè piblikman ak transparans."],
-"Ekri kijan ou ta trete yon akizasyon ou resevwa sou WhatsApp."],
-["Sous ak verifikasyon",
-"Yon sous kapab yon temwen, yon dokiman, yon ekspè oswa yon enstitisyon. Menm yon sous ki parèt serye ka fè erè. Verifye dat, kontèks, otantisite ak enfòmasyon lòt sous bay.",
-["Distenge sous prensipal ak sous segondè.",
-"Chèche konfimasyon endepandan lè sa posib.",
-"Verifye foto, videyo ak sitasyon.",
-"Pa itilize AI kòm sèl prèv yon evènman."],
-"Prepare yon fich verifikasyon pou yon nouvèl kominotè."],
-["Ekriti nouvèl radyo",
-"Nan radyo, moun tande yon nouvèl yon sèl fwa. Se poutèt sa fraz yo dwe kout, mo yo senp epi enfòmasyon ki pi enpòtan an dwe vini an premye.",
-["Kòmanse avèk pwen prensipal nouvèl la.",
-"Atribye deklarasyon yo bay sous yo.",
-"Evite fraz long ak mo konplike.",
-"Fini avèk kontèks oswa pwochen etap ki konfime."],
-"Ekri yon bilten radyo 100 a 130 mo avèk sous verifye."],
-["Prezantasyon nan estidyo",
-"Yon jounalis radyo dwe pale avèk klète, respire nòmalman, pwononse non yo kòrèkteman epi respekte ritm enfòmasyon an. Anvan emisyon, li dwe verifye script ak mikwofòn li.",
-["Li script la anvan ou antre an dirèk.",
-"Tcheke nivo son ak mikwofòn.",
-"Evite dramatize nouvèl la.",
-"Pa enprovize enfòmasyon ki poko konfime."],
-"Anrejistre yon bilten 60 segonn epi evalye klète, ritm ak presizyon."]
-],
-questions:[
-["Ki misyon jounalis?",["Fè piblisite","Enfòme avèk enfòmasyon verifye","Envante istwa"],1],
-["Konbyen kesyon fondamantal ki genyen?",["3","4","6"],2],
-["Kisa nouvèl dwe baze sou?",["Prèv verifyab","Rimè","Opinyon pèsonèl"],0],
-["Kisa ou fè ak yon rimè?",["Difize li","Verifye li","Ajoute detay"],1],
-["Ki prensip etik ki enpòtan?",["Manipilasyon","Avantaj pèsonèl","Onètete"],2],
-["Si ou fè yon erè?",["Korije li","Kache li","Repete li"],0],
-["Ki fraz ki bon pou radyo?",["Long","Kout ak klè","Konplike"],1],
-["Yon akizasyon se?",["Yon verite pwouve","Yon lòd","Yon deklarasyon pou verifye"],2],
-["Kisa pou verifye anvan LIVE?",["Script ak mikwofòn","Rad sèlman","Kantite likes"],0],
-["Èske AI se yon sèl sous prèv ase?",["Wi","Non","Toujou"],1]
-]
+navHome:"Akèy",
+navAbout:"Lekòl la",
+navPrograms:"Pwogram",
+navCourses:"Kou yo",
+navProfessor:"Pwofesè AI",
+navRegister:"Enskripsyon",
+navContact:"Kontak",
+school:"ÉCOLE DE JOURNALISME",
+heroText:"Yon lekòl modèn pou fòme jounalis pwofesyonèl nan radyo, televizyon ak medya dijital.",
+registerNow:"ENSKRI KOUNYE A",
+explore:"DEKOUVRI PWOGRAM YO",
+mediaHeadline:"RADYO • TELEVIZYON • MEDYA DIJITAL",
+mediaText:"Aprann • Pratike • Kominike",
+videoNote:"Espas pou jounalis k ap prezante nouvèl yo.",
+welcome:"BYENVINI NAN ÉCOLE DE JOURNALISME",
+aboutText:"PRO-MAX ACADÉMIE prepare yon nouvo jenerasyon jounalis atravè etik, rechèch, kominikasyon, teknoloji ak eksperyans pratik.",
+areas:"3 GWO DOMÈN FÒMASYON",
+radio:"Jounalis Radyo",
+radioDesc:"Prezantasyon nouvèl, entèvyou, diksyon, pwodiksyon odyo ak emisyon an dirèk.",
+tv:"Jounalis Televizyon",
+tvDesc:"Prezantasyon devan kamera, repòtaj, montaj videyo ak pwodiksyon emisyon.",
+digital:"Medya Dijital",
+digitalDesc:"Verifikasyon enfòmasyon, medya sosyal, ekriti dijital ak etik sou entènèt.",
+coursesTitle:"6 KOU JOURNALISME RADIO",
+coursesIntro:"Pwogram fòmasyon radyo a, san retire lòt pwogram lekòl la.",
+c1:"KOU 01 — Fondements du journalisme",
+c1d:"Prensip, wòl ak responsabilite jounalis la.",
+c2:"KOU 02 — Éthique et déontologie",
+c2d:"Verite, endepandans, presizyon ak etik.",
+c3:"KOU 03 — Recherche et vérification",
+c3d:"Sous, verifikasyon ak analiz enfòmasyon.",
+c4:"KOU 04 — Interview et reportage",
+c4d:"Prepare entèvyou ak reyalize repòtaj.",
+c5:"KOU 05 — Présentation radiophonique",
+c5d:"Diksyon, vwa, ekriti ak prezantasyon nouvèl.",
+c6:"KOU 06 — Production et diffusion",
+c6d:"Pwodiksyon emisyon, odyo ak difizyon.",
+courseNotice:"Lyen sa yo ouvri fichye kou yo lè yo ajoute nan GitHub.",
+profTitle:"PWOFESÈ AI & JOUNALIS VITYÈL",
+profIntro:"Yon pwofesè AI fanm ayisyèn marabou pou akonpaye elèv yo.",
+askProf:"MANDE PWOFESÈ A",
+profNote:"Avatar ak vwa a ap disponib lè sèvis AI yo konekte.",
+learning:"APRANN PA ETAP",
+step1:"Etik ak prensip jounalis",
+step2:"Rechèch ak verifikasyon",
+step3:"Entèvyou ak repòtaj",
+step4:"Pratik radyo ak televizyon",
+regTitle:"SANT ENSKRIPSYON",
+regIntro:"Ranpli fòm nan pou prepare demann enskripsyon ou.",
+name:"Non konplè",
+email:"Imèl",
+phone:"Telefòn",
+country:"Peyi",
+chooseCountry:"Chwazi peyi",
+program:"Pwogram",
+chooseProgram:"Chwazi pwogram",
+level:"Nivo eksperyans",
+chooseLevel:"Chwazi nivo",
+beginner:"Debitan",
+intermediate:"Entèmedyè",
+advanced:"Avanse",
+submit:"PREPARE ENSKRIPSYON",
+formNotice:"Fòm sa a prepare yon demann ou ka kopye. Pou voye enskripsyon otomatikman, yon sèvis backend nesesè.",
+social:"REZO SOSYAL",
+contactTitle:"KONTAK PRO-MAX ACADÉMIE",
+ready:"Demann ou pare. Kopye tèks la pou voye li bay administrasyon an."
 },
 fr:{
-home:"ACCUEIL",
-title:"COURS 01 — FONDEMENTS DU JOURNALISME",
-intro:"Découvrez les principes du journalisme professionnel, l'éthique, la vérification, l'écriture radiophonique et la présentation.",
-start:"COMMENCER LE COURS",
-studio:"Formation pratique pour la radio, la télévision et les médias numériques.",
-heading:"SIX LEÇONS FONDAMENTALES",
-lessonIntro:"Ouvrez chaque leçon, étudiez-la, réalisez l'exercice et marquez-la comme terminée.",
-progress:"PROGRESSION DE L'ÉTUDIANT",
-done:"J'ai terminé cette leçon",
-exercise:"EXERCICE PRATIQUE",
-workshop:"ATELIER PRATIQUE — PRO-MAX FM",
-workshopText:"Rédigez un bulletin de 60 secondes sur un événement réel vérifié. Répondez aux six questions journalistiques.",
-workshopHint:"Entraînez-vous au microphone et enregistrez un bulletin de 60 secondes. N'inventez pas de faits.",
-save:"ENREGISTRER LE SCRIPT",
-saved:"Script enregistré sur cet appareil.",
-exam:"EXAMEN FINAL — COURS 01",
-examIntro:"10 questions, 10 points chacune. La note minimale est de 70/100.",
-submit:"CORRIGER L'EXAMEN",
-reset:"RECOMMENCER",
-missing:"Répondez aux dix questions.",
-pass:"EXAMEN RÉUSSI !",
-fail:"RÉVISEZ LES LEÇONS ET RÉESSAYEZ.",
-lessons:[
-["Qu'est-ce que le journalisme ?",
-"Le journalisme consiste à rechercher, vérifier, organiser et communiquer des informations d'intérêt public. Le journaliste doit informer avec exactitude, sans inventer de faits ni présenter les rumeurs comme des certitudes.",
-["Distinguer les faits, les opinions et la publicité.",
-"Rechercher les informations et leur contexte.",
-"Présenter les faits avec clarté et exactitude."],
-"Rédigez un exemple de nouvelle, d'opinion et de publicité."],
-["Les six questions fondamentales",
-"Une nouvelle doit chercher à répondre aux questions : Qui ? Quoi ? Où ? Quand ? Pourquoi ? Comment ? Si une réponse n'est pas connue, le journaliste doit le préciser.",
-["Qui : les personnes concernées.",
-"Quoi : l'événement.",
-"Où et Quand : le lieu et la date.",
-"Pourquoi et Comment : les causes et circonstances vérifiées."],
-"Analysez un événement réel à l'aide des six questions."],
-["Éthique et responsabilité",
-"L'éthique journalistique exige honnêteté, indépendance, exactitude, équité et respect des personnes. Une accusation ne constitue pas un fait établi.",
-["Refuser les avantages qui influencent l'information.",
-"Respecter la vie privée et les personnes vulnérables.",
-"Rechercher les réponses des personnes mises en cause.",
-"Corriger les erreurs avec transparence."],
-"Expliquez comment traiter une accusation reçue sur WhatsApp."],
-["Sources et vérification",
-"Les sources peuvent être des témoins, documents, experts ou institutions. Vérifiez l'authenticité, les dates, le contexte et recherchez des confirmations indépendantes.",
-["Distinguer sources primaires et secondaires.",
-"Recouper les informations.",
-"Vérifier les images et citations.",
-"Ne jamais utiliser une IA comme seule preuve."],
-"Préparez une fiche de vérification d'une actualité locale."],
-["Écriture radiophonique",
-"À la radio, les auditeurs doivent comprendre immédiatement. Utilisez des phrases courtes, un vocabulaire simple et placez l'information principale au début.",
-["Commencer par l'essentiel.",
-"Attribuer les déclarations à leurs sources.",
-"Éviter les phrases complexes.",
-"Conclure avec un contexte confirmé."],
-"Rédigez un bulletin de 100 à 130 mots."],
-["Présentation en studio",
-"Le présentateur doit parler clairement, respecter le rythme, prononcer correctement les noms et vérifier son texte et son microphone avant l'émission.",
-["Relire le script.",
-"Tester le microphone.",
-"Éviter la dramatisation.",
-"Ne pas improviser de faits non confirmés."],
-"Enregistrez un bulletin de 60 secondes et évaluez votre diction."]
-],
-questions:[
-["Quelle est la mission du journaliste ?",["Faire de la publicité","Informer avec des faits vérifiés","Inventer des histoires"],1],
-["Combien de questions fondamentales ?",["3","4","6"],2],
-["Sur quoi repose une nouvelle ?",["Des faits vérifiables","Des rumeurs","Des opinions"],0],
-["Que faire d'une rumeur ?",["La diffuser","La vérifier","L'amplifier"],1],
-["Quel principe est essentiel ?",["La manipulation","L'intérêt personnel","L'honnêteté"],2],
-["En cas d'erreur ?",["La corriger","La cacher","La répéter"],0],
-["Quel style pour la radio ?",["Long","Court et clair","Complexe"],1],
-["Une accusation est :",["Une vérité prouvée","Un ordre","Une déclaration à vérifier"],2],
-["Avant le direct, vérifier :",["Script et microphone","Tenue uniquement","Nombre de likes"],0],
-["L'IA suffit-elle comme seule preuve ?",["Oui","Non","Toujours"],1]
-]
+navHome:"Accueil",
+navAbout:"Notre école",
+navPrograms:"Programmes",
+navCourses:"Cours",
+navProfessor:"Professeure IA",
+navRegister:"Inscription",
+navContact:"Contact",
+school:"ÉCOLE DE JOURNALISME",
+heroText:"Une école moderne pour former des journalistes professionnels en radio, télévision et médias numériques.",
+registerNow:"S’INSCRIRE",
+explore:"DÉCOUVRIR LES PROGRAMMES",
+mediaHeadline:"RADIO • TÉLÉVISION • MÉDIAS NUMÉRIQUES",
+mediaText:"Apprendre • Pratiquer • Communiquer",
+videoNote:"Espace réservé à une journaliste présentant les nouvelles.",
+welcome:"BIENVENUE À L’ÉCOLE DE JOURNALISME",
+aboutText:"PRO-MAX ACADÉMIE forme une nouvelle génération de journalistes grâce à l’éthique, la recherche, la communication, la technologie et la pratique.",
+areas:"3 GRANDS DOMAINES DE FORMATION",
+radio:"Journalisme radio",
+radioDesc:"Présentation des nouvelles, entrevues, diction, production audio et émissions en direct.",
+tv:"Journalisme télévisé",
+tvDesc:"Présentation devant la caméra, reportage, montage vidéo et production.",
+digital:"Médias numériques",
+digitalDesc:"Vérification des faits, réseaux sociaux, rédaction numérique et éthique en ligne.",
+coursesTitle:"6 COURS DE JOURNALISME RADIO",
+coursesIntro:"Le programme de formation radio, sans supprimer les autres programmes.",
+c1:"COURS 01 — Fondements du journalisme",
+c1d:"Principes, rôle et responsabilités du journaliste.",
+c2:"COURS 02 — Éthique et déontologie",
+c2d:"Vérité, indépendance, précision et éthique.",
+c3:"COURS 03 — Recherche et vérification",
+c3d:"Sources, vérification et analyse de l’information.",
+c4:"COURS 04 — Interview et reportage",
+c4d:"Préparation des interviews et réalisation des reportages.",
+c5:"COURS 05 — Présentation radiophonique",
+c5d:"Diction, voix, écriture et présentation des nouvelles.",
+c6:"COURS 06 — Production et diffusion",
+c6d:"Production d’émissions, audio et diffusion.",
+courseNotice:"Ces liens ouvrent les fichiers de cours lorsqu’ils sont ajoutés à GitHub.",
+profTitle:"PROFESSEURE IA & JOURNALISTE VIRTUELLE",
+profIntro:"Une professeure IA haïtienne pour accompagner les étudiants.",
+askProf:"DEMANDER À LA PROFESSEURE",
+profNote:"L’avatar et sa voix seront disponibles après connexion du service IA.",
+learning:"APPRENDRE ÉTAPE PAR ÉTAPE",
+step1:"Éthique journalistique",
+step2:"Recherche et vérification",
+step3:"Entrevues et reportages",
+step4:"Pratique radio et télévision",
+regTitle:"CENTRE D’INSCRIPTION",
+regIntro:"Remplissez le formulaire pour préparer votre demande.",
+name:"Nom complet",
+email:"Courriel",
+phone:"Téléphone",
+country:"Pays",
+chooseCountry:"Choisir un pays",
+program:"Programme",
+chooseProgram:"Choisir un programme",
+level:"Niveau d’expérience",
+chooseLevel:"Choisir un niveau",
+beginner:"Débutant",
+intermediate:"Intermédiaire",
+advanced:"Avancé",
+submit:"PRÉPARER L’INSCRIPTION",
+formNotice:"Ce formulaire prépare une demande à copier. Un service backend est nécessaire pour l’envoi automatique.",
+social:"RÉSEAUX SOCIAUX",
+contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+ready:"Votre demande est prête. Copiez le texte pour le transmettre à l’administration."
 },
 en:{
-home:"HOME",
-title:"COURSE 01 — FOUNDATIONS OF JOURNALISM",
-intro:"Learn professional journalism principles, ethics, verification, radio writing and presentation.",
-start:"START COURSE",
-studio:"Practical training for radio, television and digital media.",
-heading:"SIX FUNDAMENTAL LESSONS",
-lessonIntro:"Open each lesson, study it, complete the exercise and mark it finished.",
-progress:"STUDENT PROGRESS",
-done:"I completed this lesson",
-exercise:"PRACTICAL EXERCISE",
-workshop:"PRACTICAL WORKSHOP — PRO-MAX FM",
-workshopText:"Write a 60-second news bulletin about a verified real event. Answer the six fundamental reporting questions.",
-workshopHint:"Practice with a microphone and record a 60-second bulletin. Do not invent facts.",
-save:"SAVE SCRIPT",
-saved:"Script saved on this device.",
-exam:"FINAL EXAM — COURSE 01",
-examIntro:"10 questions worth 10 points each. A score of 70/100 is required.",
-submit:"GRADE EXAM",
-reset:"START AGAIN",
-missing:"Answer all ten questions.",
-pass:"EXAM PASSED!",
-fail:"REVIEW THE LESSONS AND TRY AGAIN.",
-lessons:[
-["What is journalism?",
-"Journalism is the process of finding, verifying, organizing and communicating information in the public interest. Journalists must report accurately without inventing facts or presenting rumors as established truth.",
-["Distinguish news, opinion and advertising.",
-"Research facts and their context.",
-"Communicate clearly and accurately."],
-"Write examples of news, opinion and advertising."],
-["The six reporting questions",
-"Good reporting asks Who? What? Where? When? Why? How? When an answer is unknown, journalists must clearly acknowledge that uncertainty.",
-["Who: people involved.",
-"What: the event.",
-"Where and When: place and time.",
-"Why and How: verified causes and circumstances."],
-"Analyze a real event using all six questions."],
-["Ethics and responsibility",
-"Journalism ethics require honesty, independence, accuracy, fairness and respect. Allegations must not be presented as established facts.",
-["Reject benefits intended to influence reporting.",
-"Respect privacy and vulnerable people.",
-"Seek responses to allegations.",
-"Correct errors transparently."],
-"Explain how you would handle an allegation received on WhatsApp."],
-["Sources and fact-checking",
-"Sources may include witnesses, documents, experts and institutions. Verify authenticity, dates and context, and seek independent corroboration.",
-["Distinguish primary and secondary sources.",
-"Cross-check important claims.",
-"Verify images and quotations.",
-"Never treat AI as the sole evidence."],
-"Prepare a verification worksheet for local news."],
-["Writing for radio",
-"Radio audiences need immediate clarity. Use short sentences, simple words and put the most important information first.",
-["Lead with the essential fact.",
-"Attribute statements to sources.",
-"Avoid complicated sentences.",
-"End with confirmed context."],
-"Write a 100–130 word news bulletin."],
-["Presenting in the studio",
-"Radio presenters should speak clearly, use a natural pace, pronounce names accurately and check their scripts and microphones before broadcasting.",
-["Read the script in advance.",
-"Test the microphone.",
-"Avoid unnecessary dramatization.",
-"Never improvise unverified facts."],
-"Record a 60-second bulletin and assess your delivery."]
-],
-questions:[
-["What is journalism's mission?",["Advertising","Reporting verified information","Inventing stories"],1],
-["How many fundamental reporting questions?",["3","4","6"],2],
-["What should news rely on?",["Verifiable facts","Rumors","Personal opinions"],0],
-["What should you do with a rumor?",["Publish it","Verify it","Embellish it"],1],
-["Which is an ethical principle?",["Manipulation","Personal gain","Honesty"],2],
-["What if you make a mistake?",["Correct it","Hide it","Repeat it"],0],
-["What style works best on radio?",["Long","Short and clear","Complicated"],1],
-["An allegation is:",["Proven truth","An order","A claim requiring verification"],2],
-["Before broadcasting, check:",["Script and microphone","Clothing only","Likes"],0],
-["Is AI sufficient as the only evidence?",["Yes","No","Always"],1]
-]
+navHome:"Home",
+navAbout:"About",
+navPrograms:"Programs",
+navCourses:"Courses",
+navProfessor:"AI Professor",
+navRegister:"Registration",
+navContact:"Contact",
+school:"ÉCOLE DE JOURNALISME",
+heroText:"A modern school training professional journalists for radio, television and digital media.",
+registerNow:"REGISTER NOW",
+explore:"EXPLORE PROGRAMS",
+mediaHeadline:"RADIO • TELEVISION • DIGITAL MEDIA",
+mediaText:"Learn • Practice • Communicate",
+videoNote:"Reserved space for a journalist presenting the news.",
+welcome:"WELCOME TO THE SCHOOL OF JOURNALISM",
+aboutText:"PRO-MAX ACADÉMIE trains the next generation of journalists through ethics, research, communication, technology and hands-on experience.",
+areas:"3 MAJOR TRAINING AREAS",
+radio:"Radio Journalism",
+radioDesc:"News presentation, interviews, diction, audio production and live broadcasting.",
+tv:"Television Journalism",
+tvDesc:"On-camera presentation, reporting, video editing and production.",
+digital:"Digital Media",
+digitalDesc:"Fact-checking, social media, digital writing and online ethics.",
+coursesTitle:"6 RADIO JOURNALISM COURSES",
+coursesIntro:"Radio journalism training while preserving the other school programs.",
+c1:"COURSE 01 — Foundations of Journalism",
+c1d:"Principles, roles and responsibilities of journalists.",
+c2:"COURSE 02 — Ethics and Professional Standards",
+c2d:"Truth, independence, accuracy and ethics.",
+c3:"COURSE 03 — Research and Verification",
+c3d:"Sources, fact-checking and information analysis.",
+c4:"COURSE 04 — Interviews and Reporting",
+c4d:"Preparing interviews and producing reports.",
+c5:"COURSE 05 — Radio Presentation",
+c5d:"Diction, voice, writing and news presentation.",
+c6:"COURSE 06 — Production and Broadcasting",
+c6d:"Program production, audio and broadcasting.",
+courseNotice:"These links open course files once those files are added to GitHub.",
+profTitle:"AI PROFESSOR & VIRTUAL JOURNALIST",
+profIntro:"A Haitian female AI professor to support students.",
+askProf:"ASK THE PROFESSOR",
+profNote:"The avatar and voice will be available once AI services are connected.",
+learning:"STEP-BY-STEP LEARNING",
+step1:"Journalism ethics",
+step2:"Research and verification",
+step3:"Interviews and reporting",
+step4:"Radio and television practice",
+regTitle:"REGISTRATION CENTER",
+regIntro:"Complete the form to prepare your registration request.",
+name:"Full name",
+email:"Email",
+phone:"Phone",
+country:"Country",
+chooseCountry:"Choose country",
+program:"Program",
+chooseProgram:"Choose program",
+level:"Experience level",
+chooseLevel:"Choose level",
+beginner:"Beginner",
+intermediate:"Intermediate",
+advanced:"Advanced",
+submit:"PREPARE REGISTRATION",
+formNotice:"This form prepares a request you can copy. Automatic submission requires a backend service.",
+social:"SOCIAL NETWORKS",
+contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+ready:"Your request is ready. Copy the text to send to the administration."
 }
 };
 
-let currentLang="ht";
-const completed=new Set();
+let lang="ht";
 
-const $=id=>document.getElementById(id);
-
-function escapeHTML(value){
- return String(value).replace(/[&<>"']/g,c=>({
-  "&":"&amp;","<":"&lt;",">":"&gt;",
-  '"':"&quot;","'":"&#39;"
- })[c]);
-}
-
-function updateProgress(){
- $("progressBar").style.width=
-  (completed.size/6*100)+"%";
- $("progressText").textContent=
-  completed.size+" / 6";
-}
-
-function renderLessons(){
- const d=content[currentLang];
- $("lessonList").innerHTML=d.lessons.map((l,i)=>`
- <article class="lesson" id="lesson-${i+1}">
- <div class="lesson-head" tabindex="0"
- role="button" aria-expanded="false">
- <span>${String(i+1).padStart(2,"0")} —
- ${escapeHTML(l[0])}</span>
- <span>＋</span>
- </div>
- <div class="lesson-body">
- <p>${escapeHTML(l[1])}</p>
- <ul>${l[2].map(x=>`<li>${escapeHTML(x)}</li>`).join("")}</ul>
- <div class="exercise">
- <strong>${d.exercise}</strong>
- <p>${escapeHTML(l[3])}</p>
- <textarea aria-label="${d.exercise} ${i+1}"
- data-exercise="${i}"></textarea>
- </div>
- <p class="checkrow">
- <input type="checkbox" data-done="${i}"
- ${completed.has(i)?"checked":""}>
- <span>${d.done}</span>
- </p>
- </div>
- </article>`).join("");
-
- document.querySelectorAll(".lesson-head").forEach(head=>{
-  function toggle(){
-   const card=head.closest(".lesson");
-   card.classList.toggle("open");
-   const opened=card.classList.contains("open");
-   head.setAttribute("aria-expanded",String(opened));
-   head.lastElementChild.textContent=opened?"−":"＋";
-  }
-  head.addEventListener("click",toggle);
-  head.addEventListener("keydown",e=>{
-   if(e.key==="Enter"||e.key===" "){
-    e.preventDefault();toggle();
-   }
+function setLanguage(code){
+  if(!dict[code])return;
+  lang=code;
+  document.documentElement.lang=code;
+  document.querySelectorAll("[data-t]").forEach(el=>{
+    const value=dict[code][el.dataset.t];
+    if(value!==undefined)el.textContent=value;
   });
- });
-
- document.querySelectorAll("[data-done]").forEach(cb=>{
-  cb.addEventListener("change",()=>{
-   const n=Number(cb.dataset.done);
-   if(cb.checked)completed.add(n);
-   else completed.delete(n);
-   updateProgress();
+  document.querySelectorAll("[data-lang]").forEach(btn=>{
+    const active=btn.dataset.lang===code;
+    btn.classList.toggle("active",active);
+    btn.setAttribute("aria-pressed",String(active));
   });
- });
+  document.getElementById("formStatus").textContent="";
+}
 
- document.querySelectorAll("[data-exercise]").forEach(t=>{
-  const key="promax-radio-exercise-"+t.dataset.exercise;
-  try{t.value=localStorage.getItem(key)||""}catch(e){}
-  t.addEventListener("input",()=>{
-   try{localStorage.setItem(key,t.value)}catch(e){}
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    setLanguage(btn.dataset.lang);
   });
- });
- updateProgress();
-}
-
-function renderExam(){
- const d=content[currentLang];
- $("questions").innerHTML=d.questions.map((q,i)=>`
- <div class="question">
- <strong>${i+1}. ${escapeHTML(q[0])}</strong>
- ${q[1].map((answer,j)=>`
- <label>
- <input type="radio" name="q${i}" value="${j}">
- ${escapeHTML(answer)}
- </label>`).join("")}
- </div>`).join("");
- $("result").textContent="";
-}
-
-function setLanguage(lang){
- if(!content[lang])return;
- currentLang=lang;
- document.documentElement.lang=lang;
- const d=content[lang];
- const labels={
- homeLink:d.home,courseTitle:d.title,
- intro:d.intro,startBtn:d.start,
- studioText:d.studio,lessonHeading:d.heading,
- lessonIntro:d.lessonIntro,progressTitle:d.progress,
- workshopTitle:d.workshop,
- workshopText:d.workshopText,
- workshopHint:d.workshopHint,
- saveScript:d.save,
- examTitle:d.exam,examIntro:d.examIntro,
- submitExam:d.submit,resetExam:d.reset
- };
- Object.entries(labels).forEach(([id,value])=>{
-  $(id).textContent=value;
- });
- document.querySelectorAll("[data-lang]").forEach(b=>{
-  b.classList.toggle("active",b.dataset.lang===lang);
- });
- renderLessons();
- renderExam();
- $("saveStatus").textContent="";
-}
-
-document.querySelectorAll("[data-lang]").forEach(b=>{
- b.addEventListener("click",()=>setLanguage(b.dataset.lang));
 });
 
-$("saveScript").addEventListener("click",()=>{
- try{
-  localStorage.setItem("promax-radio-script",$("script").value);
-  $("saveStatus").textContent=content[currentLang].saved;
- }catch(e){
-  $("saveStatus").textContent=
-   "Local storage unavailable.";
- }
-});
+document.getElementById("year").textContent=
+  new Date().getFullYear();
 
-$("examForm").addEventListener("submit",e=>{
- e.preventDefault();
- const d=content[currentLang];
- let score=0;
- let count=0;
- d.questions.forEach((q,i)=>{
-  const checked=document.querySelector(
-   `input[name="q${i}"]:checked`
-  );
-  if(checked){
-   count++;
-   if(Number(checked.value)===q[2])score+=10;
-  }
- });
- if(count!==10){
-  $("result").textContent=d.missing;
-  return;
- }
- $("result").textContent=
-  score+"/100 — "+(score>=70?d.pass:d.fail);
-});
+document.getElementById("registrationForm")
+.addEventListener("submit",function(event){
+  event.preventDefault();
+  if(!this.reportValidity())return;
 
-$("resetExam").addEventListener("click",()=>{
- $("examForm").reset();
- $("result").textContent="";
-});
+  const data=new FormData(this);
+  const message=[
+    "PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME",
+    "Registration request",
+    "Name: "+data.get("fullname"),
+    "Email: "+data.get("email"),
+    "Phone: "+data.get("phone"),
+    "Country: "+data.get("country"),
+    "Program: "+data.get("program"),
+    "Experience: "+data.get("level")
+  ].join("\n");
 
-try{
- $("script").value=
-  localStorage.getItem("promax-radio-script")||"";
-}catch(e){}
+  document.getElementById("formStatus").textContent=
+    dict[lang].ready;
+  window.prompt(dict[lang].ready,message);
+});
 
 setLanguage("ht");
 </script>
