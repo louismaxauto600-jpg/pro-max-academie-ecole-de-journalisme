@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100602">
+<title>PRO-MAX ACADÉMIE | School of Journalism</title>
+<style>
+:root{
+ --orange:#ff7900;--apricot:#ffb16a;
+ --black:#100602;--panel:#260d05;
+ --line:#9a4822;--text:#ffcc9e
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:145px}
+body{
+ margin:0;font-family:Arial,sans-serif;color:var(--text);
+ background:linear-gradient(115deg,#100602,#5a1b09 45%,#100602)
+}
+header{
+ position:sticky;top:0;z-index:50;
+ background:#100602f5;border-bottom:2px solid var(--orange)
+}
+.header-inner,.container{max-width:1160px;margin:auto;padding:16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:var(--orange);font-weight:900}
+.logo{width:65px;height:65px;object-fit:contain;border:2px solid var(--orange);border-radius:50%}
+nav{display:flex;flex-wrap:wrap;gap:13px}
+nav a{color:var(--text);font-size:13px;text-decoration:none;font-weight:bold}
+.lang{display:flex;gap:5px}
+button,.btn{
+ background:var(--orange);color:#100602;border:2px solid var(--orange);
+ border-radius:10px;padding:12px 17px;font-weight:900;
+ cursor:pointer;text-decoration:none;font-family:inherit
+}
+.lang button{padding:9px 11px;background:transparent;color:var(--apricot)}
+.lang button.active{background:var(--orange);color:#100602}
+button:hover,.btn:hover{filter:brightness(1.12)}
+section{padding:55px 0;border-bottom:1px solid #8b381b}
+h1,h2,h3{color:var(--orange)}
+h1{font-size:clamp(35px,6vw,65px);margin:12px 0}
+h2{text-align:center;font-size:clamp(23px,4vw,32px)}
+p{line-height:1.65}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.card,.lesson,.exam{
+ background:linear-gradient(145deg,#290e05,#120603);
+ border:1px solid var(--line);border-radius:18px;padding:25px
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.media{width:100%;border-radius:14px;border:2px solid var(--orange);object-fit:contain}
+.video-box{background:#100602;border:2px solid var(--orange);border-radius:16px;padding:16px;text-align:center}
+.video-box video{width:100%;max-height:390px;border-radius:12px}
+.course{margin:25px 0}
+.lesson{margin:12px 0}
+summary{cursor:pointer;color:var(--orange);font-size:19px;font-weight:900}
+.lesson-body{padding-top:15px}
+.exercise{padding:15px;border-left:4px solid var(--orange);background:#3b1709;margin-top:18px}
+.exam{margin-top:25px}
+.question{padding:15px 0;border-bottom:1px solid var(--line)}
+.question label{display:block;padding:8px;cursor:pointer}
+input[type=radio]{accent-color:var(--orange)}
+input:not([type=radio]),select,textarea{
+ width:100%;background:#100602;border:1px solid var(--orange);
+ border-radius:9px;padding:13px;color:var(--text);font:inherit
+}
+textarea{min-height:95px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field label{display:block;margin-bottom:7px;font-weight:bold}
+.socials{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.social{
+ display:flex;flex-direction:column;align-items:center;gap:9px;
+ border:2px solid currentColor;border-radius:12px;
+ padding:15px 6px;text-decoration:none;font-weight:bold
+}
+.social svg{width:29px;height:29px;fill:currentColor}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.contacts a{border:1px solid var(--line);border-radius:10px;padding:15px;text-align:center;color:var(--text);text-decoration:none}
+footer{text-align:center;padding:35px;border-top:2px solid var(--orange)}
+.status{margin-top:12px;color:var(--orange);font-weight:bold}
+@media(max-width:800px){
+ .hero,.grid,.form-grid{grid-template-columns:1fr}
+ .socials{grid-template-columns:repeat(2,1fr)}
+ .contacts{grid-template-columns:1fr}
+ .header-inner{justify-content:center}
+ nav{justify-content:center}
+ section{padding:30px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-inner">
+ <div class="brand">
+  <img class="logo" src="school-of-journalism.png" alt="PRO-MAX Academy Logo">
+  <div>PRO-MAX ACADÉMIE<br><small>SCHOOL OF JOURNALISM</small></div>
+ </div>
+ <nav>
+  <a href="#home" data-i="home"></a>
+  <a href="#program" data-i="program"></a>
+  <a href="#courses" data-i="courses"></a>
+  <a href="#teacher" data-i="teacher"></a>
+  <a href="#registration" data-i="registration"></a>
+  <a href="#contact" data-i="contact"></a>
+ </nav>
+ <div class="lang">
+  <button type="button" data-lang="ht">KRE</button>
+  <button type="button" data-lang="fr">FRA</button>
+  <button type="button" data-lang="en">ENG</button>
+ </div>
+</div>
+</header>
+
+<main>
+<section id="home">
+<div class="container hero">
+ <div>
+  <strong>BSS1815 PRO-MAX DMP</strong>
+  <img src="school-of-journalism.png" alt="School of Journalism" style="display:block;width:95px;margin-top:20px">
+  <h1>PRO-MAX ACADÉMIE</h1>
+  <h3 data-i="school"></h3>
+  <p data-i="heroText"></p>
+  <a class="btn" href="#registration" data-i="registerNow"></a>
+  <a class="btn" href="#program" data-i="discover"></a>
+ </div>
+ <div class="video-box">
+  <h3 data-i="studio"></h3>
+  <video controls playsinline poster="journalist-radio.png">
+   <source src="journalist-radio.mp4" type="video/mp4">
+  </video>
+  <p data-i="studioText"></p>
+ </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+ <h2 data-i="welcome"></h2>
+ <p style="text-align:center" data-i="welcomeText"></p>
+ <img class="media" src="school-of-journalism.png" alt="Journalism School">
+</div>
+</section>
+
+<section id="program">
+<div class="container">
+<h2 data-i="areas"></h2>
+<div class="grid">
+ <article class="card">
+  <h3 data-i="radio"></h3><p data-i="radioText"></p>
+  <a class="btn" href="#courses" data-i="start"></a>
+ </article>
+ <article class="card">
+  <h3 data-i="television"></h3><p data-i="tvText"></p>
+ </article>
+ <article class="card">
+  <h3 data-i="digital"></h3><p data-i="digitalText"></p>
+ </article>
+</div>
+</div>
+</section>
+
+<section id="courses">
+<div class="container">
+<h2 data-i="courseTitle"></h2>
+<p style="text-align:center" data-i="courseIntro"></p>
+<div id="courseContainer"></div>
+</div>
+</section>
+
+<section id="teacher">
+<div class="container">
+<h2 data-i="teacherTitle"></h2>
+<div class="hero">
+ <div class="video-box">
+  <video controls playsinline poster="haitian-ai-teacher.png">
+   <source src="haitian-ai-teacher.mp4" type="video/mp4">
+  </video>
+  <img class="media" src="haitian-ai-teacher.png"
+   alt="Haitian AI Teacher"
+   onerror="this.style.display='none'">
+ </div>
+ <div class="card">
+  <h3 data-i="meet"></h3>
+  <p data-i="teacherText"></p>
+  <p data-i="teacherNote"></p>
+ </div>
+</div>
+</div>
+</section>
+
+<section id="registration">
+<div class="container">
+<h2 data-i="registrationTitle"></h2>
+<form id="registrationForm" class="card">
+ <div class="form-grid">
+  <div class="field"><label data-i="fullName"></label>
+   <input name="name" required></div>
+  <div class="field"><label>Email</label>
+   <input name="email" type="email" required></div>
+  <div class="field"><label data-i="phone"></label>
+   <input name="phone" type="tel" required></div>
+  <div class="field"><label data-i="country"></label>
+   <select name="country" required>
+    <option value="">—</option>
+    <option>Haiti</option><option>United States</option>
+    <option>Canada</option><option>France</option>
+    <option>Other</option>
+   </select></div>
+  <div class="field"><label data-i="program"></label>
+   <select name="program" required>
+    <option value="">—</option>
+    <option value="radio">Radio Journalism</option>
+    <option value="television">Television Journalism</option>
+    <option value="digital">Digital Media</option>
+   </select></div>
+  <div class="field"><label data-i="experience"></label>
+   <select name="experience" required>
+    <option value="">—</option>
+    <option>Beginner</option>
+    <option>Intermediate</option>
+    <option>Advanced</option>
+   </select></div>
+ </div>
+ <p><button type="submit" data-i="prepare"></button></p>
+ <p data-i="formNote"></p>
+ <div id="registrationStatus" class="status" aria-live="polite"></div>
+</form>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 data-i="socialTitle"></h2>
+<div class="socials" id="socialContainer"></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 data-i="contactTitle"></h2>
+<div class="contacts">
+ <a href="tel:+14076405166">🇺🇸 (407) 640-5166</a>
+ <a href="tel:+13175381150">🇺🇸 (317) 538-1150</a>
+ <a href="tel:+50942544447">🇭🇹 +509 4254-4447</a>
+ <a href="tel:+50943437488">🇭🇹 +509 4343-7488</a>
+ <a href="tel:+50944829869">🇭🇹 +509 4482-9869</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<img class="logo" src="school-of-journalism.png" alt="Official Logo">
+<h3>PRO-MAX ACADÉMIE</h3>
+<p data-i="school"></p>
+<p>BSS1815 PRO-MAX DMP</p>
+<p>© 2026 PRO-MAX ACADÉMIE</p>
+</footer>
+
+<script>
+"use strict";
+
+/* TRANSLATIONS */
+const T={
+ht:{
+home:"Akèy",program:"Pwogram",courses:"Kou yo",teacher:"Pwofesè AI",
+registration:"Enskripsyon",contact:"Kontak",
+school:"LEKÒL JOUNALIS",
+heroText:"Fòmasyon pwofesyonèl pou jounalis radyo, televizyon ak medya dijital.",
+registerNow:"ENSKRI KOUNYE A",discover:"DEKOUVRI PWOGRAM YO",
+studio:"ESTIDYO NOUVÈL",studioText:"Jounalis k ap prezante nouvèl nan estidyo radyo a.",
+welcome:"BYENVINI NAN LEKÒL JOUNALIS",
+welcomeText:"Aprann etik, rechèch, entèvyou, kominikasyon ak teknoloji medya.",
+areas:"3 GWO DOMÈN FÒMASYON",
+radio:"Jounalis Radyo",radioText:"Diksyon, entèvyou, nouvèl ak emisyon an dirèk.",
+television:"Jounalis Televizyon",tvText:"Prezantasyon devan kamera, repòtaj ak montaj videyo.",
+digital:"Medya Dijital",digitalText:"Verifikasyon enfòmasyon, podcast ak rezo sosyal.",
+start:"KÒMANSE KOU A",courseTitle:"KOU JOUNALIS RADYO",
+courseIntro:"De premye kou yo gen sis leson chak, egzèsis ak egzamen final.",
+teacherTitle:"PWOFESÈ AI AYISYÈN",meet:"RANKONTRE PWOFESÈ A",
+teacherText:"Yon pwofesè AI fanm ayisyèn pou akonpaye elèv yo.",
+teacherNote:"Videyo avatar la ap jwe lè fichye medya ofisyèl la disponib.",
+registrationTitle:"SANT ENSKRIPSYON",fullName:"Non konplè",
+phone:"Telefòn",country:"Peyi",experience:"Nivo eksperyans",
+prepare:"PREPARE ENSKRIPSYON",
+formNote:"Fòm sa a poko konekte ak bazdone. Li prepare enfòmasyon enskripsyon an.",
+socialTitle:"REZO SOSYAL",contactTitle:"KONTAK PRO-MAX ACADÉMIE",
+lesson:"LESON",exercise:"EGZÈSIS",exam:"EGZAMEN FINAL",
+submit:"KORIJE EGZAMEN",reset:"REKÒMANSE",pass:"OU REYISI",
+fail:"OU BEZWEN REVIZE",score:"NÒT",required:"Reponn tout kesyon yo.",
+registrationReady:"Enfòmasyon yo prepare. Enskripsyon an poko voye."
+},
+fr:{
+home:"Accueil",program:"Programme",courses:"Les cours",teacher:"Professeure IA",
+registration:"Inscription",contact:"Contact",
+school:"ÉCOLE DE JOURNALISME",
+heroText:"École professionnelle de journalisme radio, télévision et médias numériques.",
+registerNow:"INSCRIVEZ-VOUS",discover:"DÉCOUVRIR LES PROGRAMMES",
+studio:"STUDIO D'INFORMATION",studioText:"Une journaliste présente les nouvelles dans le studio radio.",
+welcome:"BIENVENUE À L'ÉCOLE DE JOURNALISME",
+welcomeText:"Apprenez l'éthique, la recherche, les entretiens, la communication et les technologies médiatiques.",
+areas:"3 GRANDS DOMAINES DE FORMATION",
+radio:"Journalisme radio",radioText:"Diction, interviews, actualités et émissions en direct.",
+television:"Journalisme télévision",tvText:"Présentation face caméra, reportage et montage vidéo.",
+digital:"Médias numériques",digitalText:"Vérification des faits, podcasts et réseaux sociaux.",
+start:"COMMENCER LE COURS",courseTitle:"COURS DE JOURNALISME RADIO",
+courseIntro:"Les deux premiers cours comprennent chacun six leçons, des exercices et un examen final.",
+teacherTitle:"PROFESSEURE IA HAÏTIENNE",meet:"RENCONTREZ LA PROFESSEURE",
+teacherText:"Une professeure IA haïtienne pour accompagner les étudiants.",
+teacherNote:"La vidéo de l'avatar sera disponible lorsque le média officiel sera ajouté.",
+registrationTitle:"CENTRE D'INSCRIPTION",fullName:"Nom complet",
+phone:"Téléphone",country:"Pays",experience:"Niveau d'expérience",
+prepare:"PRÉPARER L'INSCRIPTION",
+formNote:"Ce formulaire n'est pas encore relié à une base de données.",
+socialTitle:"RÉSEAUX SOCIAUX",contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+lesson:"LEÇON",exercise:"EXERCICE",exam:"EXAMEN FINAL",
+submit:"CORRIGER L'EXAMEN",reset:"RECOMMENCER",pass:"RÉUSSI",
+fail:"RÉVISION NÉCESSAIRE",score:"NOTE",required:"Répondez à toutes les questions.",
+registrationReady:"Informations préparées. L'inscription n'a pas encore été envoyée."
+},
+en:{
+home:"Home",program:"Program",courses:"The courses",teacher:"AI teacher",
+registration:"Registration",contact:"Contact",
+school:"SCHOOL OF JOURNALISM",
+heroText:"Professional school for radio, television and digital media journalists.",
+registerNow:"REGISTER NOW",discover:"DISCOVER THE PROGRAMS",
+studio:"NEWS STUDIO",studioText:"A journalist presents news in the radio studio.",
+welcome:"WELCOME TO THE SCHOOL OF JOURNALISM",
+welcomeText:"Learn ethics, research, interviews, communication and media technology.",
+areas:"3 MAJOR AREAS OF TRAINING",
+radio:"Radio Journalist",radioText:"Diction, interviews, news and live broadcasts.",
+television:"Television Journalist",tvText:"On-camera reporting and video editing.",
+digital:"Digital Media",digitalText:"Fact checking, podcasts and social media.",
+start:"START THE COURSE",courseTitle:"RADIO JOURNALISM COURSES",
+courseIntro:"The first two courses each include six lessons, exercises and a final exam.",
+teacherTitle:"HAITIAN AI TEACHER",meet:"MEET THE TEACHER",
+teacherText:"A female Haitian AI teacher to accompany students.",
+teacherNote:"The avatar video will play when the official media file is available.",
+registrationTitle:"REGISTRATION CENTER",fullName:"Full name",
+phone:"Phone",country:"Country",experience:"Experience level",
+prepare:"PREPARE REGISTRATION",
+formNote:"This form is not yet connected to a database.",
+socialTitle:"SOCIAL NETWORKS",contactTitle:"CONTACT PRO-MAX ACADEMY",
+lesson:"LESSON",exercise:"EXERCISE",exam:"FINAL EXAM",
+submit:"GRADE EXAM",reset:"RESTART",pass:"PASSED",
+fail:"REVIEW REQUIRED",score:"SCORE",required:"Answer every question.",
+registrationReady:"Information prepared. Registration has not been submitted."
+}
+};
+
+/* LESSON CONTENT — FR / EN / KRE */
+const courses=[
+{
+title:{
+fr:"COURS 01 — FONDEMENTS DU JOURNALISME",
+en:"COURSE 01 — FUNDAMENTALS OF JOURNALISM",
+ht:"KOU 01 — FONDAMANTAL JOUNALIS"
+},
+lessons:[
+{
+title:["Définition et mission du journalisme","Definition and mission of journalism","Definisyon ak misyon jounalis"],
+body:[
+"Le journalisme consiste à rechercher, vérifier et communiquer des informations d'intérêt public. Il aide les citoyens à comprendre les événements et à prendre des décisions éclairées. Un journaliste distingue les faits, les opinions et les rumeurs. Les six questions essentielles sont : qui, quoi, où, quand, pourquoi et comment.",
+"Journalism means researching, verifying and communicating information of public interest. It helps citizens understand events and make informed decisions. A journalist distinguishes facts, opinions and rumors. The six essential questions are who, what, where, when, why and how.",
+"Jounalis se chèche, verifye epi pataje enfòmasyon ki itil piblik la. Li ede sitwayen konprann evènman yo epi pran bon desizyon. Yon jounalis dwe fè diferans ant reyalite, opinyon ak rimè. Sis kesyon enpòtan yo se kiyès, kisa, ki kote, kilè, poukisa ak kijan."
+],
+exercise:[
+"Rédigez une brève de 80 mots répondant aux six questions essentielles.",
+"Write an 80-word news brief answering the six essential questions.",
+"Ekri yon nouvèl 80 mo ki reponn sis kesyon esansyèl yo."
+]
+},
+{
+title:["Éthique et responsabilité professionnelle","Ethics and professional responsibility","Etik ak responsablite pwofesyonèl"],
+body:[
+"Le journaliste doit respecter la vérité, l'exactitude, l'indépendance et l'équité. Il protège les personnes vulnérables, corrige ses erreurs et évite les conflits d'intérêts. Une accusation ne doit pas être présentée comme un fait établi sans preuve. La rapidité de publication ne justifie jamais une information non vérifiée.",
+"Journalists must respect truth, accuracy, independence and fairness. They protect vulnerable people, correct mistakes and avoid conflicts of interest. Allegations must not be reported as established facts without evidence. Speed never justifies publishing unverified information.",
+"Jounalis dwe respekte laverite, presizyon, endepandans ak jistis. Yo dwe pwoteje moun vilnerab, korije erè epi evite konfli enterè. Yo pa dwe prezante akizasyon kòm verite san prèv. Pibliye vit pa pi enpòtan pase verifye."
+],
+exercise:[
+"Analysez un cas où un journaliste reçoit un cadeau d'une personne qu'il doit interviewer.",
+"Analyze a situation where a journalist receives a gift from someone they must interview.",
+"Analize yon ka kote yon jounalis resevwa kado nan men yon moun li pral fè entèvyou avè l."
+]
+},
+{
+title:["Recherche, sources et vérification","Research, sources and verification","Rechèch, sous ak verifikasyon"],
+body:[
+"Une source primaire fournit une information directe : témoin, document original ou observation. Une source secondaire interprète ou reprend une information. Vérifiez les noms, dates, lieux et chiffres. Comparez les témoignages indépendants et recherchez les documents officiels. Mentionnez les incertitudes au lieu de les cacher.",
+"A primary source provides direct evidence: a witness, original document or observation. A secondary source interprets existing information. Verify names, dates, places and numbers. Compare independent accounts and seek official records. Disclose uncertainty instead of hiding it.",
+"Yon sous prensipal bay enfòmasyon dirèk: temwen, dokiman orijinal oswa obsèvasyon. Yon sous segondè reprann enfòmasyon. Verifye non, dat, kote ak chif. Konpare temwayaj endepandan epi chèche dokiman ofisyèl. Di piblik la lè yon detay poko konfime."
+],
+exercise:[
+"Choisissez une nouvelle locale et identifiez deux sources indépendantes pour la vérifier.",
+"Choose a local news story and identify two independent verification sources.",
+"Chwazi yon nouvèl lokal epi idantifye de sous endepandan pou verifye li."
+]
+},
+{
+title:["Écriture journalistique pour la radio","News writing for radio","Ekriti jounalis pou radyo"],
+body:[
+"Le texte radiophonique doit être clair, court et naturel. Une phrase exprime généralement une seule idée. Commencez par le fait principal, puis ajoutez le contexte. Utilisez des mots familiers au public et expliquez les termes techniques. Lisez votre texte à voix haute pour vérifier son rythme.",
+"Radio news writing must be clear, brief and conversational. A sentence should usually express one idea. Start with the main fact and then add context. Use familiar language and explain technical terms. Read your script aloud to test its rhythm.",
+"Tèks radyo dwe klè, kout epi fasil pou tande. Chak fraz ta dwe pote yon lide prensipal. Kòmanse ak enfòmasyon ki pi enpòtan an, apre sa bay kontèks. Itilize mo piblik la konprann epi li tèks la awotvwa."
+],
+exercise:[
+"Transformez un article de 200 mots en bulletin radio de 45 secondes.",
+"Turn a 200-word article into a 45-second radio bulletin.",
+"Transfòme yon atik 200 mo an yon bilten radyo 45 segonn."
+]
+},
+{
+title:["Techniques d'interview et de reportage","Interviewing and reporting techniques","Teknik entèvyou ak repòtaj"],
+body:[
+"Préparez le sujet, vérifiez l'identité de l'invité et rédigez des questions ouvertes. Écoutez attentivement, demandez des précisions et évitez les questions orientées. Avant l'enregistrement, expliquez clairement les conditions de l'entretien. Pour un reportage, décrivez le contexte et vérifiez les affirmations recueillies.",
+"Prepare the topic, verify the guest's identity and write open-ended questions. Listen carefully, request clarification and avoid leading questions. Explain interview conditions before recording. In field reporting, describe context and verify claims made by interviewees.",
+"Prepare sijè a, verifye idantite envite a epi poze kesyon ouvè. Koute byen, mande presizyon epi evite kesyon ki pouse moun bay yon repons. Eksplike kondisyon anrejistreman an. Nan repòtaj, bay kontèks epi verifye deklarasyon yo."
+],
+exercise:[
+"Préparez huit questions ouvertes pour interviewer un responsable communautaire.",
+"Prepare eight open-ended questions for interviewing a community leader.",
+"Prepare uit kesyon ouvè pou fè entèvyou ak yon responsab kominotè."
+]
+},
+{
+title:["Présentation et production radiophonique","Radio presentation and production","Prezantasyon ak pwodiksyon radyo"],
+body:[
+"Une émission radio comporte une introduction, un développement, des transitions et une conclusion. Le présentateur contrôle sa respiration, son débit et sa prononciation. Le technicien vérifie le microphone, le niveau sonore et les enregistrements. Avant diffusion, écoutez l'intégralité du montage et assurez-vous que les extraits ne déforment pas les propos.",
+"A radio program includes an introduction, main segments, transitions and a conclusion. Presenters manage breathing, pace and pronunciation. Producers check microphones, sound levels and recordings. Before broadcasting, listen to the complete edit and ensure clips do not misrepresent speakers.",
+"Yon emisyon radyo gen entwodiksyon, devlopman, tranzisyon ak konklizyon. Prezantatè a kontwole respirasyon, vitès ak pwononsyasyon. Teknikyen an verifye mikwo, nivo son ak anrejistreman. Anvan difizyon, koute montaj la pou asire mesaj moun yo pa defòme."
+],
+exercise:[
+"Enregistrez un bulletin de deux minutes comprenant une introduction, deux nouvelles et une conclusion.",
+"Record a two-minute bulletin with an introduction, two news items and a conclusion.",
+"Anrejistre yon bilten de minit ak entwodiksyon, de nouvèl ak konklizyon."
+]
+}
+],
+questions:[
+{
+q:["Quelle est la mission principale du journalisme ?","What is journalism's main mission?","Ki misyon prensipal jounalis?"],
+a:[
+["Informer le public avec exactitude","Divertir uniquement","Promouvoir un candidat"],
+["Inform the public accurately","Only entertain","Promote a candidate"],
+["Enfòme piblik la avèk presizyon","Sèlman fè amizman","Fè pwomosyon kandida"]
+],correct:0
+},
+{
+q:["Quelle question fait partie des six questions essentielles ?","Which is one of the six essential questions?","Kilès ki youn nan sis kesyon esansyèl yo?"],
+a:[
+["Quand l'événement a-t-il eu lieu ?","Qui finance la publicité ?","Combien coûte le studio ?"],
+["When did the event happen?","Who paid for advertising?","How much is the studio?"],
+["Kilè evènman an te fèt?","Kiyès ki peye piblisite?","Konbyen estidyo a koute?"]
+],correct:0
+},
+{
+q:["Qu'est-ce qu'un fait ?","What is a fact?","Kisa yon reyalite verifyab ye?"],
+a:[
+["Une préférence personnelle","Une affirmation vérifiable","Une rumeur"],
+["A personal preference","A verifiable statement","A rumor"],
+["Yon preferans pèsonèl","Yon deklarasyon ou ka verifye","Yon rimè"]
+],correct:1
+},
+{
+q:["Comment éviter un conflit d'intérêts ?","How should conflicts of interest be handled?","Kijan pou jere konfli enterè?"],
+a:[
+["Le cacher","Accepter tous les cadeaux","Le déclarer et préserver son indépendance"],
+["Hide it","Accept all gifts","Disclose it and remain independent"],
+["Kache li","Aksepte tout kado","Deklare li epi rete endepandan"]
+],correct:2
+},
+{
+q:["Qu'est-ce qu'une source primaire ?","What is a primary source?","Kisa yon sous prensipal ye?"],
+a:[
+["Un témoin direct","Une rumeur répétée","Une publicité"],
+["A direct witness","A repeated rumor","An advertisement"],
+["Yon temwen dirèk","Yon rimè repete","Yon piblisite"]
+],correct:0
+},
+{
+q:["Pourquoi vérifier une information ?","Why verify information?","Poukisa verifye enfòmasyon?"],
+a:[
+["Pour gagner du temps","Pour réduire les erreurs","Pour augmenter les rumeurs"],
+["To save time","To reduce errors","To increase rumors"],
+["Pou ekonomize tan","Pou diminye erè","Pou ogmante rimè"]
+],correct:1
+},
+{
+q:["Comment doit être un texte radio ?","How should a radio script be written?","Kijan tèks radyo dwe ekri?"],
+a:[
+["Avec des phrases interminables","Sans contexte","Avec des phrases courtes et claires"],
+["With very long sentences","Without context","With short clear sentences"],
+["Ak fraz ki twò long","San kontèks","Ak fraz kout epi klè"]
+],correct:2
+},
+{
+q:["Quelle est une bonne question d'interview ?","Which is a good interview question?","Ki bon kesyon pou entèvyou?"],
+a:[
+["Pouvez-vous expliquer ce qui s'est passé ?","Vous êtes coupable, n'est-ce pas ?","Vous refusez de répondre ?"],
+["Can you explain what happened?","You are guilty, aren't you?","You refuse to answer?"],
+["Èske ou ka eksplike sa ki pase?","Ou koupab, pa vre?","Ou refize reponn?"]
+],correct:0
+},
+{
+q:["Que faut-il faire avant une diffusion ?","What should happen before broadcast?","Kisa pou fè anvan difizyon?"],
+a:[
+["Ignorer les erreurs","Vérifier le son et les faits","Supprimer toutes les sources"],
+["Ignore mistakes","Check audio and facts","Remove every source"],
+["Inyore erè","Verifye son ak enfòmasyon","Retire tout sous"]
+],correct:1
+},
+{
+q:["Pourquoi corriger une erreur publiée ?","Why correct a published error?","Poukisa korije yon erè ki pibliye?"],
+a:[
+["Pour cacher la vérité","Pour protéger une publicité","Pour respecter l'exactitude"],
+["To hide the truth","To protect advertising","To maintain accuracy"],
+["Pou kache laverite","Pou pwoteje piblisite","Pou respekte presizyon"]
+],correct:2
+}
+]
+},
+{
+title:{
+fr:"COURS 02 — ÉTHIQUE ET CONDUITE PROFESSIONNELLE",
+en:"COURSE 02 — ETHICS AND PROFESSIONAL CONDUCT",
+ht:"KOU 02 — ETIK AK KONDUIT PWOFESYONÈL"
+},
+lessons:[
+{
+title:["Principes fondamentaux de l'éthique","Fundamental ethical principles","Prensip fondamantal etik"],
+body:[
+"L'éthique journalistique repose sur l'exactitude, l'indépendance, l'humanité et la responsabilité. Un journaliste doit rechercher la vérité sans confondre sa mission avec la promotion d'intérêts particuliers. Il doit aussi expliquer ses méthodes lorsque cela est possible.",
+"Journalistic ethics rests on accuracy, independence, humanity and accountability. Journalists seek truth without turning their work into promotion for private interests. They should also explain their methods when possible.",
+"Etik jounalis chita sou presizyon, endepandans, respè pou moun ak responsablite. Jounalis chèche laverite san sèvi ak travay la pou fè pwomosyon enterè prive. Lè sa posib, yo dwe esplike metòd travay yo."
+],
+exercise:[
+"Rédigez cinq engagements éthiques pour votre future émission.",
+"Write five ethical commitments for your future program.",
+"Ekri senk angajman etik pou pwochen emisyon ou."
+]
+},
+{
+title:["Vérité, exactitude et vérification","Truth, accuracy and verification","Laverite, presizyon ak verifikasyon"],
+body:[
+"Une information doit être contrôlée avant publication. Les images, citations et statistiques peuvent être sorties de leur contexte. Recherchez la source originale, comparez les preuves et signalez ce qui n'est pas confirmé. Une erreur importante doit être corrigée rapidement et visiblement.",
+"Information must be checked before publication. Images, quotations and statistics may be taken out of context. Find original sources, compare evidence and identify what remains unconfirmed. Significant errors require prompt, visible correction.",
+"Enfòmasyon dwe verifye anvan piblikasyon. Foto, sitasyon ak estatistik ka soti nan kontèks yo. Chèche sous orijinal, konpare prèv epi di sa ki poko konfime. Korije gwo erè rapidman epi klèman."
+],
+exercise:[
+"Analysez une rumeur et établissez une liste des preuves nécessaires avant diffusion.",
+"Analyze a rumor and list the evidence required before broadcasting.",
+"Analize yon rimè epi fè lis prèv ou bezwen anvan difizyon."
+]
+},
+{
+title:["Indépendance et conflits d'intérêts","Independence and conflicts of interest","Endepandans ak konfli enterè"],
+body:[
+"Le journaliste doit éviter les avantages financiers, politiques ou personnels qui pourraient influencer son travail. Il distingue clairement publicité, opinion et information. Il révèle les conflits d'intérêts pertinents et peut se retirer d'un reportage lorsque son indépendance est compromise.",
+"Journalists avoid financial, political or personal benefits that could influence coverage. They clearly separate advertising, opinion and reporting. Relevant conflicts should be disclosed, and journalists may need to withdraw from assignments when independence is compromised.",
+"Jounalis dwe evite avantaj finansye, politik oswa pèsonèl ki ka enfliyanse travay yo. Yo dwe separe piblisite, opinyon ak nouvèl. Yo dwe deklare konfli enterè epi kite yon dosye si endepandans yo an danje."
+],
+exercise:[
+"Expliquez comment réagir si un annonceur demande de modifier une nouvelle.",
+"Explain what to do when an advertiser asks you to change a news story.",
+"Eksplike sa pou fè si yon piblisitè mande w chanje yon nouvèl."
+]
+},
+{
+title:["Respect de la vie privée et dignité","Privacy and human dignity","Vi prive ak diyite moun"],
+body:[
+"La publication d'informations privées exige une justification d'intérêt public. Les enfants, victimes et personnes vulnérables demandent une attention particulière. Évitez les détails sensationnalistes et demandez le consentement lorsque nécessaire. Le droit du public à l'information doit être mis en balance avec les risques de préjudice.",
+"Publishing private information requires a public-interest justification. Children, victims and vulnerable people deserve particular care. Avoid sensational details and obtain consent when appropriate. Balance the public's right to know against potential harm.",
+"Pibliye enfòmasyon prive mande yon rezon ki sèvi enterè piblik. Timoun, viktim ak moun vilnerab bezwen plis pwoteksyon. Evite detay sansasyonalis epi mande konsantman lè sa nesesè. Balanse dwa piblik la pou konnen ak risk domaj."
+],
+exercise:[
+"Décidez quelles informations personnelles doivent être retirées d'un reportage sur un mineur.",
+"Decide which personal details should be removed from a report involving a minor.",
+"Deside ki detay pèsonèl pou retire nan yon repòtaj sou yon timoun."
+]
+},
+{
+title:["Équité, diversité et droit de réponse","Fairness, diversity and right of reply","Jistis, divèsite ak dwa repons"],
+body:[
+"Un reportage équitable présente les faits dans leur contexte et offre aux personnes visées par des accusations sérieuses une occasion raisonnable de répondre. La diversité des sources améliore la compréhension du sujet. L'équité n'oblige pas à donner un poids égal à des affirmations dont les preuves sont très différentes.",
+"Fair reporting presents facts in context and gives people facing serious allegations a reasonable opportunity to respond. Diverse sources improve understanding. Fairness does not require giving equal weight to claims with very different evidentiary support.",
+"Yon repòtaj jis mete reyalite yo nan kontèks epi bay moun ki anba akizasyon serye yon chans rezonab pou reponn. Plizyè kalite sous ede piblik la konprann. Jistis pa vle di bay deklarasyon san prèv menm pwa ak deklarasyon ki gen bon prèv."
+],
+exercise:[
+"Préparez un reportage présentant les faits et sollicitant une réponse de chaque partie concernée.",
+"Prepare a report presenting facts and seeking responses from the relevant parties.",
+"Prepare yon repòtaj ki prezante reyalite yo epi chèche repons pati ki konsène yo."
+]
+},
+{
+title:["Responsabilité, corrections et médias numériques","Accountability, corrections and digital media","Responsablite, koreksyon ak medya dijital"],
+body:[
+"Les journalistes sont responsables de leurs publications, y compris sur les réseaux sociaux. Ils vérifient les contenus générés par intelligence artificielle, évitent de publier des images trompeuses et protègent les données sensibles. Les corrections doivent être identifiables et ne pas effacer silencieusement une erreur importante.",
+"Journalists are accountable for their publications, including social media posts. They verify AI-generated content, avoid misleading imagery and protect sensitive data. Corrections should be identifiable rather than silently erasing significant mistakes.",
+"Jounalis responsab sa yo pibliye, menm sou rezo sosyal. Yo dwe verifye kontni AI kreye, evite foto ki twonpe moun epi pwoteje done sansib. Koreksyon dwe vizib; pa efase gwo erè an kachèt."
+],
+exercise:[
+"Rédigez une politique de correction pour une station radio et ses réseaux sociaux.",
+"Write a correction policy for a radio station and its social media.",
+"Ekri yon politik koreksyon pou yon estasyon radyo ak rezo sosyal li yo."
+]
+}
+],
+questions:[
+{
+q:["Quelle valeur est fondamentale ?","Which value is fundamental?","Ki valè ki fondamantal?"],
+a:[
+["Exactitude","Popularité à tout prix","Cadeaux"],
+["Accuracy","Popularity at any cost","Gifts"],
+["Presizyon","Popilarite a nenpòt pri","Kado"]
+],correct:0
+},
+{
+q:["Que faire d'une information non confirmée ?","What should happen to unconfirmed information?","Kisa pou fè ak enfòmasyon ki poko konfime?"],
+a:[
+["La publier comme certaine","La vérifier et signaler l'incertitude","Inventer une source"],
+["Publish it as certain","Verify it and disclose uncertainty","Invent a source"],
+["Pibliye l kòm sèten","Verifye l epi di sa ki poko sèten","Envante yon sous"]
+],correct:1
+},
+{
+q:["Comment traiter une publicité ?","How should advertising be treated?","Kijan pou trete piblisite?"],
+a:[
+["Comme une enquête indépendante","Comme une preuve","La distinguer de l'information"],
+["As independent reporting","As evidence","Separate it from news"],
+["Tankou yon ankèt endepandan","Tankou prèv","Separe l ak nouvèl"]
+],correct:2
+},
+{
+q:["Qui demande une protection particulière ?","Who deserves special protection?","Kiyès ki bezwen pwoteksyon espesyal?"],
+a:[
+["Les enfants et personnes vulnérables","Les annonceurs uniquement","Personne"],
+["Children and vulnerable people","Advertisers only","Nobody"],
+["Timoun ak moun vilnerab","Sèlman piblisitè","Pèsonn"]
+],correct:0
+},
+{
+q:["Quel est le droit de réponse ?","What is the right of reply?","Kisa dwa repons ye?"],
+a:[
+["Une publicité gratuite","Une occasion raisonnable de répondre à une accusation","Le droit de supprimer les faits"],
+["Free advertising","A reasonable chance to answer allegations","A right to delete facts"],
+["Piblisite gratis","Yon chans rezonab pou reponn akizasyon","Dwa pou efase reyalite"]
+],correct:1
+},
+{
+q:["Que faire en cas d'erreur importante ?","What should be done after a significant error?","Kisa pou fè apre yon gwo erè?"],
+a:[
+["L'ignorer","Accuser le public","La corriger clairement"],
+["Ignore it","Blame the audience","Correct it clearly"],
+["Inyore l","Blame piblik la","Korije l klèman"]
+],correct:2
+},
+{
+q:["Quel contenu IA peut être diffusé ?","Which AI content may be published?","Ki kontni AI ou ka pibliye?"],
+a:[
+["Un contenu vérifié et correctement présenté","Tout contenu sans vérification","Une fausse citation"],
+["Verified, properly presented content","Anything without checking","A fabricated quotation"],
+["Kontni verifye epi byen prezante","Nenpòt bagay san verifikasyon","Yon fo sitasyon"]
+],correct:0
+},
+{
+q:["Qu'est-ce qui renforce l'indépendance ?","What strengthens independence?","Kisa ki ranfòse endepandans?"],
+a:[
+["Accepter des faveurs secrètes","Déclarer les conflits d'intérêts","Obéir aux annonceurs"],
+["Accept secret favors","Disclose conflicts of interest","Obey advertisers"],
+["Aksepte favè an kachèt","Deklare konfli enterè","Obeyi piblisitè"]
+],correct:1
+},
+{
+q:["Comment traiter les sources diverses ?","How should diverse sources be handled?","Kijan pou trete diferan sous?"],
+a:[
+["Les ignorer","Les copier sans contrôle","Les écouter et vérifier leurs affirmations"],
+["Ignore them","Copy without checking","Listen and verify claims"],
+["Inyore yo","Kopye san verifye","Koute epi verifye deklarasyon yo"]
+],correct:2
+},
+{
+q:["Pourquoi protéger les données privées ?","Why protect private data?","Poukisa pwoteje done prive?"],
+a:[
+["Pour éviter des préjudices inutiles","Pour cacher toutes les nouvelles","Pour augmenter les clics"],
+["To prevent unnecessary harm","To hide all news","To increase clicks"],
+["Pou evite domaj initil","Pou kache tout nouvèl","Pou ogmante klik"]
+],correct:0
+}
+]
+}
+];
+
+/* LANGUAGE ENGINE */
+let currentLanguage="fr";
+const langIndex={fr:0,en:1,ht:2};
+
+function esc(s){
+ return String(s).replace(/[&<>"']/g,c=>({
+ "&":"&amp;","<":"&lt;",">":"&gt;",
+ '"':"&quot;","'":"&#39;"
+ })[c]);
+}
+
+function setLanguage(lang){
+ if(!T[lang])return;
+ currentLanguage=lang;
+ document.documentElement.lang=lang;
+ localStorage.setItem("promax-language",lang);
+
+ document.querySelectorAll("[data-i]").forEach(el=>{
+  const key=el.dataset.i;
+  if(T[lang][key]!==undefined)el.textContent=T[lang][key];
+ });
+
+ document.querySelectorAll("[data-lang]").forEach(btn=>{
+  const active=btn.dataset.lang===lang;
+  btn.classList.toggle("active",active);
+  btn.setAttribute("aria-pressed",String(active));
+ });
+
+ renderCourses();
+}
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+ btn.addEventListener("click",()=>setLanguage(btn.dataset.lang));
+});
+
+/* COURSES + LESSONS + EXAMS */
+function renderCourses(){
+ const index=langIndex[currentLanguage];
+ const tr=T[currentLanguage];
+ const root=document.getElementById("courseContainer");
+
+ root.innerHTML=courses.map((course,ci)=>`
+ <article class="course">
+  <h2>${esc(course.title[currentLanguage])}</h2>
+  ${course.lessons.map((lesson,li)=>`
+   <details class="lesson">
+    <summary>${tr.lesson} ${li+1} — ${esc(lesson.title[index])}</summary>
+    <div class="lesson-body">
+     <p>${esc(lesson.body[index])}</p>
+     <div class="exercise">
+      <strong>${tr.exercise} ${li+1}</strong>
+      <p>${esc(lesson.exercise[index])}</p>
+      <textarea aria-label="${tr.exercise} ${li+1}"></textarea>
+     </div>
+    </div>
+   </details>
+  `).join("")}
+  <div class="exam">
+   <h2>${tr.exam} — ${ci+1}</h2>
+   <p>10 × 10 = 100 | 70% minimum</p>
+   <form id="exam${ci}" onsubmit="gradeExam(event,${ci})">
+   ${course.questions.map((item,qi)=>`
+    <div class="question">
+     <h3>${qi+1}. ${esc(item.q[index])}</h3>
+     ${item.a[index].map((answer,ai)=>`
+      <label>
+       <input type="radio" name="q${qi}" value="${ai}">
+       ${esc(answer)}
+      </label>
+     `).join("")}
+    </div>
+   `).join("")}
+   <p>
+    <button type="submit">${tr.submit}</button>
+    <button type="reset">${tr.reset}</button>
+   </p>
+   <div id="result${ci}" class="status" aria-live="polite"></div>
+   </form>
+  </div>
+ </article>
+ `).join("");
+}
+
+function gradeExam(event,ci){
+ event.preventDefault();
+ const form=event.currentTarget;
+ const questions=courses[ci].questions;
+ let score=0;
+
+ for(let i=0;i<questions.length;i++){
+  const selected=form.querySelector(
+   'input[name="q'+i+'"]:checked'
+  );
+  if(!selected){
+   document.getElementById("result"+ci).textContent=
+    T[currentLanguage].required;
+   return;
+  }
+  if(Number(selected.value)===questions[i].correct)score+=10;
+ }
+
+ const tr=T[currentLanguage];
+ document.getElementById("result"+ci).textContent=
+  tr.score+": "+score+"/100 — "+(score>=70?tr.pass:tr.fail);
+}
+
+document.getElementById("registrationForm")
+.addEventListener("submit",event=>{
+ event.preventDefault();
+ document.getElementById("registrationStatus").textContent=
+  T[currentLanguage].registrationReady;
+});
+
+/* SOCIAL NETWORKS — BRAND SYMBOLS & COLORS
+   Links to specific accounts must be supplied by owner.
+*/
+const socials=[
+ ["Facebook","https://www.facebook.com/","#1877f2","f"],
+ ["WhatsApp","https://www.whatsapp.com/","#25d366","☎"],
+ ["YouTube","https://www.youtube.com/","#ff3030","▶"],
+ ["Spotify","https://open.spotify.com/","#1ed760","≋"],
+ ["TikTok","https://www.tiktok.com/","#55dce0","♪"],
+ ["Instagram","https://www.instagram.com/","#e65bbd","◎"],
+ ["Telegram","https://telegram.org/","#29b6f6","➤"],
+ ["Truth Social","https://truthsocial.com/","#a77df0","T"],
+ ["LinkedIn","https://www.linkedin.com/","#0a8bdc","in"],
+ ["X / Twitter","https://x.com/","#ffb16a","𝕏"]
+];
+
+document.getElementById("socialContainer").innerHTML=
+ socials.map(([name,url,color,symbol])=>`
+ <a class="social" href="${url}" target="_blank"
+ rel="noopener noreferrer" style="color:${color}"
+ aria-label="${esc(name)}">
+ <span style="font-size:30px">${symbol}</span>
+ <span>${esc(name)}</span>
+ </a>`).join("");
+
+/* INITIAL LANGUAGE */
+const saved=localStorage.getItem("promax-language");
+setLanguage(T[saved]?saved:"fr");
+</script>
+</body>
+</html>
