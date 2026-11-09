@@ -1,352 +1,993 @@
 
-<!-- ===================================================
-     COURS 04 — AJOUTE SAN DETWI
-     PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME
-     =================================================== -->
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRO-MAX ACADÉMIE | ÉCOLE DE JOURNALISME</title>
+<style>
+:root{
+  --orange:#ff7900;
+  --apricot:#ffb66b;
+  --black:#090301;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--apricot);
+  background:radial-gradient(circle at 15% 10%,#76230b,#190803 40%,#090301 85%);
+}
+header{
+  position:sticky;top:0;z-index:10;
+  background:#090301f2;
+  border-bottom:2px solid var(--orange);
+  padding:12px 4%;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  gap:14px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--orange)}
+.logo{
+  width:65px;height:65px;object-fit:contain;
+  border-radius:50%;border:2px solid var(--orange);
+  background:#170600;
+}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+a{color:var(--apricot)}
+nav a{text-decoration:none;font-weight:bold;font-size:13px}
+nav a:hover{color:var(--orange)}
+.langs{display:flex;gap:5px}
+.langs button{
+  border:1px solid var(--orange);background:#150600;
+  color:var(--apricot);padding:9px 12px;
+  border-radius:8px;font-weight:bold;cursor:pointer;
+}
+.langs button.active,.btn{background:var(--orange);color:var(--black)}
+section{padding:52px max(5%,18px);border-bottom:1px solid #75300d}
+h1,h2,h3{color:var(--orange)}
+h1{font-size:clamp(36px,6vw,68px);margin:12px 0}
+h2{text-align:center}
+.hero,.split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px}
+.card{
+  border:1px solid #b85417;border-radius:18px;padding:22px;
+  background:linear-gradient(135deg,#381305,#100502);
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.btn{
+  display:inline-block;border:0;border-radius:9px;
+  padding:13px 19px;text-decoration:none;
+  font-weight:bold;margin:7px;cursor:pointer;
+}
+.media{
+  border:2px solid var(--orange);border-radius:14px;
+  background:#100501;min-height:210px;
+  display:grid;place-items:center;overflow:hidden;
+}
+.media video{max-width:100%;width:100%;max-height:310px;object-fit:contain}
+label{display:block;font-weight:bold;margin-top:12px}
+input,select{
+  display:block;width:100%;padding:12px;
+  background:#120601;color:var(--apricot);
+  border:1px solid var(--orange);border-radius:8px;margin-top:5px;
+}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.social{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.social a{
+  border:2px solid var(--c);color:var(--c);
+  text-decoration:none;text-align:center;
+  padding:12px 4px;border-radius:10px;font-weight:bold;
+}
+.social span{display:block;font-size:25px}
+.contacts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.contacts a{
+  border:1px solid var(--orange);border-radius:10px;
+  text-align:center;text-decoration:none;padding:15px;
+}
+footer{text-align:center;background:#090301;padding:36px}
+footer .logo{width:90px;height:90px}
 
-<section id="course-04">
-  <h2>COURS 04 — TEKNIK ENTÈVYOU AK REPÒTAJ</h2>
+/* LESON YO AJOUTE SAN RETIRE SEKSYON ORIJINAL YO */
+#courses .intro{max-width:850px;margin:0 auto 22px;text-align:center}
+.lesson-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.lesson-grid details{
+  border:1px solid #c65a16;border-radius:14px;
+  background:linear-gradient(135deg,#361205,#130602);
+  padding:16px;
+}
+.lesson-grid summary{cursor:pointer;color:var(--orange);font-weight:900;font-size:18px}
+.lesson-grid details[open]{box-shadow:0 0 0 1px var(--orange)}
+.lesson-grid p,.lesson-grid li{line-height:1.6}
+.course-tag{font-size:12px;letter-spacing:1px;color:var(--apricot)}
+.practice{border-left:3px solid var(--orange);padding:10px;background:#1b0903}
+.quiz{margin-top:25px}
+.quiz fieldset{border:1px solid #b85417;border-radius:12px;margin:12px 0;padding:14px}
+.quiz legend{color:var(--orange);font-weight:bold}
+.quiz label{display:flex;align-items:center;gap:10px;font-weight:normal}
+.quiz input{width:auto;margin:0;accent-color:var(--orange)}
+.result{color:var(--orange);font-weight:bold}
 
-  <p style="text-align:center;max-width:850px;margin:0 auto 25px">
-    Aprann prepare entèvyou, poze bon kestyon,
-    ranmase temwayaj, travay sou teren epi
-    prezante repòtaj pwofesyonèl pou radyo,
-    televizyon ak medya dijital.
+/* NOUVO COURS 04 — AJOUT SÈLMAN */
+#course04 .intro{
+  max-width:850px;
+  margin:0 auto 22px;
+  text-align:center;
+  line-height:1.7;
+}
+#course04 .lesson-grid details{
+  border-color:#ff7900;
+}
+#course04 .lesson-grid details[open]{
+  background:linear-gradient(135deg,#51200a,#130602);
+}
+#course04 .practice strong{
+  color:var(--orange);
+}
+#course04 .course04-badge{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin:0 auto 15px;
+  padding:9px 17px;
+  border:1px solid var(--orange);
+  border-radius:30px;
+  color:var(--orange);
+  font-weight:bold;
+  letter-spacing:1px;
+}
+#course04 .course04-note{
+  text-align:center;
+  color:var(--apricot);
+  margin-top:22px;
+}
+@media(max-width:850px){
+  .hero,.split,.grid,.lesson-grid{grid-template-columns:1fr}
+  .social,.contacts{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .formgrid,.contacts{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img class="logo" src="school-of-journalism.png" alt="Logo École de Journalisme">
+    <div>PRO-MAX ACADÉMIE<br><small>ÉCOLE DE JOURNALISME</small></div>
+  </div>
+  <nav>
+    <a href="#home" data-i="home">Akèy</a>
+    <a href="#programs" data-i="programs">Pwogram</a>
+    <a href="#courses" data-i="courses">Kou</a>
+    <a href="#professor" data-i="professor">Pwofesè AI</a>
+    <a href="#registration" data-i="registration">Enskripsyon</a>
+    <a href="#contact" data-i="contact">Kontak</a>
+  </nav>
+  <div class="langs">
+    <button type="button" data-lang="ht" class="active">KRE</button>
+    <button type="button" data-lang="fr">FRA</button>
+    <button type="button" data-lang="en">ENG</button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <b>BSS1815 PRO-MAX DMP</b>
+    <h1>PRO-MAX ACADÉMIE</h1>
+    <h3>ÉCOLE DE JOURNALISME</h3>
+    <p data-i="hero">Lekòl pwofesyonèl pou fòme jounalis radyo, televizyon ak medya dijital.</p>
+    <a href="#registration" class="btn" data-i="apply">ENSKRI KOUNYE A</a>
+    <a href="#programs" class="btn" data-i="explore">DEKOUVRI PWOGRAM YO</a>
+  </div>
+  <div class="card" style="text-align:center">
+    <img class="logo" style="width:100px;height:100px" src="school-of-journalism.png" alt="Logo lekòl la">
+    <h3 data-i="media">RADYO • TELEVIZYON • MEDYA DIJITAL</h3>
+    <div class="media">
+      <video controls playsinline poster="school-of-journalism.png">
+        <source src="assets/videos/journalist-news.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p data-i="video">Espas videyo jounalis k ap prezante nouvèl.</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2 data-i="welcome">BYENVINI NAN LEKÒL JOUNALIS LA</h2>
+  <p style="text-align:center" data-i="about">
+    Aprann etik, rechèch, entèvyou, kominikasyon ak teknoloji medya.
+  </p>
+</section>
+
+<section id="programs">
+  <h2 data-i="training">3 GWO DOMÈN FÒMASYON</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 data-i="radio">Jounalis Radyo</h3>
+      <p data-i="radioD">Diksyon, entèvyou, nouvèl ak emisyon an dirèk.</p>
+    </div>
+    <div class="card">
+      <h3 data-i="tv">Jounalis Televizyon</h3>
+      <p data-i="tvD">Prezantasyon devan kamera, repòtaj ak montaj videyo.</p>
+    </div>
+    <div class="card">
+      <h3 data-i="digital">Medya Dijital</h3>
+      <p data-i="digitalD">Verifikasyon enfòmasyon, podcast ak medya sosyal.</p>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <h2 data-i="courseTitle">COURS 03 — RECHÈCH AK VERIFIKASYON ENFÒMASYON</h2>
+  <p class="intro" data-i="courseIntro">
+    Sis leson pratik pou jwenn sous serye, verifye prèv, evite dezenfòmasyon epi pibliye nouvèl ak responsablite.
+  </p>
+  <div class="lesson-grid">
+
+    <details>
+      <summary><span class="course-tag">LESON 01</span><br>Jwenn enfòmasyon serye</summary>
+      <p>Yon bon repòtaj kòmanse ak yon kesyon klè. Chèche sous premye men: dokiman ofisyèl, temwen dirèk, done piblik ak espesyalis.</p>
+      <ul>
+        <li>Ekri kiyès, kisa, ki kote, kilè, poukisa ak kijan.</li>
+        <li>Distenge temwayaj ak dokiman ki ka verifye.</li>
+        <li>Pa konfonn popilarite ak kredibilite.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Chwazi yon nouvèl lokal. Idantifye de sous endepandan ak yon dokiman ki ka konfime li.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 02</span><br>Evalye kredibilite sous yo</summary>
+      <p>Verifye idantite sous la, konpetans li, relasyon li ak sijè a, ak enterè li ka genyen.</p>
+      <ul>
+        <li>Konfime dat ak kontèks deklarasyon an.</li>
+        <li>Chèche sous endepandan.</li>
+        <li>Pwoteje sous anonim lè gen bon rezon editoryal.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Konpare de atik sou menm evènman an epi idantifye enfòmasyon ki poko verifye yo.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 03</span><br>Verifye foto ak videyo</summary>
+      <p>Yon imaj ka otantik men li soti nan yon lòt dat oswa yon lòt kote. Verifye sous orijinal, kote, lè ak kontèks.</p>
+      <ul>
+        <li>Chèche vèsyon ki pi ansyen an.</li>
+        <li>Konpare siy, bilding ak detay vizib.</li>
+        <li>Pa fè konklizyon san prèv.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Ekri twa etap pou verifye yon foto ki sikile sou rezo sosyal.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 04</span><br>Entèvyou ak konfimasyon</summary>
+      <p>Prepare kestyon ouvè, koute repons yo, mande presizyon epi bay moun ki konsène yo chans reponn akizasyon yo.</p>
+      <ul>
+        <li>Kenbe nòt ak anrejistreman lè sa legal.</li>
+        <li>Separe sa temwen an wè ak sa lòt moun rakonte li.</li>
+        <li>Pa chanje sans deklarasyon yo.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Ekri senk kestyon pou verifye yon evènman nan kominote a.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 05</span><br>Dezenfòmasyon ak etik</summary>
+      <p>Dezenfòmasyon ka sèvi ak fo tit, kont fo, ansyen foto oswa done ki retire nan kontèks.</p>
+      <ul>
+        <li>Distenge opinyon, rimè, erè ak enfòmasyon fo.</li>
+        <li>Pwoteje vi prive moun.</li>
+        <li>Korije erè piblikman ak transparans.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Reekri yon tit sansasyonalis pou li vin egzak ak net.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 06</span><br>Prepare yon repòtaj verifye</summary>
+      <p>Rasanble prèv, òganize yon liy tan, konfime sitasyon epi idantifye sa ki toujou ensèten anvan piblikasyon.</p>
+      <ul>
+        <li>Konfime non, chif, dat ak kote.</li>
+        <li>Prezante diferan repons avèk jistis.</li>
+        <li>Idantifye enfòmasyon ki poko konfime.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Prepare yon ti repòtaj 200 mo ak de sous endepandan.</p>
+    </details>
+  </div>
+
+  <div class="card quiz">
+    <h3 data-i="quizTitle">TI EGZAMEN — COURS 03</h3>
+    <form id="course-quiz">
+      <fieldset>
+        <legend>1. Ki sa yon jounalis dwe fè anvan li pibliye yon rimè?</legend>
+        <label><input type="radio" name="q1" value="a" required> Pibliye l touswit.</label>
+        <label><input type="radio" name="q1" value="b"> Verifye li ak sous serye.</label>
+      </fieldset>
+      <fieldset>
+        <legend>2. Yon foto reyèl kapab bay fo enfòmasyon?</legend>
+        <label><input type="radio" name="q2" value="a" required> Wi, si yo retire li nan kontèks.</label>
+        <label><input type="radio" name="q2" value="b"> Non, paske foto a reyèl.</label>
+      </fieldset>
+      <fieldset>
+        <legend>3. Lè yon jounalis fè yon erè, kisa li dwe fè?</legend>
+        <label><input type="radio" name="q3" value="a" required> Kache erè a.</label>
+        <label><input type="radio" name="q3" value="b"> Korije li ak transparans.</label>
+      </fieldset>
+      <button class="btn" type="submit" data-i="quizSubmit">VERIFYE REPONS YO</button>
+      <p id="course-result" class="result" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- NOUVO COURS 04 — AJOUT SAN DETWI -->
+<section id="course04">
+
+  <span class="course04-badge">PRO-MAX ACADÉMIE • JOURNALISME</span>
+
+  <h2 data-c04="title">
+    COURS 04 — TEKNIK ENTÈVYOU AK REPÒTAJ
+  </h2>
+
+  <p class="intro" data-c04="intro">
+    Aprann prepare entèvyou pwofesyonèl, poze bon kestyon,
+    fè repòtaj sou teren, itilize mikwo ak kamera,
+    epi prezante enfòmasyon avèk presizyon ak etik.
   </p>
 
   <div class="lesson-grid">
 
     <details>
       <summary>
-        <span class="course-tag">LESON 01</span>
-        <br>Preparasyon yon entèvyou
+        <span class="course-tag">LESON 01</span><br>
+        <span data-c04="l1">Preparasyon yon entèvyou</span>
       </summary>
-      <p>
-        Anvan yon jounalis fè entèvyou, li dwe
-        konnen sijè a, moun li pral rankontre a
-        ak objektif enfòmasyon li bezwen jwenn.
+      <p data-c04="l1p">
+        Anvan yon entèvyou, jounalis la dwe konnen sijè a,
+        fè rechèch sou moun li pral rankontre a epi
+        prepare objektif konvèsasyon an.
       </p>
       <ul>
-        <li>Fè rechèch sou envite a.</li>
-        <li>Prepare kestyon davans.</li>
-        <li>Verifye non ak fonksyon envite a.</li>
-        <li>Prepare mikwo, kamera oswa telefòn.</li>
+        <li>Idantifye sijè prensipal la.</li>
+        <li>Verifye enfòmasyon sou envite a.</li>
+        <li>Prepare kestyon klè ak kestyon swivi.</li>
         <li>Chwazi yon kote ki apwopriye.</li>
       </ul>
       <p class="practice">
-        <strong>EGZÈSIS:</strong>
-        Prepare 5 kestyon pou entèvyouve
-        yon responsab kominotè nan Léogâne.
+        <strong>Egzèsis:</strong>
+        Prepare yon plan entèvyou pou yon responsab
+        kominotè nan Léogâne.
       </p>
     </details>
 
     <details>
       <summary>
-        <span class="course-tag">LESON 02</span>
-        <br>Teknik pou poze kestyon
+        <span class="course-tag">LESON 02</span><br>
+        <span data-c04="l2">Teknik pou poze kestyon</span>
       </summary>
-      <p>
-        Yon bon jounalis poze kestyon klè,
-        kout, san patipri, epi li koute repons
-        moun nan avèk anpil atansyon.
+      <p data-c04="l2p">
+        Yon bon kestyon dwe senp, net epi ouvè.
+        Jounalis la dwe evite kestyon ki fòse
+        envite a bay yon repons espesifik.
       </p>
       <ul>
-        <li>Poze kestyon ouvè.</li>
-        <li>Evite mete repons nan kestyon an.</li>
-        <li>Pa entèwonp envite a san nesesite.</li>
-        <li>Mande presizyon lè yon repons pa klè.</li>
-        <li>Respekte envite a.</li>
+        <li>Sèvi ak kestyon ouvè.</li>
+        <li>Pa mete de kestyon nan yon sèl fraz.</li>
+        <li>Koute repons lan anvan kestyon swivi a.</li>
+        <li>Mande egzanp ak prèv.</li>
       </ul>
       <p class="practice">
-        <strong>EGZÈSIS:</strong>
-        Ekri 3 kestyon ouvè ki kòmanse ak
-        «Kijan», «Poukisa» ak «Ki sa».
+        <strong>Egzèsis:</strong>
+        Ekri 10 kestyon pou yon entèvyou
+        sou devlopman kominotè.
       </p>
     </details>
 
     <details>
       <summary>
-        <span class="course-tag">LESON 03</span>
-        <br>Ranmase temwayaj
+        <span class="course-tag">LESON 03</span><br>
+        <span data-c04="l3">Koute ak relanse entèvyou a</span>
       </summary>
-      <p>
-        Temwayaj ede piblik la konprann yon
-        evènman. Men jounalis la dwe fè
-        diferans ant sa yon moun wè ak
-        sa li tande nan bouch lòt moun.
+      <p data-c04="l3p">
+        Yon jounalis pwofesyonèl pa sèlman poze kestyon.
+        Li koute avèk atansyon, mande presizyon
+        epi respekte moun k ap pale a.
       </p>
       <ul>
-        <li>Idantifye temwen an.</li>
-        <li>Konfime kote ak dat evènman an.</li>
-        <li>Konpare temwayaj ak lòt prèv.</li>
-        <li>Respekte sekirite temwen an.</li>
-        <li>Pa modifye sans deklarasyon li.</li>
+        <li>Pa koupe envite a san nesesite.</li>
+        <li>Remake kontradiksyon yo.</li>
+        <li>Mande klarifikasyon avèk respè.</li>
+        <li>Evite jijman pèsonèl.</li>
       </ul>
       <p class="practice">
-        <strong>EGZÈSIS:</strong>
-        Prepare 5 kestyon pou yon temwen
-        ki te asiste yon evènman piblik.
+        <strong>Egzèsis:</strong>
+        Fè yon entèvyou senk minit epi
+        ekri twa kestyon swivi.
       </p>
     </details>
 
     <details>
       <summary>
-        <span class="course-tag">LESON 04</span>
-        <br>Repòtaj sou teren
+        <span class="course-tag">LESON 04</span><br>
+        <span data-c04="l4">Repòtaj sou teren</span>
       </summary>
-      <p>
-        Yon repòtè sou teren obsève,
-        verifye epi dokimante sa k ap pase.
-        Li dwe prezante enfòmasyon yo avèk
-        presizyon ak responsablite.
+      <p data-c04="l4p">
+        Repòtaj sou teren pèmèt jounalis la
+        obsève yon evènman dirèkteman,
+        rankontre temwen epi kolekte enfòmasyon.
       </p>
       <ul>
         <li>Prepare materyèl anvan deplasman.</li>
-        <li>Obsève anviwònman an.</li>
-        <li>Pran nòt sou detay enpòtan.</li>
-        <li>Ranmase son ak imaj apwopriye.</li>
-        <li>Evite mete tèt li oswa lòt moun an danje.</li>
+        <li>Verifye kote ak lè evènman an.</li>
+        <li>Pran nòt sou sa ou obsève.</li>
+        <li>Konfime deklarasyon enpòtan yo.</li>
+        <li>Respekte sekirite ak vi prive moun.</li>
       </ul>
       <p class="practice">
-        <strong>EGZÈSIS:</strong>
-        Ekri yon deskripsyon 100 mo sou
-        yon aktivite kominotè.
+        <strong>Egzèsis:</strong>
+        Prepare yon repòtaj sou yon aktivite
+        sosyal oswa kiltirèl nan kominote a.
       </p>
     </details>
 
     <details>
       <summary>
-        <span class="course-tag">LESON 05</span>
-        <br>Ekri ak prezante repòtaj
+        <span class="course-tag">LESON 05</span><br>
+        <span data-c04="l5">Mikwo, kamera ak prezantasyon</span>
       </summary>
-      <p>
-        Yon repòtaj dwe gen yon entwodiksyon
-        ki klè, enfòmasyon verifye,
+      <p data-c04="l5p">
+        Bon kalite son, bon limyè ak yon
+        prezantasyon klè ede piblik la
+        konprann enfòmasyon an.
+      </p>
+      <ul>
+        <li>Teste mikwo a anvan anrejistreman.</li>
+        <li>Evite bri ki deranje vwa a.</li>
+        <li>Kenbe kamera a estab.</li>
+        <li>Pale klè, san prese.</li>
+        <li>Verifye son ak imaj apre anrejistreman.</li>
+      </ul>
+      <p class="practice">
+        <strong>Egzèsis:</strong>
+        Anrejistre yon prezantasyon nouvèl
+        ki dire ant 60 ak 90 segonn.
+      </p>
+    </details>
+
+    <details>
+      <summary>
+        <span class="course-tag">LESON 06</span><br>
+        <span data-c04="l6">Pwodiksyon yon repòtaj final</span>
+      </summary>
+      <p data-c04="l6p">
+        Yon repòtaj final dwe gen yon
+        entwodiksyon, enfòmasyon verifye,
         temwayaj enpòtan ak yon konklizyon.
       </p>
       <ul>
-        <li>Kòmanse ak enfòmasyon prensipal la.</li>
-        <li>Eksplike kontèks evènman an.</li>
-        <li>Site sous yo avèk presizyon.</li>
-        <li>Sèvi ak langaj senp ak pwofesyonèl.</li>
-        <li>Verifye tout detay anvan difizyon.</li>
+        <li>Ekri yon tit egzak.</li>
+        <li>Prepare entwodiksyon repòtaj la.</li>
+        <li>Entegre temwayaj ki verifye.</li>
+        <li>Revize son, videyo ak tèks.</li>
+        <li>Korije erè anvan piblikasyon.</li>
       </ul>
       <p class="practice">
-        <strong>EGZÈSIS:</strong>
-        Ekri yon repòtaj 200 mo sou
-        yon evènman nan Léogâne.
-      </p>
-    </details>
-
-    <details>
-      <summary>
-        <span class="course-tag">LESON 06</span>
-        <br>Etik ak responsablite repòtè
-      </summary>
-      <p>
-        Yon jounalis dwe respekte laverite,
-        diyite moun, vi prive ak prensip
-        endepandans pwofesyonèl.
-      </p>
-      <ul>
-        <li>Pa envante deklarasyon.</li>
-        <li>Pa pibliye rimè kòm reyalite.</li>
-        <li>Bay moun ki konsène yo chans reponn.</li>
-        <li>Pwoteje enfòmasyon sansib.</li>
-        <li>Korije erè avèk transparans.</li>
-      </ul>
-      <p class="practice">
-        <strong>EGZÈSIS:</strong>
-        Prepare yon lis 6 verifikasyon
-        anvan yon repòtaj ale an dirèk.
+        <strong>Egzèsis final:</strong>
+        Pwodui yon repòtaj radyo oswa televizyon
+        ki dire 2 a 3 minit, avèk omwen
+        de sous enfòmasyon.
       </p>
     </details>
 
   </div>
 
   <div class="card quiz">
-    <h3>EGZAMEN FINAL — COURS 04</h3>
+    <h3 data-c04="exam">EGZAMEN FINAL — COURS 04</h3>
 
     <form id="course04-quiz">
 
       <fieldset>
-        <legend>
-          1. Ki premye bagay yon jounalis dwe
-          fè anvan yon entèvyou?
+        <legend data-c04="q1">
+          1. Kisa yon jounalis dwe fè anvan yon entèvyou?
         </legend>
         <label>
-          <input type="radio" name="q1" value="a" required>
-          Kòmanse san preparasyon.
+          <input type="radio" name="c04q1" value="a" required>
+          <span data-c04="q1a">Kòmanse san preparasyon.</span>
         </label>
         <label>
-          <input type="radio" name="q1" value="b">
-          Fè rechèch epi prepare kestyon.
+          <input type="radio" name="c04q1" value="b">
+          <span data-c04="q1b">Fè rechèch epi prepare kestyon.</span>
         </label>
       </fieldset>
 
       <fieldset>
-        <legend>
-          2. Ki kalite kestyon ki ankouraje
-          yon envite bay plis detay?
+        <legend data-c04="q2">
+          2. Ki kalite kestyon ki pi itil pou yon entèvyou?
         </legend>
         <label>
-          <input type="radio" name="q2" value="a" required>
-          Kestyon ouvè.
+          <input type="radio" name="c04q2" value="a" required>
+          <span data-c04="q2a">Kestyon ouvè ak net.</span>
         </label>
         <label>
-          <input type="radio" name="q2" value="b">
-          Kestyon ki deja gen repons ladan yo.
+          <input type="radio" name="c04q2" value="b">
+          <span data-c04="q2b">Kestyon ki fòse yon repons.</span>
         </label>
       </fieldset>
 
       <fieldset>
-        <legend>
-          3. Kisa yon repòtè dwe fè
-          ak yon temwayaj?
+        <legend data-c04="q3">
+          3. Kisa ki enpòtan pandan yon repòtaj sou teren?
         </legend>
         <label>
-          <input type="radio" name="q3" value="a" required>
-          Pibliye li san verifye.
+          <input type="radio" name="c04q3" value="a" required>
+          <span data-c04="q3a">Pibliye tout rimè.</span>
         </label>
         <label>
-          <input type="radio" name="q3" value="b">
-          Konpare li ak lòt sous ak prèv.
+          <input type="radio" name="c04q3" value="b">
+          <span data-c04="q3b">Obsève epi verifye enfòmasyon.</span>
         </label>
       </fieldset>
 
       <fieldset>
-        <legend>
-          4. Ki prensip ki enpòtan
-          pandan yon repòtaj sou teren?
+        <legend data-c04="q4">
+          4. Kisa jounalis la dwe fè anvan anrejistreman?
         </legend>
         <label>
-          <input type="radio" name="q4" value="a" required>
-          Obsèvasyon, presizyon ak sekirite.
+          <input type="radio" name="c04q4" value="a" required>
+          <span data-c04="q4a">Teste mikwo ak kamera.</span>
         </label>
         <label>
-          <input type="radio" name="q4" value="b">
-          Pibliye enfòmasyon ki poko konfime.
+          <input type="radio" name="c04q4" value="b">
+          <span data-c04="q4b">Pa verifye ekipman an.</span>
         </label>
       </fieldset>
 
       <fieldset>
-        <legend>
-          5. Kijan yon jounalis dwe
-          prezante yon repòtaj?
+        <legend data-c04="q5">
+          5. Kisa yon repòtaj pwofesyonèl dwe genyen?
         </legend>
         <label>
-          <input type="radio" name="q5" value="a" required>
-          Avèk rimè ak opinyon pèsonèl.
+          <input type="radio" name="c04q5" value="a" required>
+          <span data-c04="q5a">Opinyon pèsonèl sèlman.</span>
         </label>
         <label>
-          <input type="radio" name="q5" value="b">
-          Avèk enfòmasyon verifye ak klète.
+          <input type="radio" name="c04q5" value="b">
+          <span data-c04="q5b">Enfòmasyon verifye ak sous serye.</span>
         </label>
       </fieldset>
 
-      <fieldset>
-        <legend>
-          6. Kisa yon jounalis dwe fè
-          lè li dekouvri yon erè?
-        </legend>
-        <label>
-          <input type="radio" name="q6" value="a" required>
-          Korije erè a avèk transparans.
-        </label>
-        <label>
-          <input type="radio" name="q6" value="b">
-          Kache erè a.
-        </label>
-      </fieldset>
-
-      <button type="submit" class="btn">
-        VERIFYE EGZAMEN COURS 04
+      <button class="btn" type="submit" data-c04="submit">
+        KORIJE EGZAMEN AN
       </button>
 
-      <p id="course04-result"
-         class="result"
-         role="status"
-         aria-live="polite"></p>
+      <p id="course04-result" class="result" role="status"></p>
+
     </form>
   </div>
 
-  <div class="card" style="margin-top:24px">
-    <h3>TRAVAY PRATIK FINAL</h3>
-    <p>
-      Prepare yon entèvyou 5 minit avèk
-      omwen 6 kestyon ouvè.
-    </p>
-    <p>
-      Apre sa, ekri yon repòtaj 200–300 mo
-      avèk omwen 2 sous endepandan.
-    </p>
-    <p>
-      <strong>Evalyasyon:</strong>
-      Preparasyon 20 pwen,
-      kestyon 20 pwen,
-      verifikasyon 25 pwen,
-      etik 20 pwen,
-      prezantasyon 15 pwen.
-    </p>
-    <p><strong>TOTAL: 100 PWEN</strong></p>
+  <p class="course04-note" data-c04="note">
+    PRO-MAX ACADÉMIE — Aprann • Pratike • Pwogrese
+  </p>
+
+</section>
+<!-- FIN NOUVO COURS 04 -->
+
+<section id="professor">
+  <h2 data-i="profTitle">PWOFESÈ AI AYISYÈN</h2>
+  <div class="split">
+    <div class="card">
+      <h3 data-i="meet">RANKONTRE PWOFESÈ A</h3>
+      <p data-i="profD">Yon pwofesè AI fanm ayisyèn pou akonpaye elèv yo.</p>
+      <p data-i="profNote">Pou avatar la pale, ajoute videyo oswa sèvis AI.</p>
+    </div>
+    <div class="card">
+      <div class="media">
+        <video controls playsinline poster="school-of-journalism.png">
+          <source src="assets/videos/ai-professor.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </div>
 </section>
 
+<section id="registration">
+  <h2 data-i="regTitle">SANT ENSKRIPSYON</h2>
+  <div class="card">
+    <form id="reg">
+      <div class="formgrid">
+        <div>
+          <label data-i="name">Non konplè</label>
+          <input name="name" required>
+        </div>
+        <div>
+          <label data-i="email">Imèl</label>
+          <input name="email" type="email" required>
+        </div>
+        <div>
+          <label data-i="phone">Telefòn</label>
+          <input name="phone" type="tel" required>
+        </div>
+        <div>
+          <label data-i="country">Peyi</label>
+          <select name="country" required>
+            <option value="" data-i="choose">Chwazi...</option>
+            <option>Haiti</option><option>USA</option><option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label data-i="program">Pwogram</label>
+          <select name="program" required>
+            <option value="" data-i="choose">Chwazi...</option>
+            <option value="Radio" data-i="radio">Jounalis Radyo</option>
+            <option value="Television" data-i="tv">Jounalis Televizyon</option>
+            <option value="Digital" data-i="digital">Medya Dijital</option>
+          </select>
+        </div>
+        <div>
+          <label data-i="level">Nivo eksperyans</label>
+          <select name="level" required>
+            <option value="" data-i="choose">Chwazi...</option>
+            <option value="Beginner" data-i="beginner">Debitan</option>
+            <option value="Intermediate" data-i="intermediate">Entèmedyè</option>
+            <option value="Advanced" data-i="advanced">Avanse</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" type="submit" data-i="submit">PREPARE ENSKRIPSYON</button>
+      <p id="status" role="status"></p>
+      <small data-i="note">Fòm sa a prepare demann lan; li poko konekte ak yon bazdone.</small>
+    </form>
+  </div>
+</section>
+
+<section id="social">
+  <h2 data-i="social">REZO SOSYAL</h2>
+  <div class="social">
+    <a style="--c:#438aff" href="https://facebook.com/" target="_blank" rel="noopener"><span>f</span>Facebook</a>
+    <a style="--c:#25d366" href="https://wa.me/14076405166" target="_blank" rel="noopener"><span>☎</span>WhatsApp</a>
+    <a style="--c:#ff2929" href="https://www.youtube.com/@BSS1815PROMAXDMP" target="_blank" rel="noopener"><span>▶</span>YouTube</a>
+    <a style="--c:#1ed760" href="https://open.spotify.com/" target="_blank" rel="noopener"><span>≋</span>Spotify</a>
+    <a style="--c:#65e9e5" href="https://www.tiktok.com/@y_me11" target="_blank" rel="noopener"><span>♪</span>TikTok</a>
+    <a style="--c:#db62cc" href="https://www.instagram.com/lebaron072/" target="_blank" rel="noopener"><span>◎</span>Instagram</a>
+    <a style="--c:#40b6ef" href="https://t.me/bss1815dmp" target="_blank" rel="noopener"><span>➤</span>Telegram</a>
+    <a style="--c:#a878fa" href="https://truthsocial.com/" target="_blank" rel="noopener"><span>T</span>Truth Social</a>
+    <a style="--c:#2786cc" href="https://linkedin.com/" target="_blank" rel="noopener"><span>in</span>LinkedIn</a>
+    <a style="--c:#ffb367" href="https://x.com/" target="_blank" rel="noopener"><span>𝕏</span>X / Twitter</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 data-i="contactTitle">KONTAK PRO-MAX ACADÉMIE</h2>
+  <div class="contacts">
+    <a href="tel:+14076405166">🇺🇸 (407) 640-5166</a>
+    <a href="tel:+13175381150">🇺🇸 (317) 538-1150</a>
+    <a href="tel:+50942544447">🇭🇹 +509 4254-4447</a>
+    <a href="tel:+50944829869">🇭🇹 +509 4482-9869</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img class="logo" src="school-of-journalism.png" alt="Logo lekòl la">
+  <h3>PRO-MAX ACADÉMIE</h3>
+  <p>ÉCOLE DE JOURNALISME</p>
+  <p>BSS1815 PRO-MAX DMP</p>
+  <b>DEVAN DEVAN NÈT!</b>
+  <p>© <span id="year"></span></p>
+</footer>
+
 <script>
-/* COURS 04 — SCRIPT ENDEPANDAN
-   PA MODIFYE SCRIPT ORIJINAL LA */
+const t={
+ht:{
+home:"Akèy",programs:"Pwogram",courses:"Kou",
+professor:"Pwofesè AI",registration:"Enskripsyon",contact:"Kontak",
+hero:"Lekòl pwofesyonèl pou fòme jounalis radyo, televizyon ak medya dijital.",
+apply:"ENSKRI KOUNYE A",explore:"DEKOUVRI PWOGRAM YO",
+media:"RADYO • TELEVIZYON • MEDYA DIJITAL",
+video:"Espas videyo jounalis k ap prezante nouvèl.",
+welcome:"BYENVINI NAN LEKÒL JOUNALIS LA",
+about:"Aprann etik, rechèch, entèvyou, kominikasyon ak teknoloji medya.",
+training:"3 GWO DOMÈN FÒMASYON",
+radio:"Jounalis Radyo",
+radioD:"Diksyon, entèvyou, nouvèl ak emisyon an dirèk.",
+tv:"Jounalis Televizyon",
+tvD:"Prezantasyon devan kamera, repòtaj ak montaj videyo.",
+digital:"Medya Dijital",
+digitalD:"Verifikasyon enfòmasyon, podcast ak medya sosyal.",
+courseTitle:"COURS 03 — RECHÈCH AK VERIFIKASYON ENFÒMASYON",
+courseIntro:"Sis leson pratik pou jwenn sous serye, verifye prèv, evite dezenfòmasyon epi pibliye nouvèl ak responsablite.",
+quizTitle:"TI EGZAMEN — COURS 03",
+quizSubmit:"VERIFYE REPONS YO",
+profTitle:"PWOFESÈ AI AYISYÈN",
+meet:"RANKONTRE PWOFESÈ A",
+profD:"Yon pwofesè AI fanm ayisyèn pou akonpaye elèv yo.",
+profNote:"Pou avatar la pale, ajoute videyo oswa sèvis AI.",
+regTitle:"SANT ENSKRIPSYON",
+name:"Non konplè",email:"Imèl",phone:"Telefòn",
+country:"Peyi",choose:"Chwazi...",program:"Pwogram",
+level:"Nivo eksperyans",beginner:"Debitan",
+intermediate:"Entèmedyè",advanced:"Avanse",
+submit:"PREPARE ENSKRIPSYON",
+note:"Fòm sa a prepare demann lan; li poko konekte ak yon bazdone.",
+social:"REZO SOSYAL",contactTitle:"KONTAK PRO-MAX ACADÉMIE",
+ready:"Demann lan pare. Kopye tèks la."
+},
+fr:{
+home:"Accueil",programs:"Programmes",courses:"Cours",
+professor:"Professeure IA",registration:"Inscription",contact:"Contact",
+hero:"Une école professionnelle de journalisme pour la radio, la télévision et les médias numériques.",
+apply:"S'INSCRIRE",explore:"DÉCOUVRIR LES PROGRAMMES",
+media:"RADIO • TÉLÉVISION • MÉDIAS NUMÉRIQUES",
+video:"Espace réservé à la présentation du journal.",
+welcome:"BIENVENUE À L'ÉCOLE DE JOURNALISME",
+about:"Apprenez l’éthique, la recherche, les entrevues et la technologie des médias.",
+training:"3 GRANDS DOMAINES DE FORMATION",
+radio:"Journalisme radio",
+radioD:"Diction, entrevues, nouvelles et diffusion en direct.",
+tv:"Journalisme télévisé",
+tvD:"Présentation devant la caméra, reportage et montage vidéo.",
+digital:"Médias numériques",
+digitalD:"Vérification des faits, podcasts et réseaux sociaux.",
+courseTitle:"COURS 03 — RECHERCHE ET VÉRIFICATION DE L’INFORMATION",
+courseIntro:"Six leçons pratiques pour trouver des sources fiables, vérifier les preuves et publier avec responsabilité.",
+quizTitle:"MINI-EXAMEN — COURS 03",
+quizSubmit:"VÉRIFIER LES RÉPONSES",
+profTitle:"PROFESSEURE IA HAÏTIENNE",
+meet:"RENCONTREZ LA PROFESSEURE",
+profD:"Une professeure IA haïtienne pour accompagner les étudiants.",
+profNote:"Pour parler, l’avatar nécessite une vidéo ou un service IA.",
+regTitle:"CENTRE D'INSCRIPTION",
+name:"Nom complet",email:"Courriel",phone:"Téléphone",
+country:"Pays",choose:"Choisir...",program:"Programme",
+level:"Niveau d'expérience",beginner:"Débutant",
+intermediate:"Intermédiaire",advanced:"Avancé",
+submit:"PRÉPARER L'INSCRIPTION",
+note:"Ce formulaire prépare une demande; aucune base de données n’est connectée.",
+social:"RÉSEAUX SOCIAUX",contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+ready:"La demande est prête. Copiez le texte."
+},
+en:{
+home:"Home",programs:"Programs",courses:"Courses",
+professor:"AI Professor",registration:"Registration",contact:"Contact",
+hero:"A professional journalism school for radio, television and digital media.",
+apply:"REGISTER NOW",explore:"EXPLORE PROGRAMS",
+media:"RADIO • TELEVISION • DIGITAL MEDIA",
+video:"Reserved space for a news presenter video.",
+welcome:"WELCOME TO THE SCHOOL OF JOURNALISM",
+about:"Learn ethics, research, interviews, communication and media technology.",
+training:"3 MAJOR TRAINING AREAS",
+radio:"Radio Journalism",
+radioD:"Diction, interviews, news and live broadcasting.",
+tv:"Television Journalism",
+tvD:"On-camera presentation, reporting and video editing.",
+digital:"Digital Media",
+digitalD:"Fact-checking, podcasts and social media.",
+courseTitle:"COURSE 03 — RESEARCH AND FACT-CHECKING",
+courseIntro:"Six practical lessons on finding reliable sources, verifying evidence and publishing responsibly.",
+quizTitle:"SHORT QUIZ — COURSE 03",
+quizSubmit:"CHECK ANSWERS",
+profTitle:"HAITIAN AI PROFESSOR",
+meet:"MEET THE PROFESSOR",
+profD:"A Haitian female AI professor to support journalism students.",
+profNote:"A speaking avatar requires video or an AI service.",
+regTitle:"REGISTRATION CENTER",
+name:"Full Name",email:"Email",phone:"Phone",
+country:"Country",choose:"Select...",program:"Program",
+level:"Experience Level",beginner:"Beginner",
+intermediate:"Intermediate",advanced:"Advanced",
+submit:"PREPARE REGISTRATION",
+note:"This form prepares a request; no database is connected.",
+social:"SOCIAL NETWORKS",contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+ready:"Your request is ready. Copy the text."
+}
+};
 
-(function () {
-  const form = document.getElementById("course04-quiz");
-  const result = document.getElementById("course04-result");
+let lang="ht";
 
-  if (!form || !result) return;
+function setLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const key=el.dataset.i;
+    if(t[l][key])el.textContent=t[l][key];
+  });
+  document.querySelectorAll("[data-lang]").forEach(btn=>{
+    btn.classList.toggle("active",btn.dataset.lang===l);
+    btn.setAttribute("aria-pressed",String(btn.dataset.lang===l));
+  });
+  document.getElementById("status").textContent="";
+  document.getElementById("course-result").textContent="";
+}
 
-  const answers = {
-    q1: "b",
-    q2: "a",
-    q3: "b",
-    q4: "a",
-    q5: "b",
-    q6: "a"
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+  btn.addEventListener("click",()=>setLang(btn.dataset.lang));
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+document.getElementById("reg").addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!this.reportValidity())return;
+  const d=new FormData(this);
+  const lines=[
+    "PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME",
+    ...["name","email","phone","country","program","level"]
+      .map(k=>k+": "+d.get(k))
+  ].join("\n");
+  document.getElementById("status").textContent=t[lang].ready;
+  window.prompt(t[lang].ready,lines);
+});
+
+document.getElementById("course-quiz").addEventListener("submit",function(e){
+  e.preventDefault();
+  const d=new FormData(this);
+  const answers={q1:"b",q2:"a",q3:"b"};
+  let score=0;
+  Object.keys(answers).forEach(k=>{
+    if(d.get(k)===answers[k])score++;
+  });
+  const messages={
+    ht:`Rezilta ou: ${score}/3. ${score===3?"Bravo! Ou metrize prensip verifikasyon yo.":"Revize leson yo epi eseye ankò."}`,
+    fr:`Résultat : ${score}/3. ${score===3?"Bravo ! Vous maîtrisez les bases de la vérification.":"Relisez les leçons et réessayez."}`,
+    en:`Your score: ${score}/3. ${score===3?"Great work! You understand verification basics.":"Review the lessons and try again."}`
+  };
+  document.getElementById("course-result").textContent=messages[lang];
+});
+
+/* NOUVO COURS 04 — JAVASCRIPT AJOUTE SÈLMAN */
+
+const course04Translations={
+  ht:{
+    title:"COURS 04 — TEKNIK ENTÈVYOU AK REPÒTAJ",
+    intro:"Aprann prepare entèvyou pwofesyonèl, poze bon kestyon, fè repòtaj sou teren, itilize mikwo ak kamera, epi prezante enfòmasyon avèk presizyon ak etik.",
+    l1:"Preparasyon yon entèvyou",
+    l1p:"Anvan yon entèvyou, jounalis la dwe konnen sijè a, fè rechèch sou moun li pral rankontre a epi prepare objektif konvèsasyon an.",
+    l2:"Teknik pou poze kestyon",
+    l2p:"Yon bon kestyon dwe senp, net epi ouvè. Jounalis la dwe evite kestyon ki fòse envite a bay yon repons espesifik.",
+    l3:"Koute ak relanse entèvyou a",
+    l3p:"Yon jounalis pwofesyonèl pa sèlman poze kestyon. Li koute avèk atansyon, mande presizyon epi respekte moun k ap pale a.",
+    l4:"Repòtaj sou teren",
+    l4p:"Repòtaj sou teren pèmèt jounalis la obsève yon evènman dirèkteman, rankontre temwen epi kolekte enfòmasyon.",
+    l5:"Mikwo, kamera ak prezantasyon",
+    l5p:"Bon kalite son, bon limyè ak yon prezantasyon klè ede piblik la konprann enfòmasyon an.",
+    l6:"Pwodiksyon yon repòtaj final",
+    l6p:"Yon repòtaj final dwe gen yon entwodiksyon, enfòmasyon verifye, temwayaj enpòtan ak yon konklizyon.",
+    exam:"EGZAMEN FINAL — COURS 04",
+    q1:"1. Kisa yon jounalis dwe fè anvan yon entèvyou?",
+    q1a:"Kòmanse san preparasyon.",
+    q1b:"Fè rechèch epi prepare kestyon.",
+    q2:"2. Ki kalite kestyon ki pi itil pou yon entèvyou?",
+    q2a:"Kestyon ouvè ak net.",
+    q2b:"Kestyon ki fòse yon repons.",
+    q3:"3. Kisa ki enpòtan pandan yon repòtaj sou teren?",
+    q3a:"Pibliye tout rimè.",
+    q3b:"Obsève epi verifye enfòmasyon.",
+    q4:"4. Kisa jounalis la dwe fè anvan anrejistreman?",
+    q4a:"Teste mikwo ak kamera.",
+    q4b:"Pa verifye ekipman an.",
+    q5:"5. Kisa yon repòtaj pwofesyonèl dwe genyen?",
+    q5a:"Opinyon pèsonèl sèlman.",
+    q5b:"Enfòmasyon verifye ak sous serye.",
+    submit:"KORIJE EGZAMEN AN",
+    note:"PRO-MAX ACADÉMIE — Aprann • Pratike • Pwogrese"
+  },
+  fr:{
+    title:"COURS 04 — TECHNIQUES D’ENTREVUE ET DE REPORTAGE",
+    intro:"Apprenez à préparer des entrevues professionnelles, à poser les bonnes questions, à réaliser des reportages sur le terrain et à utiliser le microphone et la caméra.",
+    l1:"Préparer une entrevue",
+    l1p:"Avant une entrevue, le journaliste doit connaître son sujet, faire des recherches sur son invité et définir les objectifs de la conversation.",
+    l2:"Techniques de questionnement",
+    l2p:"Une bonne question doit être simple, neutre et ouverte. Le journaliste évite les questions qui orientent les réponses.",
+    l3:"Écoute et questions de suivi",
+    l3p:"Le journaliste écoute attentivement, demande des précisions et respecte son interlocuteur.",
+    l4:"Reportage sur le terrain",
+    l4p:"Le reportage permet d’observer directement les événements, de rencontrer les témoins et de recueillir des informations.",
+    l5:"Microphone, caméra et présentation",
+    l5p:"Un son de qualité, un bon éclairage et une présentation claire facilitent la compréhension du public.",
+    l6:"Production d’un reportage final",
+    l6p:"Un reportage final doit comprendre une introduction, des informations vérifiées, des témoignages pertinents et une conclusion.",
+    exam:"EXAMEN FINAL — COURS 04",
+    q1:"1. Que doit faire un journaliste avant une entrevue?",
+    q1a:"Commencer sans préparation.",
+    q1b:"Faire des recherches et préparer les questions.",
+    q2:"2. Quel type de question convient à une entrevue?",
+    q2a:"Des questions ouvertes et neutres.",
+    q2b:"Des questions qui imposent une réponse.",
+    q3:"3. Que faut-il faire pendant un reportage?",
+    q3a:"Publier toutes les rumeurs.",
+    q3b:"Observer et vérifier les informations.",
+    q4:"4. Que faut-il faire avant l’enregistrement?",
+    q4a:"Tester le microphone et la caméra.",
+    q4b:"Ne pas vérifier le matériel.",
+    q5:"5. Que doit contenir un reportage professionnel?",
+    q5a:"Uniquement des opinions personnelles.",
+    q5b:"Des informations vérifiées et des sources fiables.",
+    submit:"CORRIGER L’EXAMEN",
+    note:"PRO-MAX ACADÉMIE — Apprendre • Pratiquer • Progresser"
+  },
+  en:{
+    title:"COURSE 04 — INTERVIEW AND REPORTING TECHNIQUES",
+    intro:"Learn how to prepare professional interviews, ask effective questions, report from the field, use microphones and cameras, and present information accurately and ethically.",
+    l1:"Preparing an interview",
+    l1p:"Before an interview, a journalist must understand the subject, research the guest, and define the purpose of the conversation.",
+    l2:"Questioning techniques",
+    l2p:"A good question is simple, neutral and open-ended. Journalists should avoid leading questions.",
+    l3:"Active listening and follow-up",
+    l3p:"A professional journalist listens carefully, asks for clarification and respects the interviewee.",
+    l4:"Field reporting",
+    l4p:"Field reporting allows journalists to observe events directly, interview witnesses and gather information.",
+    l5:"Microphones, cameras and presentation",
+    l5p:"Clear sound, proper lighting and effective presentation help audiences understand the news.",
+    l6:"Producing a final report",
+    l6p:"A complete report should include an introduction, verified facts, relevant testimony and a conclusion.",
+    exam:"FINAL EXAM — COURSE 04",
+    q1:"1. What should a journalist do before an interview?",
+    q1a:"Begin without preparation.",
+    q1b:"Research and prepare questions.",
+    q2:"2. What type of questions work best in interviews?",
+    q2a:"Open-ended and neutral questions.",
+    q2b:"Questions that force an answer.",
+    q3:"3. What matters during field reporting?",
+    q3a:"Publishing every rumor.",
+    q3b:"Observing and verifying information.",
+    q4:"4. What should a journalist do before recording?",
+    q4a:"Test the microphone and camera.",
+    q4b:"Skip equipment checks.",
+    q5:"5. What should a professional report contain?",
+    q5a:"Only personal opinions.",
+    q5b:"Verified information and reliable sources.",
+    submit:"GRADE EXAM",
+    note:"PRO-MAX ACADÉMIE — Learn • Practice • Progress"
+  }
+};
+
+function setCourse04Language(l){
+  const translations=course04Translations[l]||course04Translations.ht;
+  document.querySelectorAll("#course04 [data-c04]").forEach(el=>{
+    const key=el.dataset.c04;
+    if(Object.prototype.hasOwnProperty.call(translations,key)){
+      el.textContent=translations[key];
+    }
+  });
+  document.getElementById("course04-result").textContent="";
+}
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    setCourse04Language(btn.dataset.lang);
+  });
+});
+
+document.getElementById("course04-quiz").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  if(!this.reportValidity())return;
+
+  const answers={
+    c04q1:"b",
+    c04q2:"a",
+    c04q3:"b",
+    c04q4:"a",
+    c04q5:"b"
   };
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  const formData=new FormData(this);
+  let score=0;
 
-    if (!form.reportValidity()) return;
-
-    const data = new FormData(form);
-    let score = 0;
-
-    Object.keys(answers).forEach(function (question) {
-      if (data.get(question) === answers[question]) {
-        score++;
-      }
-    });
-
-    const language = document.documentElement.lang;
-
-    const messages = {
-      ht: "Rezilta ou: " + score + "/6. " +
-        (score === 6
-          ? "BRAVO! Ou reyisi egzamen COURS 04 la."
-          : "Revize leson yo epi eseye ankò."),
-
-      fr: "Résultat : " + score + "/6. " +
-        (score === 6
-          ? "BRAVO ! Vous avez réussi l'examen du COURS 04."
-          : "Révisez les leçons et réessayez."),
-
-      en: "Your score: " + score + "/6. " +
-        (score === 6
-          ? "CONGRATULATIONS! You passed the COURSE 04 quiz."
-          : "Review the lessons and try again.")
-    };
-
-    result.textContent = messages[language] || messages.ht;
+  Object.entries(answers).forEach(([question,answer])=>{
+    if(formData.get(question)===answer){
+      score++;
+    }
   });
-})();
-</script>
 
-<!-- FIN AJOUT COURS 04 -->
+  const messages={
+    ht:`Rezilta: ${score}/5. ${score===5?"Bravo! Ou reyisi egzamen an.":"Revize leson yo epi eseye ankò."}`,
+    fr:`Résultat : ${score}/5. ${score===5?"Bravo ! Vous avez réussi l’examen.":"Révisez les leçons et réessayez."}`,
+    en:`Score: ${score}/5. ${score===5?"Congratulations! You passed the exam.":"Review the lessons and try again."}`
+  };
+
+  document.getElementById("course04-result").textContent=messages[lang];
+});
+
+setLang("ht");
+setCourse04Language("ht");
+</script>
+</body>
+</html>
