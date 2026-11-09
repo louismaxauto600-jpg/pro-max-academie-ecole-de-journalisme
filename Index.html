@@ -4,815 +4,640 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="PRO-MAX Académie, École de Journalisme LÉOGÂNE INFO. Formation professionnelle en recherche, vérification et rédaction journalistique.">
-<title>ÉCOLE DE JOURNALISME | PRO-MAX ACADÉMIE</title>
-
+<title>PRO-MAX ACADÉMIE | ÉCOLE DE JOURNALISME</title>
 <style>
 :root{
-  --orange:#ff8c24;
-  --apricot:#ffbd78;
-  --dark:#090909;
-  --panel:#18110c;
-  --line:#75401c;
-  --text:#ffd3a3;
-  --muted:#d9a579;
+ --orange:#ff922d;
+ --apricot:#ffd09a;
+ --black:#080808;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
-  margin:0;
-  background:linear-gradient(145deg,#000,#1b1008 55%,#000);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.7;
+ margin:0;
+ font:16px/1.65 Arial,sans-serif;
+ color:var(--apricot);
+ background:linear-gradient(140deg,#000,#211005 55%,#000) fixed;
 }
-button,input,textarea{font:inherit}
-button{cursor:pointer}
-a{color:var(--apricot)}
-header{
-  padding:24px 16px;
-  text-align:center;
-  background:linear-gradient(120deg,#000,#3a1c09,#000);
-  border-bottom:3px solid var(--orange);
+header,footer{
+ text-align:center;
+ padding:28px 16px;
+ background:linear-gradient(110deg,#000,#321805,#000);
+ border-bottom:3px solid var(--orange);
 }
-.brand{
-  font-size:clamp(25px,5vw,43px);
-  font-weight:900;
-  color:var(--orange);
-  letter-spacing:1px;
+footer{
+ border-top:2px solid var(--orange);
+ border-bottom:0;
 }
-.subtitle{
-  font-size:clamp(19px,3vw,27px);
-  font-weight:bold;
+h1,h2,h3{
+ color:var(--orange);
+ line-height:1.3;
 }
-.media{
-  color:var(--apricot);
-  font-weight:bold;
-  letter-spacing:2px;
-}
-.motto{font-style:italic}
-.languages{
-  display:flex;
-  justify-content:center;
-  gap:9px;
-  margin-top:16px;
-}
-.languages button{
-  border:1px solid var(--orange);
-  border-radius:8px;
-  background:#160c05;
-  color:var(--apricot);
-  padding:9px 17px;
-  font-weight:bold;
-}
-.languages button.active{
-  background:var(--orange);
-  color:#000;
+h1{
+ font-size:clamp(25px,5vw,44px);
+ margin:0;
 }
 main{
-  width:min(1150px,95%);
-  margin:25px auto;
+ max-width:1100px;
+ margin:auto;
+ padding:20px;
 }
-.hero,.panel{
-  background:linear-gradient(140deg,#241407,#080808);
-  border:1px solid var(--line);
-  border-radius:15px;
-  padding:24px;
-  margin-bottom:20px;
+section,.card{
+ border:1px solid #844517;
+ background:linear-gradient(130deg,#241307,#0a0908);
+ border-radius:15px;
+ padding:22px;
+ margin-bottom:18px;
 }
-.hero{text-align:center}
-.hero h1{color:var(--orange);line-height:1.25}
-h2,h3{color:var(--orange);line-height:1.35}
-h4{color:var(--apricot)}
-.lesson-nav{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:12px;
 }
-.lesson-btn{
-  padding:16px;
-  background:#160d07;
-  color:var(--apricot);
-  border:1px solid var(--line);
-  border-radius:10px;
-  text-align:left;
-  font-weight:bold;
+button{
+ background:#201106;
+ color:var(--apricot);
+ border:1px solid var(--orange);
+ padding:12px 15px;
+ border-radius:9px;
+ cursor:pointer;
+ font-weight:bold;
 }
-.lesson-btn:hover,.lesson-btn.active{
-  background:var(--orange);
-  color:#000;
+button:hover,button.active,.primary{
+ background:var(--orange);
+ color:#000;
+}
+button:focus-visible,textarea:focus-visible{
+ outline:3px solid var(--apricot);
+}
+button:disabled{
+ opacity:.45;
+ cursor:not-allowed;
 }
 .lesson{display:none}
 .lesson.active{display:block}
 .topic{
-  border-left:4px solid var(--orange);
-  padding:12px 18px;
-  margin:15px 0;
-  background:#140d08;
-  border-radius:6px;
+ border-left:4px solid var(--orange);
+ background:#160d08;
+ padding:12px 18px;
+ margin:14px 0;
 }
-.example{
-  background:#261507;
-  border:1px solid var(--line);
-  border-radius:10px;
-  padding:15px;
-  margin:16px 0;
-}
-ul,ol{padding-left:25px}
-li{margin-bottom:9px}
 .quiz{
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  margin-top:20px;
+ padding:16px;
+ border:1px solid #844517;
+ border-radius:12px;
+ margin-top:18px;
 }
-.question{margin:20px 0}
-.question label{
-  display:block;
-  margin:8px 0;
-  cursor:pointer;
-}
-input[type=radio]{accent-color:var(--orange)}
 textarea{
-  display:block;
-  width:100%;
-  min-height:110px;
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:8px;
-  background:#100b07;
-  color:var(--text);
-  resize:vertical;
+ width:100%;
+ min-height:110px;
+ background:#100b08;
+ color:var(--apricot);
+ border:1px solid #844517;
+ padding:12px;
+ border-radius:8px;
 }
-.action{
-  background:var(--orange);
-  color:#000;
-  border:0;
-  border-radius:9px;
-  padding:12px 19px;
-  font-weight:bold;
-  margin:8px 5px 8px 0;
+label{
+ display:block;
+ margin:8px 0;
 }
-.action.secondary{
-  background:#211309;
-  color:var(--apricot);
-  border:1px solid var(--orange);
-}
+input{accent-color:var(--orange)}
 .result{
-  margin-top:12px;
-  padding:12px;
-  border-radius:8px;
-  background:#271708;
+ padding:12px;
+ background:#261608;
+ border-radius:8px;
+ margin-top:12px;
 }
-table{
-  border-collapse:collapse;
-  width:100%;
+.bar{
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+ justify-content:center;
+ margin-top:16px;
 }
-th,td{
-  border:1px solid var(--line);
-  padding:10px;
-  text-align:left;
+.small{
+ font-size:13px;
+ color:#d9a777;
 }
-th{color:var(--orange)}
-.footer-nav{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:20px;
+.hidden{display:none!important}
+@media print{
+ body{background:#000}
+ .lesson{display:block!important}
+ button,.bar,#nav{display:none!important}
+ section{break-inside:avoid}
 }
-footer{
-  text-align:center;
-  border-top:2px solid var(--orange);
-  padding:28px 15px;
-  color:var(--apricot);
-  background:#000;
-}
-.small{font-size:13px;color:var(--muted)}
 @media(max-width:600px){
-  .hero,.panel{padding:16px}
-  .footer-nav{flex-direction:column}
-  .footer-nav button{width:100%}
+ section{padding:15px}
 }
 </style>
 </head>
-
 <body>
+
 <header>
-  <div class="brand">PRO-MAX ACADÉMIE</div>
-  <div class="subtitle" data-i18n="school">
-    ÉCOLE DE JOURNALISME
-  </div>
-  <div class="media">LÉOGÂNE INFO</div>
-  <p class="motto">DEVAN DEVAN NÈT</p>
-  <div class="languages" aria-label="Language">
-    <button data-lang="fr" class="active">FR</button>
-    <button data-lang="en">ENG</button>
-    <button data-lang="ht">KRE</button>
-  </div>
+<h1>PRO-MAX ACADÉMIE</h1>
+<h2 id="school">ÉCOLE DE JOURNALISME</h2>
+<strong>LÉOGÂNE INFO</strong>
+<p>DEVAN DEVAN NÈT</p>
+<div class="bar">
+<button data-lang="fr" class="active">FR</button>
+<button data-lang="en">ENG</button>
+<button data-lang="ht">KRE</button>
+</div>
 </header>
 
 <main>
-<section class="hero">
-  <h1 data-i18n="course">
-    COURS 03 — RECHERCHE ET VÉRIFICATION DE L'INFORMATION
-  </h1>
-  <p data-i18n="intro">
-    Six leçons pour apprendre à rechercher, vérifier,
-    interviewer et rédiger une information fiable.
-  </p>
-  <p class="small" data-i18n="instruction">
-    Sélectionnez une leçon pour commencer.
-  </p>
-</section>
-
-<nav class="panel" aria-label="Navigation des leçons">
-  <h2 data-i18n="contents">PROGRAMME DES LEÇONS</h2>
-  <div class="lesson-nav" id="lessonNav"></div>
-</nav>
-
-<section class="panel lesson active" id="lesson1">
-<h2>LEÇON 01 — LES SOURCES D'INFORMATION</h2>
-<p><strong>Objectif :</strong> Identifier et évaluer les sources utilisées dans la production d'une information journalistique.</p>
-
-<h3>1. Définition d'une source</h3>
-<p>Une source journalistique est une personne, un document, une observation ou une donnée qui fournit des éléments permettant de comprendre ou de vérifier un événement.</p>
-
-<h3>2. Les principales sources</h3>
-<div class="topic">
-<h4>Source primaire</h4>
-<p>Information obtenue directement : témoin, document original, observation sur le terrain ou entretien avec une personne concernée.</p>
-</div>
-<div class="topic">
-<h4>Source secondaire</h4>
-<p>Information présentée ou analysée par une autre publication, un rapport ou un spécialiste.</p>
-</div>
-<div class="topic">
-<h4>Source anonyme</h4>
-<p>Personne dont l'identité n'est pas rendue publique. Le journaliste doit évaluer sa crédibilité, vérifier ses affirmations et protéger son identité lorsque la confidentialité a été promise.</p>
-</div>
-
-<h3>3. Évaluer la fiabilité</h3>
-<ul>
-<li>Identifier l'origine de l'information.</li>
-<li>Vérifier la compétence et l'accès direct de la source.</li>
-<li>Examiner les preuves disponibles.</li>
-<li>Rechercher des confirmations indépendantes.</li>
-<li>Identifier les intérêts ou conflits possibles.</li>
-</ul>
-
-<div class="example">
-<strong>Exemple LÉOGÂNE INFO :</strong>
-Un résident signale qu'un pont est endommagé.
-Le journaliste peut consulter des observations de terrain,
-des photographies datées et les services responsables.
-</div>
-
-<div class="quiz">
-<h3>Exercice pratique</h3>
-<p>Une personne affirme qu'un bâtiment public sera fermé demain. Quelles sources consulteriez-vous avant de publier cette annonce ?</p>
-<textarea id="exercise1" placeholder="Votre réponse..."></textarea>
-<button class="action" onclick="saveExercise(1)">Enregistrer la réponse</button>
-<p id="saved1" class="small"></p>
-</div>
-</section>
-
-<section class="panel lesson" id="lesson2">
-<h2>LEÇON 02 — LA VÉRIFICATION DES FAITS</h2>
-<p><strong>Objectif :</strong> Appliquer une méthode de vérification avant publication.</p>
-
-<h3>1. La méthode 5W + 1H</h3>
-<table>
-<tr><th>Question</th><th>Signification</th></tr>
-<tr><td>Who?</td><td>Qui est concerné ?</td></tr>
-<tr><td>What?</td><td>Que s'est-il passé ?</td></tr>
-<tr><td>Where?</td><td>Où ?</td></tr>
-<tr><td>When?</td><td>Quand ?</td></tr>
-<tr><td>Why?</td><td>Pourquoi ?</td></tr>
-<tr><td>How?</td><td>Comment ?</td></tr>
-</table>
-
-<h3>2. Procédure de vérification</h3>
-<ol>
-<li>Formuler précisément l'affirmation à vérifier.</li>
-<li>Retrouver la source originale.</li>
-<li>Contrôler les dates, les lieux et les personnes.</li>
-<li>Consulter les documents disponibles.</li>
-<li>Comparer les sources indépendantes.</li>
-<li>Signaler clairement les éléments non confirmés.</li>
-</ol>
-
-<h3>3. Les images et vidéos</h3>
-<p>Une image authentique peut être utilisée dans un contexte trompeur. Vérifiez son origine, sa date, son lieu et les versions antérieures disponibles.</p>
-
-<div class="example">
-<strong>Cas pratique :</strong>
-Une vidéo présentée comme tournée aujourd'hui à Léogâne circule sur les réseaux sociaux. Avant de la publier, le journaliste recherche les premières publications et les indices permettant de vérifier le lieu et la date.
-</div>
-
-<div class="quiz">
-<h3>Exercice pratique</h3>
-<p>Expliquez comment vérifier une vidéo dont la date et le lieu sont inconnus.</p>
-<textarea id="exercise2" placeholder="Votre réponse..."></textarea>
-<button class="action" onclick="saveExercise(2)">Enregistrer la réponse</button>
-<p id="saved2" class="small"></p>
-</div>
-</section>
-
-<section class="panel lesson" id="lesson3">
-<h2>LEÇON 03 — LES FAUSSES INFORMATIONS</h2>
-<p><strong>Objectif :</strong> Reconnaître les différentes formes de manipulation de l'information.</p>
-
-<h3>1. La mésinformation</h3>
-<p>Une information fausse ou trompeuse diffusée sans intention de tromper.</p>
-<div class="example">Exemple : partager une ancienne photographie d'inondation en pensant qu'elle date du jour même.</div>
-
-<h3>2. La désinformation</h3>
-<p>Une information fausse ou trompeuse créée ou diffusée délibérément pour induire le public en erreur.</p>
-<div class="example">Exemple : fabriquer un faux communiqué attribué à une institution.</div>
-
-<h3>3. La malinformation</h3>
-<p>Une information fondée sur des éléments réels, mais utilisée de manière trompeuse ou dans l'intention de nuire.</p>
-<div class="example">Exemple : divulguer des informations privées authentiques pour intimider un témoin.</div>
-
-<h3>4. Prévenir la désinformation</h3>
-<ul>
-<li>Ne pas confondre popularité et fiabilité.</li>
-<li>Identifier l'auteur et l'origine.</li>
-<li>Contrôler les documents et les citations.</li>
-<li>Rechercher des preuves indépendantes.</li>
-<li>Corriger rapidement les erreurs publiées.</li>
-</ul>
-
-<div class="quiz">
-<h3>Exercice pratique</h3>
-<p>Un message affirme que toutes les écoles de Léogâne fermeront demain. Aucune confirmation officielle n'est disponible. Que doit faire la rédaction ?</p>
-<textarea id="exercise3" placeholder="Votre réponse..."></textarea>
-<button class="action" onclick="saveExercise(3)">Enregistrer la réponse</button>
-<p id="saved3" class="small"></p>
-</div>
-</section>
-
-<section class="panel lesson" id="lesson4">
-<h2>LEÇON 04 — LES TECHNIQUES DE RECHERCHE JOURNALISTIQUE</h2>
-<p><strong>Objectif :</strong> Organiser une recherche documentaire et humaine rigoureuse.</p>
-
-<h3>1. Définir le sujet</h3>
-<p>Identifier le problème, son importance pour le public et les questions auxquelles le reportage devra répondre.</p>
-
-<h3>2. Collecter les documents</h3>
-<p>Consulter les archives, les rapports, les données publiques, les communiqués et les documents originaux.</p>
-
-<h3>3. Interroger les sources</h3>
-<p>Rencontrer les personnes concernées, les témoins et les spécialistes. Poser des questions précises et documenter les réponses.</p>
-
-<h3>4. Recouper les informations</h3>
-<p>Comparer les déclarations et les preuves. Une répétition de la même rumeur par plusieurs personnes ne constitue pas nécessairement une confirmation indépendante.</p>
-
-<h3>5. Préparer le dossier</h3>
-<p>Classer les notes, documents, dates, citations et informations vérifiées. Séparer les faits établis des hypothèses.</p>
-
-<h3>Outils utiles</h3>
-<ul>
-<li>Moteurs de recherche et archives numériques.</li>
-<li>Registres et documents publics.</li>
-<li>Recherche inversée d'images.</li>
-<li>Enregistreur audio et carnet de notes.</li>
-<li>Tableau de suivi des sources et vérifications.</li>
-</ul>
-
-<div class="example">
-<strong>Scénario fictif :</strong>
-Des habitants de Signo signalent qu'une route devient impraticable après la pluie. Le journaliste doit observer la situation, recueillir des témoignages, vérifier les dates et solliciter les services compétents.
-</div>
-
-<div class="quiz">
-<h3>Exercice pratique</h3>
-<p>Identifiez trois sources, deux preuves à rechercher et une question à poser aux autorités.</p>
-<textarea id="exercise4" placeholder="Votre réponse..."></textarea>
-<button class="action" onclick="saveExercise(4)">Enregistrer la réponse</button>
-<p id="saved4" class="small"></p>
-</div>
-</section>
-
-<section class="panel lesson" id="lesson5">
-<h2>LEÇON 05 — LES TECHNIQUES D'INTERVIEW JOURNALISTIQUE</h2>
-<p><strong>Objectif :</strong> Préparer et conduire un entretien journalistique professionnel.</p>
-
-<h3>1. Les types d'interviews</h3>
-<ul>
-<li><strong>Informative :</strong> recueillir des faits.</li>
-<li><strong>D'investigation :</strong> examiner une situation en profondeur.</li>
-<li><strong>De personnalité :</strong> présenter un parcours.</li>
-<li><strong>D'expert :</strong> obtenir une analyse spécialisée.</li>
-<li><strong>De témoignage :</strong> recueillir une expérience vécue.</li>
-</ul>
-
-<h3>2. Les sept règles</h3>
-<ol>
-<li>Préparer le sujet et connaître l'invité.</li>
-<li>Rester objectif et éviter les questions orientées.</li>
-<li>Poser des questions claires.</li>
-<li>Écouter attentivement les réponses.</li>
-<li>Demander des précisions.</li>
-<li>Respecter la personne interrogée.</li>
-<li>Vérifier les déclarations importantes.</li>
-</ol>
-
-<h3>3. Exemple d'interview</h3>
-<div class="example">
-<p><strong>Journaliste :</strong> Quelles difficultés rencontrent les habitants concernant l'état des routes ?</p>
-<p><strong>Invité :</strong> Plusieurs routes nécessitent des réparations.</p>
-<p><strong>Journaliste :</strong> Pouvez-vous identifier les zones concernées et préciser les éléments qui confirment cette situation ?</p>
-<p><strong>Invité :</strong> Nous avons reçu plusieurs signalements.</p>
-<p><strong>Journaliste :</strong> Ces signalements ont-ils été vérifiés sur le terrain ?</p>
-<p class="small">Dialogue fictif utilisé uniquement pour la formation.</p>
-</div>
-
-<h3>4. Les erreurs à éviter</h3>
-<ul>
-<li>Interrompre inutilement l'invité.</li>
-<li>Présenter une accusation non prouvée comme un fait.</li>
-<li>Modifier le sens d'une déclaration au montage.</li>
-<li>Ignorer les réponses contradictoires.</li>
-<li>Rompre une promesse de confidentialité.</li>
-</ul>
-
-<div class="quiz">
-<h3>Exercice pratique</h3>
-<p>Rédigez cinq questions ouvertes pour interviewer un responsable communal sur les infrastructures.</p>
-<textarea id="exercise5" placeholder="Vos cinq questions..."></textarea>
-<button class="action" onclick="saveExercise(5)">Enregistrer la réponse</button>
-<p id="saved5" class="small"></p>
-</div>
-</section>
-
-<section class="panel lesson" id="lesson6">
-<h2>LEÇON 06 — LA RÉDACTION D'UN ARTICLE JOURNALISTIQUE</h2>
-<p><strong>Objectif :</strong> Rédiger un article clair, précis, structuré et vérifiable.</p>
-
-<h3>1. Le titre</h3>
-<p>Il annonce le sujet principal sans exagération ni affirmation non établie.</p>
-
-<h3>2. Le chapô</h3>
-<p>Ce court paragraphe présente les informations essentielles : qui, quoi, où et quand, selon les éléments disponibles.</p>
-
-<h3>3. La pyramide inversée</h3>
-<div class="topic">
-<strong>Premier niveau :</strong> les faits essentiels.
-</div>
-<div class="topic">
-<strong>Deuxième niveau :</strong> les détails, les déclarations et les preuves.
-</div>
-<div class="topic">
-<strong>Troisième niveau :</strong> le contexte et les informations complémentaires.
-</div>
-
-<h3>4. Les citations</h3>
-<p>Les citations directes doivent reproduire fidèlement les propos. Les paraphrases doivent conserver le sens des déclarations.</p>
-
-<h3>5. La vérification avant publication</h3>
-<ul>
-<li>Contrôler les noms et les fonctions.</li>
-<li>Vérifier les dates, chiffres et lieux.</li>
-<li>Attribuer les déclarations à leurs sources.</li>
-<li>Rechercher la réponse des personnes mises en cause.</li>
-<li>Éviter les formulations trompeuses.</li>
-<li>Corriger les erreurs de langue et de contenu.</li>
-</ul>
-
-<h3>6. Exemple d'article pédagogique</h3>
-<div class="example">
-<h4>Des habitants signalent des difficultés de circulation sur une route locale</h4>
-<p><strong>Chapô :</strong> Dans cet exercice fictif situé à Léogâne, plusieurs résidents déclarent rencontrer des difficultés de circulation après de fortes pluies.</p>
-<p>Selon les témoignages imaginaires utilisés dans cet exercice, l'accumulation d'eau rendrait certains déplacements difficiles.</p>
-<p>La rédaction devrait effectuer une observation sur le terrain, consulter des éléments vérifiables et solliciter les autorités concernées avant toute publication réelle.</p>
-<p class="small">Cet article est entièrement fictif et ne constitue pas une information d'actualité.</p>
-</div>
-
-<div class="quiz">
-<h3>Atelier de rédaction</h3>
-<p>Rédigez un titre, un chapô et deux paragraphes sur un événement fictif, en distinguant les faits vérifiés des informations non confirmées.</p>
-<textarea id="exercise6" placeholder="Rédigez votre article ici..."></textarea>
-<button class="action" onclick="saveExercise(6)">Enregistrer l'article</button>
-<p id="saved6" class="small"></p>
-</div>
-</section>
-
-<section class="panel" id="finalExam">
-<h2>EXAMEN FINAL — COURS 03</h2>
-<p>Répondez aux six questions. Chaque bonne réponse vaut un point.</p>
-<form id="examForm">
-<div id="examQuestions"></div>
-<button type="submit" class="action">
-  CORRIGER MON EXAMEN
-</button>
-<button type="button" class="action secondary" onclick="resetExam()">
-  RECOMMENCER
-</button>
-</form>
-<div id="examResult" class="result" hidden aria-live="polite"></div>
-</section>
-
-<section class="panel">
-<h2 data-i18n="progress">SUIVI DE FORMATION</h2>
-<p id="progressText"></p>
-<button class="action secondary" onclick="printPage()">
-  IMPRIMER / ENREGISTRER EN PDF
-</button>
-<p class="small" data-i18n="notice">
-  Les réponses sont conservées uniquement dans ce navigateur lorsque le stockage local est disponible. Aucun compte étudiant ni certificat officiel n'est créé par cette page.
+<section>
+<h2 id="courseTitle">
+COURS 03 — RECHERCHE ET VÉRIFICATION DE L'INFORMATION
+</h2>
+<p id="intro">
+Six leçons complètes, avec exercices, navigation et examen final.
+</p>
+<p class="small" id="langNote">
+Les cours sont rédigés en français. Le sélecteur change la navigation et les consignes principales.
 </p>
 </section>
 
-<div class="footer-nav">
-<button class="action secondary" onclick="changeLesson(-1)">
-  ◀ LEÇON PRÉCÉDENTE
+<section id="nav">
+<h2 id="programTitle">PROGRAMME DES LEÇONS</h2>
+<div class="grid" id="navButtons"></div>
+</section>
+
+<div id="lessons"></div>
+
+<section>
+<h2 id="examTitle">EXAMEN FINAL — COURS 03</h2>
+<p>Six questions, un point par réponse correcte.</p>
+<form id="examForm">
+<div id="examQuestions"></div>
+<button class="primary" type="submit">
+CORRIGER MON EXAMEN
 </button>
-<button class="action" onclick="changeLesson(1)">
-  LEÇON SUIVANTE ▶
+<button type="reset">RECOMMENCER</button>
+</form>
+<div class="result hidden" id="examResult" aria-live="polite"></div>
+</section>
+
+<section>
+<h2 id="progressTitle">SUIVI DE FORMATION</h2>
+<p id="progress"></p>
+<button id="printBtn">
+IMPRIMER / ENREGISTRER EN PDF
 </button>
+<p class="small">
+Les réponses restent sur cet appareil si le stockage du navigateur est disponible. Aucun compte ni certificat officiel n'est généré.
+</p>
+</section>
+
+<div class="bar">
+<button id="prev">◀ LEÇON PRÉCÉDENTE</button>
+<button id="next" class="primary">LEÇON SUIVANTE ▶</button>
 </div>
 </main>
 
 <footer>
-<strong>PRO-MAX ACADÉMIE</strong>
-<p>ÉCOLE DE JOURNALISME — LÉOGÂNE INFO</p>
+<strong>PRO-MAX ACADÉMIE — LÉOGÂNE INFO</strong>
 <p>DEVAN DEVAN NÈT</p>
 <p>Bati pou Jodi a, Pare pou Demen.</p>
-<p>© 2026 BSS1815 PRO-MAX DMP</p>
+<small>© 2026 BSS1815 PRO-MAX DMP</small>
 </footer>
 
 <script>
 "use strict";
 
-const lessons = [
- "LES SOURCES D'INFORMATION",
- "LA VÉRIFICATION DES FAITS",
- "LES FAUSSES INFORMATIONS",
- "LA RECHERCHE JOURNALISTIQUE",
- "LES TECHNIQUES D'INTERVIEW",
- "LA RÉDACTION JOURNALISTIQUE"
+const data = [
+{
+ title:"LES SOURCES D'INFORMATION",
+ objective:"Identifier et évaluer les sources journalistiques.",
+ blocks:[
+  ["Définition",
+   "Une source journalistique est une personne, un document, une observation ou une donnée apportant des éléments à vérifier."],
+  ["Sources primaires",
+   "Un témoin direct, une observation sur le terrain ou un document original constituent des sources primaires. Même une source primaire peut se tromper."],
+  ["Sources secondaires",
+   "Un article, un rapport de synthèse ou une analyse qui reprend des sources initiales constitue une source secondaire. Il faut retrouver les documents originaux lorsque c'est possible."],
+  ["Sources anonymes",
+   "L'identité d'une source peut être protégée pour des raisons légitimes. Le journaliste doit connaître ses motivations, vérifier ses affirmations et respecter les engagements de confidentialité."],
+  ["Évaluer la fiabilité",
+   "Identifier l'origine; vérifier la proximité avec les faits; rechercher des preuves; distinguer témoignage et interprétation; comparer des sources indépendantes."],
+  ["Exemple pédagogique",
+   "Un habitant affirme qu'un pont est endommagé à Léogâne. La rédaction cherche des images datées, une observation directe et une réponse des services responsables avant de conclure."]
+ ],
+ exercise:"Quelles sources consulteriez-vous pour vérifier l'annonce de fermeture d'un bâtiment public ?"
+},
+{
+ title:"LA VÉRIFICATION DES FAITS",
+ objective:"Appliquer une méthode de vérification avant publication.",
+ blocks:[
+  ["Les six questions",
+   "Qui ? Quoi ? Où ? Quand ? Pourquoi ? Comment ? Ces questions, appelées 5W + 1H, structurent la collecte d'informations."],
+  ["Identifier l'affirmation",
+   "Formuler exactement ce qui doit être vérifié. Séparer les faits observables, les opinions et les hypothèses."],
+  ["Retrouver l'origine",
+   "Chercher la déclaration, la vidéo ou le document original plutôt qu'une copie partagée sans contexte."],
+  ["Recouper",
+   "Comparer les dates, les lieux, les chiffres et les témoignages. Plusieurs comptes répétant une seule rumeur ne constituent pas plusieurs confirmations."],
+  ["Vérifier les images",
+   "Rechercher les publications antérieures, observer les indices visuels et vérifier si une image authentique est utilisée hors contexte."],
+  ["Informer avec précision",
+   "Si une information reste incertaine, le dire explicitement. Ne jamais transformer une affirmation non confirmée en fait établi."]
+ ],
+ exercise:"Expliquez les étapes permettant de vérifier une vidéo dont le lieu et la date sont inconnus."
+},
+{
+ title:"LES FAUSSES INFORMATIONS",
+ objective:"Reconnaître les formes de manipulation et éviter leur diffusion.",
+ blocks:[
+  ["Mésinformation",
+   "Une information fausse ou trompeuse partagée sans intention de tromper, par exemple une ancienne photo présentée par erreur comme récente."],
+  ["Désinformation",
+   "Une information fausse ou trompeuse fabriquée ou diffusée volontairement pour induire le public en erreur, par exemple un faux communiqué."],
+  ["Malinformation",
+   "Une information réelle utilisée hors contexte ou pour causer un préjudice, comme la divulgation de données privées pour intimider un témoin."],
+  ["Signaux d'alerte",
+   "Titre sensationnaliste, absence de source identifiable, date manquante, image recadrée, document impossible à retrouver ou pression pour partager immédiatement."],
+  ["Réponse professionnelle",
+   "Suspendre la publication, retrouver la source, comparer des preuves indépendantes, contacter les institutions concernées et corriger publiquement toute erreur."],
+  ["Exemple pédagogique",
+   "Une publication annonce la fermeture de toutes les écoles de Léogâne sans preuve. La rédaction contacte les autorités éducatives et ne présente pas cette affirmation comme confirmée."]
+ ],
+ exercise:"Comment traiter une rumeur non confirmée sur la fermeture des écoles ?"
+},
+{
+ title:"LES TECHNIQUES DE RECHERCHE JOURNALISTIQUE",
+ objective:"Constituer un dossier de recherche vérifiable et organisé.",
+ blocks:[
+  ["Définir l'angle",
+   "Choisir une question d'intérêt public précise : quel problème, quelles personnes concernées et quelles informations manquent ?"],
+  ["Collecter les documents",
+   "Consulter archives, rapports publics, statistiques, documents originaux et communiqués; noter les liens, auteurs et dates."],
+  ["Interroger les sources",
+   "Rencontrer les témoins, experts et responsables. Poser des questions ouvertes, consigner les réponses et préciser les conditions d'enregistrement."],
+  ["Recouper les éléments",
+   "Comparer documents et déclarations; signaler les contradictions; demander une réponse aux personnes ou institutions mises en cause."],
+  ["Organiser le dossier",
+   "Conserver chronologie, notes, citations exactes, copies des documents et tableau des points confirmés ou incertains."],
+  ["Scénario fictif",
+   "Des habitants de Signo signalent une route impraticable après la pluie. Le journaliste effectue une visite, vérifie les dates, recueille des témoignages et contacte les services compétents."]
+ ],
+ exercise:"Citez trois sources, deux preuves et une question à poser aux autorités sur l'état d'une route."
+},
+{
+ title:"LES TECHNIQUES D'INTERVIEW",
+ objective:"Préparer, conduire et exploiter un entretien professionnel.",
+ blocks:[
+  ["Types d'interviews",
+   "Informative : établir les faits. Investigation : examiner une situation. Portrait : raconter un parcours. Expertise : expliquer un domaine. Témoignage : recueillir une expérience vécue."],
+  ["Préparation",
+   "Définir l'objectif, rechercher le parcours de l'invité, préparer les thèmes et vérifier les faits déjà connus."],
+  ["Questions ouvertes",
+   "Préférer « Comment expliquez-vous cette situation ? » à une question qui impose déjà une réponse. Poser une question à la fois."],
+  ["Écoute et relance",
+   "Laisser répondre, demander des dates, des chiffres et des exemples; reformuler sans déformer les propos."],
+  ["Respect et responsabilité",
+   "Éviter l'intimidation, respecter la confidentialité promise, ne pas manipuler le sens des citations au montage et vérifier les accusations."],
+  ["Dialogue fictif",
+   "Journaliste : « Quelles routes sont concernées ? » Invité : « Plusieurs secteurs. » Journaliste : « Pouvez-vous préciser lesquels et indiquer comment cela a été constaté ? »"]
+ ],
+ exercise:"Rédigez cinq questions ouvertes à poser à un responsable communal sur les infrastructures."
+},
+{
+ title:"LA RÉDACTION D'UN ARTICLE JOURNALISTIQUE",
+ objective:"Produire un article clair, précis et vérifiable.",
+ blocks:[
+  ["Le titre",
+   "Résumer le fait principal sans exagérer ni annoncer comme certain ce qui n'est pas vérifié."],
+  ["Le chapô",
+   "Présenter brièvement les éléments essentiels : qui, quoi, où et quand, selon les informations disponibles."],
+  ["La pyramide inversée",
+   "Placer les faits essentiels en premier, puis les détails, les citations, les preuves et enfin le contexte complémentaire."],
+  ["Citations et attribution",
+   "Reproduire fidèlement les citations directes; attribuer les informations à leurs sources; distinguer les faits de l'analyse."],
+  ["Révision avant publication",
+   "Contrôler noms, fonctions, dates, lieux, chiffres, accusations, orthographe et droit de réponse des personnes mises en cause."],
+  ["Exemple fictif d'article",
+   "Titre : « Des résidents signalent des difficultés de circulation après la pluie ». Chapô : « Dans cet exercice fictif situé à Léogâne, plusieurs habitants disent rencontrer des difficultés de déplacement. » Corps : « Ces déclarations doivent être vérifiées sur le terrain et auprès des services concernés avant toute publication réelle. »"]
+ ],
+ exercise:"Rédigez un titre, un chapô et deux paragraphes pour un événement fictif, en distinguant les faits confirmés des affirmations à vérifier."
+}
+];
+
+const questions = [
+ ["Quelle est une source primaire ?",
+  ["Une publicité","Un témoin direct","Une rumeur"],1],
+ ["Que signifie « Where » ?",
+  ["Quand","Pourquoi","Où"],2],
+ ["La désinformation est-elle intentionnelle ?",
+  ["Oui","Non","Toujours accidentelle"],0],
+ ["Pourquoi recouper les sources ?",
+  ["Pour vérifier les faits","Pour rallonger le texte","Pour éviter les preuves"],0],
+ ["Quelle pratique convient à une interview ?",
+  ["Modifier les réponses","Écouter et demander des précisions","Imposer une opinion"],1],
+ ["Que place-t-on en premier dans la pyramide inversée ?",
+  ["Les détails secondaires","Une opinion personnelle","Les faits essentiels"],2]
 ];
 
 const translations = {
  fr:{
   school:"ÉCOLE DE JOURNALISME",
-  course:"COURS 03 — RECHERCHE ET VÉRIFICATION DE L'INFORMATION",
-  intro:"Six leçons pour apprendre à rechercher, vérifier, interviewer et rédiger une information fiable.",
-  instruction:"Sélectionnez une leçon pour commencer.",
-  contents:"PROGRAMME DES LEÇONS",
+  course:"COURS 03 — RECHERCHE ET VÉRIFICATION DE L’INFORMATION",
+  intro:"Six leçons complètes, avec exercices, navigation et examen final.",
+  program:"PROGRAMME DES LEÇONS",
   progress:"SUIVI DE FORMATION",
-  notice:"Les réponses sont conservées uniquement dans ce navigateur lorsque le stockage local est disponible. Aucun compte étudiant ni certificat officiel n'est créé par cette page."
+  exam:"EXAMEN FINAL — COURS 03",
+  previous:"◀ LEÇON PRÉCÉDENTE",
+  next:"LEÇON SUIVANTE ▶",
+  note:"Les cours sont rédigés en français. Le sélecteur change la navigation et les consignes principales."
  },
  en:{
   school:"SCHOOL OF JOURNALISM",
-  course:"COURSE 03 — NEWS RESEARCH AND FACT-CHECKING",
-  intro:"Six lessons on researching, verifying, interviewing and writing reliable news.",
-  instruction:"Select a lesson to begin.",
-  contents:"LESSON PROGRAM",
-  progress:"TRAINING PROGRESS",
-  notice:"Answers are stored only in this browser when local storage is available. This page does not create student accounts or official certificates."
+  course:"COURSE 03 — RESEARCH AND FACT-CHECKING",
+  intro:"Six complete lessons with exercises, navigation and a final exam.",
+  program:"LESSON PROGRAM",
+  progress:"LEARNING PROGRESS",
+  exam:"FINAL EXAM — COURSE 03",
+  previous:"◀ PREVIOUS LESSON",
+  next:"NEXT LESSON ▶",
+  note:"Lesson content is in French. This switch translates the main navigation and instructions."
  },
  ht:{
   school:"LEKÒL JOUNALIS",
   course:"KOU 03 — RECHÈCH AK VERIFIKASYON ENFÒMASYON",
-  intro:"Sis leson pou aprann fè rechèch, verifye nouvèl, fè entèvyou epi ekri enfòmasyon serye.",
-  instruction:"Chwazi yon leson pou kòmanse.",
-  contents:"PWOGRAM LESON YO",
-  progress:"SWIV PWOGRÈ FÒMASYON AN",
-  notice:"Repons yo rete sèlman nan navigatè sa a lè depo lokal disponib. Paj sa a pa kreye kont elèv ni sètifika ofisyèl."
+  intro:"Sis leson konplè ak egzèsis, navigasyon ak egzamen final.",
+  program:"PWOGRAM LESON YO",
+  progress:"PWOGRÈ FÒMASYON AN",
+  exam:"EGZAMEN FINAL — KOU 03",
+  previous:"◀ LESON ANVAN AN",
+  next:"PWOCHEN LESON ▶",
+  note:"Kontni leson yo an fransè. Bouton lang yo tradui navigasyon ak prensipal enstriksyon yo."
  }
 };
 
-const exam = [
- {
-  q:"Quelle est une source primaire ?",
-  a:["Une rumeur","Un témoin direct","Une publicité"],
-  correct:1
- },
- {
-  q:"Que signifie le W de Where ?",
-  a:["Pourquoi","Quand","Où"],
-  correct:2
- },
- {
-  q:"Qu'est-ce que la désinformation ?",
-  a:["Une manipulation délibérée","Une correction","Une interview"],
-  correct:0
- },
- {
-  q:"Pourquoi recouper les sources ?",
-  a:["Pour allonger l'article","Pour vérifier les affirmations","Pour éviter les interviews"],
-  correct:1
- },
- {
-  q:"Quelle attitude convient à une interview ?",
-  a:["Écouter et relancer","Modifier les réponses","Imposer son opinion"],
-  correct:0
- },
- {
-  q:"Quel élément apparaît généralement au début d'un article en pyramide inversée ?",
-  a:["Les détails secondaires","Les faits essentiels","La conclusion personnelle"],
-  correct:1
- }
-];
+const safeGet = key => {
+ try { return localStorage.getItem(key); }
+ catch(e) { return null; }
+};
 
-let currentLesson = 1;
-let currentLanguage = "fr";
-const completed = new Set();
+const safeSet = (key,value) => {
+ try { localStorage.setItem(key,value); }
+ catch(e) {}
+};
 
-function storageGet(key){
- try{return localStorage.getItem(key)}
- catch(e){return null}
-}
-function storageSet(key,value){
- try{localStorage.setItem(key,value)}
- catch(e){}
-}
+let current=1;
+let language="fr";
+const completed=new Set();
+const root=document.getElementById("lessons");
 
-function escapeHTML(value){
- return String(value).replace(/[&<>"']/g,function(c){
-  return {
-   "&":"&amp;",
-   "<":"&lt;",
-   ">":"&gt;",
-   '"':"&quot;",
-   "'":"&#39;"
-  }[c];
+data.forEach((lesson,index)=>{
+ const number=index+1;
+ const section=document.createElement("section");
+ section.className="lesson";
+ section.id="lesson"+number;
+
+ const heading=document.createElement("h2");
+ heading.textContent=
+  "LEÇON "+String(number).padStart(2,"0")+
+  " — "+lesson.title;
+ section.append(heading);
+
+ const objective=document.createElement("p");
+ const strong=document.createElement("strong");
+ strong.textContent="Objectif : ";
+ objective.append(
+  strong,
+  document.createTextNode(lesson.objective)
+ );
+ section.append(objective);
+
+ lesson.blocks.forEach(([headingText,paragraph],i)=>{
+  const div=document.createElement("div");
+  div.className="topic";
+
+  const title=document.createElement("h3");
+  title.textContent=(i+1)+". "+headingText;
+
+  const text=document.createElement("p");
+  text.textContent=paragraph;
+
+  div.append(title,text);
+  section.append(div);
  });
-}
 
-function renderNavigation(){
- const nav=document.getElementById("lessonNav");
- nav.innerHTML="";
- lessons.forEach((name,index)=>{
-  const n=index+1;
-  const btn=document.createElement("button");
-  btn.type="button";
-  btn.className="lesson-btn";
-  btn.textContent="LEÇON "+String(n).padStart(2,"0")+" — "+name;
-  btn.addEventListener("click",()=>showLesson(n));
-  nav.appendChild(btn);
+ const quiz=document.createElement("div");
+ quiz.className="quiz";
+
+ const quizTitle=document.createElement("h3");
+ quizTitle.textContent="EXERCICE PRATIQUE";
+
+ const prompt=document.createElement("p");
+ prompt.textContent=lesson.exercise;
+
+ const area=document.createElement("textarea");
+ area.id="exercise"+number;
+ area.setAttribute(
+  "aria-label",
+  "Réponse à l’exercice "+number
+ );
+ area.placeholder="Rédigez votre réponse ici...";
+ area.value=safeGet("pmj_answer_"+number)||"";
+
+ if(area.value.trim())completed.add(number);
+
+ const button=document.createElement("button");
+ button.className="primary";
+ button.textContent="ENREGISTRER LA RÉPONSE";
+
+ const feedback=document.createElement("p");
+ feedback.setAttribute("aria-live","polite");
+
+ button.addEventListener("click",()=>{
+  if(!area.value.trim()){
+   feedback.textContent="Veuillez écrire une réponse.";
+   return;
+  }
+  safeSet("pmj_answer_"+number,area.value);
+  completed.add(number);
+  feedback.textContent=
+   "Réponse enregistrée sur cet appareil.";
+  updateProgress();
  });
-}
 
-function showLesson(number,scroll=true){
+ quiz.append(quizTitle,prompt,area,button,feedback);
+ section.append(quiz);
+ root.append(section);
+
+ const navButton=document.createElement("button");
+ navButton.textContent=
+  "LEÇON "+String(number).padStart(2,"0")+
+  " — "+lesson.title;
+
+ navButton.addEventListener("click",()=>show(number));
+ document.getElementById("navButtons").append(navButton);
+});
+
+function show(number,scroll=true){
  if(number<1||number>6)return;
- currentLesson=number;
- document.querySelectorAll(".lesson").forEach(el=>{
-  el.classList.toggle("active",el.id==="lesson"+number);
+ current=number;
+
+ document.querySelectorAll(".lesson").forEach((el,i)=>{
+  el.classList.toggle("active",i===number-1);
  });
- document.querySelectorAll(".lesson-btn").forEach((btn,i)=>{
-  const active=i+1===number;
-  btn.classList.toggle("active",active);
-  btn.setAttribute("aria-current",active?"step":"false");
+
+ document.querySelectorAll("#navButtons button")
+ .forEach((el,i)=>{
+  el.classList.toggle("active",i===number-1);
+  el.setAttribute(
+   "aria-current",
+   i===number-1?"step":"false"
+  );
  });
- storageSet("journalism_current_lesson",String(number));
+
+ safeSet("pmj_current",String(number));
+
+ document.getElementById("prev").disabled=number===1;
+ document.getElementById("next").disabled=number===6;
+
  if(scroll){
   document.getElementById("lesson"+number)
-   .scrollIntoView({behavior:"smooth",block:"start"});
+   .scrollIntoView({behavior:"smooth"});
  }
-}
-
-function changeLesson(direction){
- showLesson(currentLesson+direction);
-}
-
-function saveExercise(number){
- const field=document.getElementById("exercise"+number);
- const message=document.getElementById("saved"+number);
- const value=field.value.trim();
- if(!value){
-  message.textContent="Veuillez rédiger une réponse.";
-  return;
- }
- storageSet("journalism_exercise_"+number,value);
- completed.add(number);
- storageSet("journalism_completed",JSON.stringify([...completed]));
- message.textContent="Réponse enregistrée dans ce navigateur.";
- updateProgress();
-}
-
-function restoreExercises(){
- for(let n=1;n<=6;n++){
-  const saved=storageGet("journalism_exercise_"+n);
-  if(saved){
-   document.getElementById("exercise"+n).value=saved;
-   completed.add(n);
-  }
- }
- updateProgress();
 }
 
 function updateProgress(){
- const count=completed.size;
- document.getElementById("progressText").textContent=
-  count+" / 6 exercices enregistrés.";
+ document.getElementById("progress").textContent=
+  completed.size+
+  " / 6 exercices enregistrés sur cet appareil.";
 }
 
-function renderExam(){
- const container=document.getElementById("examQuestions");
- container.innerHTML="";
- exam.forEach((item,i)=>{
-  const group=document.createElement("fieldset");
-  group.className="question";
-  group.style.border="0";
-  group.style.padding="0";
-  const legend=document.createElement("legend");
-  legend.textContent=(i+1)+". "+item.q;
-  legend.style.fontWeight="bold";
-  group.appendChild(legend);
-  item.a.forEach((answer,j)=>{
-   const label=document.createElement("label");
-   const radio=document.createElement("input");
-   radio.type="radio";
-   radio.name="q"+i;
-   radio.value=String(j);
-   label.appendChild(radio);
-   label.appendChild(document.createTextNode(" "+answer));
-   group.appendChild(label);
-  });
-  container.appendChild(group);
- });
-}
+const examContainer=document.getElementById("examQuestions");
 
-document.getElementById("examForm").addEventListener("submit",function(event){
- event.preventDefault();
- let score=0;
- let answered=0;
- const details=[];
- exam.forEach((item,i)=>{
-  const selected=document.querySelector('input[name="q'+i+'"]:checked');
-  if(selected){
-   answered++;
-   if(Number(selected.value)===item.correct)score++;
-  }
-  details.push(
-   "Question "+(i+1)+": "+item.a[item.correct]
+questions.forEach(([question,options],i)=>{
+ const field=document.createElement("fieldset");
+ field.className="quiz";
+
+ const legend=document.createElement("legend");
+ legend.textContent=(i+1)+". "+question;
+ field.append(legend);
+
+ options.forEach((option,j)=>{
+  const label=document.createElement("label");
+  const radio=document.createElement("input");
+
+  radio.type="radio";
+  radio.name="q"+i;
+  radio.value=j;
+
+  label.append(
+   radio,
+   document.createTextNode(" "+option)
   );
+  field.append(label);
  });
- const result=document.getElementById("examResult");
- result.hidden=false;
- if(answered!==exam.length){
-  result.textContent="Veuillez répondre aux six questions avant de soumettre.";
-  return;
- }
- result.innerHTML=
-  "<h3>Résultat : "+score+" / 6</h3>"+
-  "<p>"+(score>=5?"Examen réussi.":"Révisez les leçons et réessayez.")+"</p>"+
-  "<p>"+details.map(escapeHTML).join("<br>")+"</p>";
- storageSet("journalism_exam_score",String(score));
- result.scrollIntoView({behavior:"smooth",block:"center"});
+
+ examContainer.append(field);
 });
 
-function resetExam(){
- document.getElementById("examForm").reset();
+document.getElementById("examForm")
+.addEventListener("submit",event=>{
+ event.preventDefault();
+
+ let score=0;
+ let answered=0;
+ const corrections=[];
+
+ questions.forEach(([question,options,right],i)=>{
+  const checked=document.querySelector(
+   'input[name="q'+i+'"]:checked'
+  );
+
+  if(checked){
+   answered++;
+   if(Number(checked.value)===right)score++;
+  }
+
+  corrections.push((i+1)+". "+options[right]);
+ });
+
  const result=document.getElementById("examResult");
- result.hidden=true;
- result.textContent="";
-}
+ result.classList.remove("hidden");
+
+ if(answered<6){
+  result.textContent=
+   "Répondez aux six questions avant de soumettre.";
+  return;
+ }
+
+ result.textContent=
+  "Résultat : "+score+"/6. "+
+  (score>=5
+   ?"Examen réussi."
+   :"Révisez les leçons et réessayez.")+
+  " Réponses correctes : "+corrections.join(" | ");
+
+ safeSet("pmj_exam_score",String(score));
+});
+
+document.getElementById("examForm")
+.addEventListener("reset",()=>{
+ document.getElementById("examResult")
+  .classList.add("hidden");
+});
 
 function setLanguage(lang){
  if(!translations[lang])return;
- currentLanguage=lang;
+ language=lang;
  document.documentElement.lang=lang;
- document.querySelectorAll("[data-i18n]").forEach(el=>{
-  const key=el.dataset.i18n;
-  if(translations[lang][key]){
-   el.textContent=translations[lang][key];
-  }
+
+ const words=translations[lang];
+
+ [
+  ["school","school"],
+  ["courseTitle","course"],
+  ["intro","intro"],
+  ["programTitle","program"],
+  ["progressTitle","progress"],
+  ["examTitle","exam"],
+  ["langNote","note"],
+  ["prev","previous"],
+  ["next","next"]
+ ].forEach(([id,key])=>{
+  document.getElementById(id).textContent=words[key];
  });
- document.querySelectorAll("[data-lang]").forEach(btn=>{
-  const active=btn.dataset.lang===lang;
-  btn.classList.toggle("active",active);
-  btn.setAttribute("aria-pressed",String(active));
+
+ document.querySelectorAll("[data-lang]").forEach(button=>{
+  button.classList.toggle(
+   "active",
+   button.dataset.lang===lang
+  );
  });
- storageSet("journalism_language",lang);
+
+ safeSet("pmj_language",lang);
 }
 
-function printPage(){
- const lessonsEls=document.querySelectorAll(".lesson");
- const old=currentLesson;
- lessonsEls.forEach(el=>el.classList.add("active"));
- window.print();
- showLesson(old,false);
-}
-
-document.querySelectorAll("[data-lang]").forEach(btn=>{
- btn.addEventListener("click",()=>setLanguage(btn.dataset.lang));
+document.querySelectorAll("[data-lang]").forEach(button=>{
+ button.addEventListener("click",()=>{
+  setLanguage(button.dataset.lang);
+ });
 });
 
-renderNavigation();
-renderExam();
-restoreExercises();
+document.getElementById("prev")
+.addEventListener("click",()=>show(current-1));
 
-const savedLanguage=storageGet("journalism_language");
-setLanguage(translations[savedLanguage]?savedLanguage:"fr");
+document.getElementById("next")
+.addEventListener("click",()=>show(current+1));
 
-const savedLesson=Number(storageGet("journalism_current_lesson"));
-showLesson(savedLesson>=1&&savedLesson<=6?savedLesson:1,false);
+document.getElementById("printBtn")
+.addEventListener("click",()=>window.print());
+
+updateProgress();
+setLanguage(safeGet("pmj_language")||"fr");
+
+show(
+ Math.min(
+  6,
+  Math.max(1,Number(safeGet("pmj_current"))||1)
+ ),
+ false
+);
 </script>
 </body>
 </html>
