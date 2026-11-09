@@ -1,643 +1,551 @@
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ht">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PRO-MAX ACADÉMIE | ÉCOLE DE JOURNALISME</title>
 <style>
 :root{
- --orange:#ff922d;
- --apricot:#ffd09a;
- --black:#080808;
+  --orange:#ff7900;
+  --apricot:#ffb66b;
+  --black:#090301;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
- margin:0;
- font:16px/1.65 Arial,sans-serif;
- color:var(--apricot);
- background:linear-gradient(140deg,#000,#211005 55%,#000) fixed;
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--apricot);
+  background:radial-gradient(circle at 15% 10%,#76230b,#190803 40%,#090301 85%);
 }
-header,footer{
- text-align:center;
- padding:28px 16px;
- background:linear-gradient(110deg,#000,#321805,#000);
- border-bottom:3px solid var(--orange);
+header{
+  position:sticky;top:0;z-index:10;
+  background:#090301f2;
+  border-bottom:2px solid var(--orange);
+  padding:12px 4%;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  gap:14px;flex-wrap:wrap;
 }
-footer{
- border-top:2px solid var(--orange);
- border-bottom:0;
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--orange)}
+.logo{
+  width:65px;height:65px;object-fit:contain;
+  border-radius:50%;border:2px solid var(--orange);
+  background:#170600;
 }
-h1,h2,h3{
- color:var(--orange);
- line-height:1.3;
+nav{display:flex;gap:14px;flex-wrap:wrap}
+a{color:var(--apricot)}
+nav a{text-decoration:none;font-weight:bold;font-size:13px}
+nav a:hover{color:var(--orange)}
+.langs{display:flex;gap:5px}
+.langs button{
+  border:1px solid var(--orange);background:#150600;
+  color:var(--apricot);padding:9px 12px;
+  border-radius:8px;font-weight:bold;cursor:pointer;
 }
-h1{
- font-size:clamp(25px,5vw,44px);
- margin:0;
+.langs button.active,.btn{background:var(--orange);color:var(--black)}
+section{padding:52px max(5%,18px);border-bottom:1px solid #75300d}
+h1,h2,h3{color:var(--orange)}
+h1{font-size:clamp(36px,6vw,68px);margin:12px 0}
+h2{text-align:center}
+.hero,.split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px}
+.card{
+  border:1px solid #b85417;border-radius:18px;padding:22px;
+  background:linear-gradient(135deg,#381305,#100502);
 }
-main{
- max-width:1100px;
- margin:auto;
- padding:20px;
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.btn{
+  display:inline-block;border:0;border-radius:9px;
+  padding:13px 19px;text-decoration:none;
+  font-weight:bold;margin:7px;cursor:pointer;
 }
-section,.card{
- border:1px solid #844517;
- background:linear-gradient(130deg,#241307,#0a0908);
- border-radius:15px;
- padding:22px;
- margin-bottom:18px;
+.media{
+  border:2px solid var(--orange);border-radius:14px;
+  background:#100501;min-height:210px;
+  display:grid;place-items:center;overflow:hidden;
 }
-.grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
- gap:12px;
+.media video{max-width:100%;width:100%;max-height:310px;object-fit:contain}
+label{display:block;font-weight:bold;margin-top:12px}
+input,select{
+  display:block;width:100%;padding:12px;
+  background:#120601;color:var(--apricot);
+  border:1px solid var(--orange);border-radius:8px;margin-top:5px;
 }
-button{
- background:#201106;
- color:var(--apricot);
- border:1px solid var(--orange);
- padding:12px 15px;
- border-radius:9px;
- cursor:pointer;
- font-weight:bold;
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.social{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.social a{
+  border:2px solid var(--c);color:var(--c);
+  text-decoration:none;text-align:center;
+  padding:12px 4px;border-radius:10px;font-weight:bold;
 }
-button:hover,button.active,.primary{
- background:var(--orange);
- color:#000;
+.social span{display:block;font-size:25px}
+.contacts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.contacts a{
+  border:1px solid var(--orange);border-radius:10px;
+  text-align:center;text-decoration:none;padding:15px;
 }
-button:focus-visible,textarea:focus-visible{
- outline:3px solid var(--apricot);
+footer{text-align:center;background:#090301;padding:36px}
+footer .logo{width:90px;height:90px}
+
+/* LESON YO AJOUTE SAN RETIRE SEKSYON ORIJINAL YO */
+#courses .intro{max-width:850px;margin:0 auto 22px;text-align:center}
+.lesson-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.lesson-grid details{
+  border:1px solid #c65a16;border-radius:14px;
+  background:linear-gradient(135deg,#361205,#130602);
+  padding:16px;
 }
-button:disabled{
- opacity:.45;
- cursor:not-allowed;
+.lesson-grid summary{cursor:pointer;color:var(--orange);font-weight:900;font-size:18px}
+.lesson-grid details[open]{box-shadow:0 0 0 1px var(--orange)}
+.lesson-grid p,.lesson-grid li{line-height:1.6}
+.course-tag{font-size:12px;letter-spacing:1px;color:var(--apricot)}
+.practice{border-left:3px solid var(--orange);padding:10px;background:#1b0903}
+.quiz{margin-top:25px}
+.quiz fieldset{border:1px solid #b85417;border-radius:12px;margin:12px 0;padding:14px}
+.quiz legend{color:var(--orange);font-weight:bold}
+.quiz label{display:flex;align-items:center;gap:10px;font-weight:normal}
+.quiz input{width:auto;margin:0;accent-color:var(--orange)}
+.result{color:var(--orange);font-weight:bold}
+@media(max-width:850px){
+  .hero,.split,.grid,.lesson-grid{grid-template-columns:1fr}
+  .social,.contacts{grid-template-columns:repeat(2,1fr)}
 }
-.lesson{display:none}
-.lesson.active{display:block}
-.topic{
- border-left:4px solid var(--orange);
- background:#160d08;
- padding:12px 18px;
- margin:14px 0;
-}
-.quiz{
- padding:16px;
- border:1px solid #844517;
- border-radius:12px;
- margin-top:18px;
-}
-textarea{
- width:100%;
- min-height:110px;
- background:#100b08;
- color:var(--apricot);
- border:1px solid #844517;
- padding:12px;
- border-radius:8px;
-}
-label{
- display:block;
- margin:8px 0;
-}
-input{accent-color:var(--orange)}
-.result{
- padding:12px;
- background:#261608;
- border-radius:8px;
- margin-top:12px;
-}
-.bar{
- display:flex;
- flex-wrap:wrap;
- gap:10px;
- justify-content:center;
- margin-top:16px;
-}
-.small{
- font-size:13px;
- color:#d9a777;
-}
-.hidden{display:none!important}
-@media print{
- body{background:#000}
- .lesson{display:block!important}
- button,.bar,#nav{display:none!important}
- section{break-inside:avoid}
-}
-@media(max-width:600px){
- section{padding:15px}
+@media(max-width:480px){
+  .formgrid,.contacts{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <header>
-<h1>PRO-MAX ACADÉMIE</h1>
-<h2 id="school">ÉCOLE DE JOURNALISME</h2>
-<strong>LÉOGÂNE INFO</strong>
-<p>DEVAN DEVAN NÈT</p>
-<div class="bar">
-<button data-lang="fr" class="active">FR</button>
-<button data-lang="en">ENG</button>
-<button data-lang="ht">KRE</button>
-</div>
+  <div class="brand">
+    <img class="logo" src="school-of-journalism.png" alt="Logo École de Journalisme">
+    <div>PRO-MAX ACADÉMIE<br><small>ÉCOLE DE JOURNALISME</small></div>
+  </div>
+  <nav>
+    <a href="#home" data-i="home">Akèy</a>
+    <a href="#programs" data-i="programs">Pwogram</a>
+    <a href="#courses" data-i="courses">Kou</a>
+    <a href="#professor" data-i="professor">Pwofesè AI</a>
+    <a href="#registration" data-i="registration">Enskripsyon</a>
+    <a href="#contact" data-i="contact">Kontak</a>
+  </nav>
+  <div class="langs">
+    <button type="button" data-lang="ht" class="active">KRE</button>
+    <button type="button" data-lang="fr">FRA</button>
+    <button type="button" data-lang="en">ENG</button>
+  </div>
 </header>
 
 <main>
-<section>
-<h2 id="courseTitle">
-COURS 03 — RECHERCHE ET VÉRIFICATION DE L'INFORMATION
-</h2>
-<p id="intro">
-Six leçons complètes, avec exercices, navigation et examen final.
-</p>
-<p class="small" id="langNote">
-Les cours sont rédigés en français. Le sélecteur change la navigation et les consignes principales.
-</p>
+<section id="home" class="hero">
+  <div>
+    <b>BSS1815 PRO-MAX DMP</b>
+    <h1>PRO-MAX ACADÉMIE</h1>
+    <h3>ÉCOLE DE JOURNALISME</h3>
+    <p data-i="hero">Lekòl pwofesyonèl pou fòme jounalis radyo, televizyon ak medya dijital.</p>
+    <a href="#registration" class="btn" data-i="apply">ENSKRI KOUNYE A</a>
+    <a href="#programs" class="btn" data-i="explore">DEKOUVRI PWOGRAM YO</a>
+  </div>
+  <div class="card" style="text-align:center">
+    <img class="logo" style="width:100px;height:100px" src="school-of-journalism.png" alt="Logo lekòl la">
+    <h3 data-i="media">RADYO • TELEVIZYON • MEDYA DIJITAL</h3>
+    <div class="media">
+      <video controls playsinline poster="school-of-journalism.png">
+        <source src="assets/videos/journalist-news.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p data-i="video">Espas videyo jounalis k ap prezante nouvèl.</p>
+  </div>
 </section>
 
-<section id="nav">
-<h2 id="programTitle">PROGRAMME DES LEÇONS</h2>
-<div class="grid" id="navButtons"></div>
+<section id="about">
+  <h2 data-i="welcome">BYENVINI NAN LEKÒL JOUNALIS LA</h2>
+  <p style="text-align:center" data-i="about">
+    Aprann etik, rechèch, entèvyou, kominikasyon ak teknoloji medya.
+  </p>
 </section>
 
-<div id="lessons"></div>
-
-<section>
-<h2 id="examTitle">EXAMEN FINAL — COURS 03</h2>
-<p>Six questions, un point par réponse correcte.</p>
-<form id="examForm">
-<div id="examQuestions"></div>
-<button class="primary" type="submit">
-CORRIGER MON EXAMEN
-</button>
-<button type="reset">RECOMMENCER</button>
-</form>
-<div class="result hidden" id="examResult" aria-live="polite"></div>
+<section id="programs">
+  <h2 data-i="training">3 GWO DOMÈN FÒMASYON</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 data-i="radio">Jounalis Radyo</h3>
+      <p data-i="radioD">Diksyon, entèvyou, nouvèl ak emisyon an dirèk.</p>
+    </div>
+    <div class="card">
+      <h3 data-i="tv">Jounalis Televizyon</h3>
+      <p data-i="tvD">Prezantasyon devan kamera, repòtaj ak montaj videyo.</p>
+    </div>
+    <div class="card">
+      <h3 data-i="digital">Medya Dijital</h3>
+      <p data-i="digitalD">Verifikasyon enfòmasyon, podcast ak medya sosyal.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2 id="progressTitle">SUIVI DE FORMATION</h2>
-<p id="progress"></p>
-<button id="printBtn">
-IMPRIMER / ENREGISTRER EN PDF
-</button>
-<p class="small">
-Les réponses restent sur cet appareil si le stockage du navigateur est disponible. Aucun compte ni certificat officiel n'est généré.
-</p>
+<section id="courses">
+  <h2 data-i="courseTitle">COURS 03 — RECHÈCH AK VERIFIKASYON ENFÒMASYON</h2>
+  <p class="intro" data-i="courseIntro">
+    Sis leson pratik pou jwenn sous serye, verifye prèv, evite dezenfòmasyon epi pibliye nouvèl ak responsablite.
+  </p>
+  <div class="lesson-grid">
+
+    <details>
+      <summary><span class="course-tag">LESON 01</span><br>Jwenn enfòmasyon serye</summary>
+      <p>Yon bon repòtaj kòmanse ak yon kesyon klè. Chèche sous premye men: dokiman ofisyèl, temwen dirèk, done piblik ak espesyalis.</p>
+      <ul>
+        <li>Ekri kiyès, kisa, ki kote, kilè, poukisa ak kijan.</li>
+        <li>Distenge temwayaj ak dokiman ki ka verifye.</li>
+        <li>Pa konfonn popilarite ak kredibilite.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Chwazi yon nouvèl lokal. Idantifye de sous endepandan ak yon dokiman ki ka konfime li.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 02</span><br>Evalye kredibilite sous yo</summary>
+      <p>Verifye idantite sous la, konpetans li, relasyon li ak sijè a, ak enterè li ka genyen.</p>
+      <ul>
+        <li>Konfime dat ak kontèks deklarasyon an.</li>
+        <li>Chèche sous endepandan.</li>
+        <li>Pwoteje sous anonim lè gen bon rezon editoryal.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Konpare de atik sou menm evènman an epi idantifye enfòmasyon ki poko verifye yo.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 03</span><br>Verifye foto ak videyo</summary>
+      <p>Yon imaj ka otantik men li soti nan yon lòt dat oswa yon lòt kote. Verifye sous orijinal, kote, lè ak kontèks.</p>
+      <ul>
+        <li>Chèche vèsyon ki pi ansyen an.</li>
+        <li>Konpare siy, bilding ak detay vizib.</li>
+        <li>Pa fè konklizyon san prèv.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Ekri twa etap pou verifye yon foto ki sikile sou rezo sosyal.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 04</span><br>Entèvyou ak konfimasyon</summary>
+      <p>Prepare kestyon ouvè, koute repons yo, mande presizyon epi bay moun ki konsène yo chans reponn akizasyon yo.</p>
+      <ul>
+        <li>Kenbe nòt ak anrejistreman lè sa legal.</li>
+        <li>Separe sa temwen an wè ak sa lòt moun rakonte li.</li>
+        <li>Pa chanje sans deklarasyon yo.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Ekri senk kestyon pou verifye yon evènman nan kominote a.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 05</span><br>Dezenfòmasyon ak etik</summary>
+      <p>Dezenfòmasyon ka sèvi ak fo tit, kont fo, ansyen foto oswa done ki retire nan kontèks.</p>
+      <ul>
+        <li>Distenge opinyon, rimè, erè ak enfòmasyon fo.</li>
+        <li>Pwoteje vi prive moun.</li>
+        <li>Korije erè piblikman ak transparans.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Reekri yon tit sansasyonalis pou li vin egzak ak net.</p>
+    </details>
+
+    <details>
+      <summary><span class="course-tag">LESON 06</span><br>Prepare yon repòtaj verifye</summary>
+      <p>Rasanble prèv, òganize yon liy tan, konfime sitasyon epi idantifye sa ki toujou ensèten anvan piblikasyon.</p>
+      <ul>
+        <li>Konfime non, chif, dat ak kote.</li>
+        <li>Prezante diferan repons avèk jistis.</li>
+        <li>Idantifye enfòmasyon ki poko konfime.</li>
+      </ul>
+      <p class="practice"><strong>Egzèsis:</strong> Prepare yon ti repòtaj 200 mo ak de sous endepandan.</p>
+    </details>
+  </div>
+
+  <div class="card quiz">
+    <h3 data-i="quizTitle">TI EGZAMEN — COURS 03</h3>
+    <form id="course-quiz">
+      <fieldset>
+        <legend>1. Ki sa yon jounalis dwe fè anvan li pibliye yon rimè?</legend>
+        <label><input type="radio" name="q1" value="a" required> Pibliye l touswit.</label>
+        <label><input type="radio" name="q1" value="b"> Verifye li ak sous serye.</label>
+      </fieldset>
+      <fieldset>
+        <legend>2. Yon foto reyèl kapab bay fo enfòmasyon?</legend>
+        <label><input type="radio" name="q2" value="a" required> Wi, si yo retire li nan kontèks.</label>
+        <label><input type="radio" name="q2" value="b"> Non, paske foto a reyèl.</label>
+      </fieldset>
+      <fieldset>
+        <legend>3. Lè yon jounalis fè yon erè, kisa li dwe fè?</legend>
+        <label><input type="radio" name="q3" value="a" required> Kache erè a.</label>
+        <label><input type="radio" name="q3" value="b"> Korije li ak transparans.</label>
+      </fieldset>
+      <button class="btn" type="submit" data-i="quizSubmit">VERIFYE REPONS YO</button>
+      <p id="course-result" class="result" role="status"></p>
+    </form>
+  </div>
 </section>
 
-<div class="bar">
-<button id="prev">◀ LEÇON PRÉCÉDENTE</button>
-<button id="next" class="primary">LEÇON SUIVANTE ▶</button>
-</div>
+<section id="professor">
+  <h2 data-i="profTitle">PWOFESÈ AI AYISYÈN</h2>
+  <div class="split">
+    <div class="card">
+      <h3 data-i="meet">RANKONTRE PWOFESÈ A</h3>
+      <p data-i="profD">Yon pwofesè AI fanm ayisyèn pou akonpaye elèv yo.</p>
+      <p data-i="profNote">Pou avatar la pale, ajoute videyo oswa sèvis AI.</p>
+    </div>
+    <div class="card">
+      <div class="media">
+        <video controls playsinline poster="school-of-journalism.png">
+          <source src="assets/videos/ai-professor.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="registration">
+  <h2 data-i="regTitle">SANT ENSKRIPSYON</h2>
+  <div class="card">
+    <form id="reg">
+      <div class="formgrid">
+        <div>
+          <label data-i="name">Non konplè</label>
+          <input name="name" required>
+        </div>
+        <div>
+          <label data-i="email">Imèl</label>
+          <input name="email" type="email" required>
+        </div>
+        <div>
+          <label data-i="phone">Telefòn</label>
+          <input name="phone" type="tel" required>
+        </div>
+        <div>
+          <label data-i="country">Peyi</label>
+          <select name="country" required>
+            <option value="" data-i="choose">Chwazi...</option>
+            <option>Haiti</option><option>USA</option><option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label data-i="program">Pwogram</label>
+          <select name="program" required>
+            <option value="" data-i="choose">Chwazi...</option>
+            <option value="Radio" data-i="radio">Jounalis Radyo</option>
+            <option value="Television" data-i="tv">Jounalis Televizyon</option>
+            <option value="Digital" data-i="digital">Medya Dijital</option>
+          </select>
+        </div>
+        <div>
+          <label data-i="level">Nivo eksperyans</label>
+          <select name="level" required>
+            <option value="" data-i="choose">Chwazi...</option>
+            <option value="Beginner" data-i="beginner">Debitan</option>
+            <option value="Intermediate" data-i="intermediate">Entèmedyè</option>
+            <option value="Advanced" data-i="advanced">Avanse</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" type="submit" data-i="submit">PREPARE ENSKRIPSYON</button>
+      <p id="status" role="status"></p>
+      <small data-i="note">Fòm sa a prepare demann lan; li poko konekte ak yon bazdone.</small>
+    </form>
+  </div>
+</section>
+
+<section id="social">
+  <h2 data-i="social">REZO SOSYAL</h2>
+  <div class="social">
+    <a style="--c:#438aff" href="https://facebook.com/" target="_blank" rel="noopener"><span>f</span>Facebook</a>
+    <a style="--c:#25d366" href="https://wa.me/14076405166" target="_blank" rel="noopener"><span>☎</span>WhatsApp</a>
+    <a style="--c:#ff2929" href="https://www.youtube.com/@BSS1815PROMAXDMP" target="_blank" rel="noopener"><span>▶</span>YouTube</a>
+    <a style="--c:#1ed760" href="https://open.spotify.com/" target="_blank" rel="noopener"><span>≋</span>Spotify</a>
+    <a style="--c:#65e9e5" href="https://www.tiktok.com/@y_me11" target="_blank" rel="noopener"><span>♪</span>TikTok</a>
+    <a style="--c:#db62cc" href="https://www.instagram.com/lebaron072/" target="_blank" rel="noopener"><span>◎</span>Instagram</a>
+    <a style="--c:#40b6ef" href="https://t.me/bss1815dmp" target="_blank" rel="noopener"><span>➤</span>Telegram</a>
+    <a style="--c:#a878fa" href="https://truthsocial.com/" target="_blank" rel="noopener"><span>T</span>Truth Social</a>
+    <a style="--c:#2786cc" href="https://linkedin.com/" target="_blank" rel="noopener"><span>in</span>LinkedIn</a>
+    <a style="--c:#ffb367" href="https://x.com/" target="_blank" rel="noopener"><span>𝕏</span>X / Twitter</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 data-i="contactTitle">KONTAK PRO-MAX ACADÉMIE</h2>
+  <div class="contacts">
+    <a href="tel:+14076405166">🇺🇸 (407) 640-5166</a>
+    <a href="tel:+13175381150">🇺🇸 (317) 538-1150</a>
+    <a href="tel:+50942544447">🇭🇹 +509 4254-4447</a>
+    <a href="tel:+50944829869">🇭🇹 +509 4482-9869</a>
+  </div>
+</section>
 </main>
 
 <footer>
-<strong>PRO-MAX ACADÉMIE — LÉOGÂNE INFO</strong>
-<p>DEVAN DEVAN NÈT</p>
-<p>Bati pou Jodi a, Pare pou Demen.</p>
-<small>© 2026 BSS1815 PRO-MAX DMP</small>
+  <img class="logo" src="school-of-journalism.png" alt="Logo lekòl la">
+  <h3>PRO-MAX ACADÉMIE</h3>
+  <p>ÉCOLE DE JOURNALISME</p>
+  <p>BSS1815 PRO-MAX DMP</p>
+  <b>DEVAN DEVAN NÈT!</b>
+  <p>© <span id="year"></span></p>
 </footer>
 
 <script>
-"use strict";
-
-const data = [
-{
- title:"LES SOURCES D'INFORMATION",
- objective:"Identifier et évaluer les sources journalistiques.",
- blocks:[
-  ["Définition",
-   "Une source journalistique est une personne, un document, une observation ou une donnée apportant des éléments à vérifier."],
-  ["Sources primaires",
-   "Un témoin direct, une observation sur le terrain ou un document original constituent des sources primaires. Même une source primaire peut se tromper."],
-  ["Sources secondaires",
-   "Un article, un rapport de synthèse ou une analyse qui reprend des sources initiales constitue une source secondaire. Il faut retrouver les documents originaux lorsque c'est possible."],
-  ["Sources anonymes",
-   "L'identité d'une source peut être protégée pour des raisons légitimes. Le journaliste doit connaître ses motivations, vérifier ses affirmations et respecter les engagements de confidentialité."],
-  ["Évaluer la fiabilité",
-   "Identifier l'origine; vérifier la proximité avec les faits; rechercher des preuves; distinguer témoignage et interprétation; comparer des sources indépendantes."],
-  ["Exemple pédagogique",
-   "Un habitant affirme qu'un pont est endommagé à Léogâne. La rédaction cherche des images datées, une observation directe et une réponse des services responsables avant de conclure."]
- ],
- exercise:"Quelles sources consulteriez-vous pour vérifier l'annonce de fermeture d'un bâtiment public ?"
+const t={
+ht:{
+home:"Akèy",programs:"Pwogram",courses:"Kou",
+professor:"Pwofesè AI",registration:"Enskripsyon",contact:"Kontak",
+hero:"Lekòl pwofesyonèl pou fòme jounalis radyo, televizyon ak medya dijital.",
+apply:"ENSKRI KOUNYE A",explore:"DEKOUVRI PWOGRAM YO",
+media:"RADYO • TELEVIZYON • MEDYA DIJITAL",
+video:"Espas videyo jounalis k ap prezante nouvèl.",
+welcome:"BYENVINI NAN LEKÒL JOUNALIS LA",
+about:"Aprann etik, rechèch, entèvyou, kominikasyon ak teknoloji medya.",
+training:"3 GWO DOMÈN FÒMASYON",
+radio:"Jounalis Radyo",
+radioD:"Diksyon, entèvyou, nouvèl ak emisyon an dirèk.",
+tv:"Jounalis Televizyon",
+tvD:"Prezantasyon devan kamera, repòtaj ak montaj videyo.",
+digital:"Medya Dijital",
+digitalD:"Verifikasyon enfòmasyon, podcast ak medya sosyal.",
+courseTitle:"COURS 03 — RECHÈCH AK VERIFIKASYON ENFÒMASYON",
+courseIntro:"Sis leson pratik pou jwenn sous serye, verifye prèv, evite dezenfòmasyon epi pibliye nouvèl ak responsablite.",
+quizTitle:"TI EGZAMEN — COURS 03",
+quizSubmit:"VERIFYE REPONS YO",
+profTitle:"PWOFESÈ AI AYISYÈN",
+meet:"RANKONTRE PWOFESÈ A",
+profD:"Yon pwofesè AI fanm ayisyèn pou akonpaye elèv yo.",
+profNote:"Pou avatar la pale, ajoute videyo oswa sèvis AI.",
+regTitle:"SANT ENSKRIPSYON",
+name:"Non konplè",email:"Imèl",phone:"Telefòn",
+country:"Peyi",choose:"Chwazi...",program:"Pwogram",
+level:"Nivo eksperyans",beginner:"Debitan",
+intermediate:"Entèmedyè",advanced:"Avanse",
+submit:"PREPARE ENSKRIPSYON",
+note:"Fòm sa a prepare demann lan; li poko konekte ak yon bazdone.",
+social:"REZO SOSYAL",contactTitle:"KONTAK PRO-MAX ACADÉMIE",
+ready:"Demann lan pare. Kopye tèks la."
 },
-{
- title:"LA VÉRIFICATION DES FAITS",
- objective:"Appliquer une méthode de vérification avant publication.",
- blocks:[
-  ["Les six questions",
-   "Qui ? Quoi ? Où ? Quand ? Pourquoi ? Comment ? Ces questions, appelées 5W + 1H, structurent la collecte d'informations."],
-  ["Identifier l'affirmation",
-   "Formuler exactement ce qui doit être vérifié. Séparer les faits observables, les opinions et les hypothèses."],
-  ["Retrouver l'origine",
-   "Chercher la déclaration, la vidéo ou le document original plutôt qu'une copie partagée sans contexte."],
-  ["Recouper",
-   "Comparer les dates, les lieux, les chiffres et les témoignages. Plusieurs comptes répétant une seule rumeur ne constituent pas plusieurs confirmations."],
-  ["Vérifier les images",
-   "Rechercher les publications antérieures, observer les indices visuels et vérifier si une image authentique est utilisée hors contexte."],
-  ["Informer avec précision",
-   "Si une information reste incertaine, le dire explicitement. Ne jamais transformer une affirmation non confirmée en fait établi."]
- ],
- exercise:"Expliquez les étapes permettant de vérifier une vidéo dont le lieu et la date sont inconnus."
+fr:{
+home:"Accueil",programs:"Programmes",courses:"Cours",
+professor:"Professeure IA",registration:"Inscription",contact:"Contact",
+hero:"Une école professionnelle de journalisme pour la radio, la télévision et les médias numériques.",
+apply:"S'INSCRIRE",explore:"DÉCOUVRIR LES PROGRAMMES",
+media:"RADIO • TÉLÉVISION • MÉDIAS NUMÉRIQUES",
+video:"Espace réservé à la présentation du journal.",
+welcome:"BIENVENUE À L'ÉCOLE DE JOURNALISME",
+about:"Apprenez l’éthique, la recherche, les entrevues et la technologie des médias.",
+training:"3 GRANDS DOMAINES DE FORMATION",
+radio:"Journalisme radio",
+radioD:"Diction, entrevues, nouvelles et diffusion en direct.",
+tv:"Journalisme télévisé",
+tvD:"Présentation devant la caméra, reportage et montage vidéo.",
+digital:"Médias numériques",
+digitalD:"Vérification des faits, podcasts et réseaux sociaux.",
+courseTitle:"COURS 03 — RECHERCHE ET VÉRIFICATION DE L’INFORMATION",
+courseIntro:"Six leçons pratiques pour trouver des sources fiables, vérifier les preuves et publier avec responsabilité.",
+quizTitle:"MINI-EXAMEN — COURS 03",
+quizSubmit:"VÉRIFIER LES RÉPONSES",
+profTitle:"PROFESSEURE IA HAÏTIENNE",
+meet:"RENCONTREZ LA PROFESSEURE",
+profD:"Une professeure IA haïtienne pour accompagner les étudiants.",
+profNote:"Pour parler, l’avatar nécessite une vidéo ou un service IA.",
+regTitle:"CENTRE D'INSCRIPTION",
+name:"Nom complet",email:"Courriel",phone:"Téléphone",
+country:"Pays",choose:"Choisir...",program:"Programme",
+level:"Niveau d'expérience",beginner:"Débutant",
+intermediate:"Intermédiaire",advanced:"Avancé",
+submit:"PRÉPARER L'INSCRIPTION",
+note:"Ce formulaire prépare une demande; aucune base de données n’est connectée.",
+social:"RÉSEAUX SOCIAUX",contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+ready:"La demande est prête. Copiez le texte."
 },
-{
- title:"LES FAUSSES INFORMATIONS",
- objective:"Reconnaître les formes de manipulation et éviter leur diffusion.",
- blocks:[
-  ["Mésinformation",
-   "Une information fausse ou trompeuse partagée sans intention de tromper, par exemple une ancienne photo présentée par erreur comme récente."],
-  ["Désinformation",
-   "Une information fausse ou trompeuse fabriquée ou diffusée volontairement pour induire le public en erreur, par exemple un faux communiqué."],
-  ["Malinformation",
-   "Une information réelle utilisée hors contexte ou pour causer un préjudice, comme la divulgation de données privées pour intimider un témoin."],
-  ["Signaux d'alerte",
-   "Titre sensationnaliste, absence de source identifiable, date manquante, image recadrée, document impossible à retrouver ou pression pour partager immédiatement."],
-  ["Réponse professionnelle",
-   "Suspendre la publication, retrouver la source, comparer des preuves indépendantes, contacter les institutions concernées et corriger publiquement toute erreur."],
-  ["Exemple pédagogique",
-   "Une publication annonce la fermeture de toutes les écoles de Léogâne sans preuve. La rédaction contacte les autorités éducatives et ne présente pas cette affirmation comme confirmée."]
- ],
- exercise:"Comment traiter une rumeur non confirmée sur la fermeture des écoles ?"
-},
-{
- title:"LES TECHNIQUES DE RECHERCHE JOURNALISTIQUE",
- objective:"Constituer un dossier de recherche vérifiable et organisé.",
- blocks:[
-  ["Définir l'angle",
-   "Choisir une question d'intérêt public précise : quel problème, quelles personnes concernées et quelles informations manquent ?"],
-  ["Collecter les documents",
-   "Consulter archives, rapports publics, statistiques, documents originaux et communiqués; noter les liens, auteurs et dates."],
-  ["Interroger les sources",
-   "Rencontrer les témoins, experts et responsables. Poser des questions ouvertes, consigner les réponses et préciser les conditions d'enregistrement."],
-  ["Recouper les éléments",
-   "Comparer documents et déclarations; signaler les contradictions; demander une réponse aux personnes ou institutions mises en cause."],
-  ["Organiser le dossier",
-   "Conserver chronologie, notes, citations exactes, copies des documents et tableau des points confirmés ou incertains."],
-  ["Scénario fictif",
-   "Des habitants de Signo signalent une route impraticable après la pluie. Le journaliste effectue une visite, vérifie les dates, recueille des témoignages et contacte les services compétents."]
- ],
- exercise:"Citez trois sources, deux preuves et une question à poser aux autorités sur l'état d'une route."
-},
-{
- title:"LES TECHNIQUES D'INTERVIEW",
- objective:"Préparer, conduire et exploiter un entretien professionnel.",
- blocks:[
-  ["Types d'interviews",
-   "Informative : établir les faits. Investigation : examiner une situation. Portrait : raconter un parcours. Expertise : expliquer un domaine. Témoignage : recueillir une expérience vécue."],
-  ["Préparation",
-   "Définir l'objectif, rechercher le parcours de l'invité, préparer les thèmes et vérifier les faits déjà connus."],
-  ["Questions ouvertes",
-   "Préférer « Comment expliquez-vous cette situation ? » à une question qui impose déjà une réponse. Poser une question à la fois."],
-  ["Écoute et relance",
-   "Laisser répondre, demander des dates, des chiffres et des exemples; reformuler sans déformer les propos."],
-  ["Respect et responsabilité",
-   "Éviter l'intimidation, respecter la confidentialité promise, ne pas manipuler le sens des citations au montage et vérifier les accusations."],
-  ["Dialogue fictif",
-   "Journaliste : « Quelles routes sont concernées ? » Invité : « Plusieurs secteurs. » Journaliste : « Pouvez-vous préciser lesquels et indiquer comment cela a été constaté ? »"]
- ],
- exercise:"Rédigez cinq questions ouvertes à poser à un responsable communal sur les infrastructures."
-},
-{
- title:"LA RÉDACTION D'UN ARTICLE JOURNALISTIQUE",
- objective:"Produire un article clair, précis et vérifiable.",
- blocks:[
-  ["Le titre",
-   "Résumer le fait principal sans exagérer ni annoncer comme certain ce qui n'est pas vérifié."],
-  ["Le chapô",
-   "Présenter brièvement les éléments essentiels : qui, quoi, où et quand, selon les informations disponibles."],
-  ["La pyramide inversée",
-   "Placer les faits essentiels en premier, puis les détails, les citations, les preuves et enfin le contexte complémentaire."],
-  ["Citations et attribution",
-   "Reproduire fidèlement les citations directes; attribuer les informations à leurs sources; distinguer les faits de l'analyse."],
-  ["Révision avant publication",
-   "Contrôler noms, fonctions, dates, lieux, chiffres, accusations, orthographe et droit de réponse des personnes mises en cause."],
-  ["Exemple fictif d'article",
-   "Titre : « Des résidents signalent des difficultés de circulation après la pluie ». Chapô : « Dans cet exercice fictif situé à Léogâne, plusieurs habitants disent rencontrer des difficultés de déplacement. » Corps : « Ces déclarations doivent être vérifiées sur le terrain et auprès des services concernés avant toute publication réelle. »"]
- ],
- exercise:"Rédigez un titre, un chapô et deux paragraphes pour un événement fictif, en distinguant les faits confirmés des affirmations à vérifier."
+en:{
+home:"Home",programs:"Programs",courses:"Courses",
+professor:"AI Professor",registration:"Registration",contact:"Contact",
+hero:"A professional journalism school for radio, television and digital media.",
+apply:"REGISTER NOW",explore:"EXPLORE PROGRAMS",
+media:"RADIO • TELEVISION • DIGITAL MEDIA",
+video:"Reserved space for a news presenter video.",
+welcome:"WELCOME TO THE SCHOOL OF JOURNALISM",
+about:"Learn ethics, research, interviews, communication and media technology.",
+training:"3 MAJOR TRAINING AREAS",
+radio:"Radio Journalism",
+radioD:"Diction, interviews, news and live broadcasting.",
+tv:"Television Journalism",
+tvD:"On-camera presentation, reporting and video editing.",
+digital:"Digital Media",
+digitalD:"Fact-checking, podcasts and social media.",
+courseTitle:"COURSE 03 — RESEARCH AND FACT-CHECKING",
+courseIntro:"Six practical lessons on finding reliable sources, verifying evidence and publishing responsibly.",
+quizTitle:"SHORT QUIZ — COURSE 03",
+quizSubmit:"CHECK ANSWERS",
+profTitle:"HAITIAN AI PROFESSOR",
+meet:"MEET THE PROFESSOR",
+profD:"A Haitian female AI professor to support journalism students.",
+profNote:"A speaking avatar requires video or an AI service.",
+regTitle:"REGISTRATION CENTER",
+name:"Full Name",email:"Email",phone:"Phone",
+country:"Country",choose:"Select...",program:"Program",
+level:"Experience Level",beginner:"Beginner",
+intermediate:"Intermediate",advanced:"Advanced",
+submit:"PREPARE REGISTRATION",
+note:"This form prepares a request; no database is connected.",
+social:"SOCIAL NETWORKS",contactTitle:"CONTACT PRO-MAX ACADÉMIE",
+ready:"Your request is ready. Copy the text."
 }
-];
-
-const questions = [
- ["Quelle est une source primaire ?",
-  ["Une publicité","Un témoin direct","Une rumeur"],1],
- ["Que signifie « Where » ?",
-  ["Quand","Pourquoi","Où"],2],
- ["La désinformation est-elle intentionnelle ?",
-  ["Oui","Non","Toujours accidentelle"],0],
- ["Pourquoi recouper les sources ?",
-  ["Pour vérifier les faits","Pour rallonger le texte","Pour éviter les preuves"],0],
- ["Quelle pratique convient à une interview ?",
-  ["Modifier les réponses","Écouter et demander des précisions","Imposer une opinion"],1],
- ["Que place-t-on en premier dans la pyramide inversée ?",
-  ["Les détails secondaires","Une opinion personnelle","Les faits essentiels"],2]
-];
-
-const translations = {
- fr:{
-  school:"ÉCOLE DE JOURNALISME",
-  course:"COURS 03 — RECHERCHE ET VÉRIFICATION DE L’INFORMATION",
-  intro:"Six leçons complètes, avec exercices, navigation et examen final.",
-  program:"PROGRAMME DES LEÇONS",
-  progress:"SUIVI DE FORMATION",
-  exam:"EXAMEN FINAL — COURS 03",
-  previous:"◀ LEÇON PRÉCÉDENTE",
-  next:"LEÇON SUIVANTE ▶",
-  note:"Les cours sont rédigés en français. Le sélecteur change la navigation et les consignes principales."
- },
- en:{
-  school:"SCHOOL OF JOURNALISM",
-  course:"COURSE 03 — RESEARCH AND FACT-CHECKING",
-  intro:"Six complete lessons with exercises, navigation and a final exam.",
-  program:"LESSON PROGRAM",
-  progress:"LEARNING PROGRESS",
-  exam:"FINAL EXAM — COURSE 03",
-  previous:"◀ PREVIOUS LESSON",
-  next:"NEXT LESSON ▶",
-  note:"Lesson content is in French. This switch translates the main navigation and instructions."
- },
- ht:{
-  school:"LEKÒL JOUNALIS",
-  course:"KOU 03 — RECHÈCH AK VERIFIKASYON ENFÒMASYON",
-  intro:"Sis leson konplè ak egzèsis, navigasyon ak egzamen final.",
-  program:"PWOGRAM LESON YO",
-  progress:"PWOGRÈ FÒMASYON AN",
-  exam:"EGZAMEN FINAL — KOU 03",
-  previous:"◀ LESON ANVAN AN",
-  next:"PWOCHEN LESON ▶",
-  note:"Kontni leson yo an fransè. Bouton lang yo tradui navigasyon ak prensipal enstriksyon yo."
- }
 };
 
-const safeGet = key => {
- try { return localStorage.getItem(key); }
- catch(e) { return null; }
-};
+let lang="ht";
 
-const safeSet = (key,value) => {
- try { localStorage.setItem(key,value); }
- catch(e) {}
-};
-
-let current=1;
-let language="fr";
-const completed=new Set();
-const root=document.getElementById("lessons");
-
-data.forEach((lesson,index)=>{
- const number=index+1;
- const section=document.createElement("section");
- section.className="lesson";
- section.id="lesson"+number;
-
- const heading=document.createElement("h2");
- heading.textContent=
-  "LEÇON "+String(number).padStart(2,"0")+
-  " — "+lesson.title;
- section.append(heading);
-
- const objective=document.createElement("p");
- const strong=document.createElement("strong");
- strong.textContent="Objectif : ";
- objective.append(
-  strong,
-  document.createTextNode(lesson.objective)
- );
- section.append(objective);
-
- lesson.blocks.forEach(([headingText,paragraph],i)=>{
-  const div=document.createElement("div");
-  div.className="topic";
-
-  const title=document.createElement("h3");
-  title.textContent=(i+1)+". "+headingText;
-
-  const text=document.createElement("p");
-  text.textContent=paragraph;
-
-  div.append(title,text);
-  section.append(div);
- });
-
- const quiz=document.createElement("div");
- quiz.className="quiz";
-
- const quizTitle=document.createElement("h3");
- quizTitle.textContent="EXERCICE PRATIQUE";
-
- const prompt=document.createElement("p");
- prompt.textContent=lesson.exercise;
-
- const area=document.createElement("textarea");
- area.id="exercise"+number;
- area.setAttribute(
-  "aria-label",
-  "Réponse à l’exercice "+number
- );
- area.placeholder="Rédigez votre réponse ici...";
- area.value=safeGet("pmj_answer_"+number)||"";
-
- if(area.value.trim())completed.add(number);
-
- const button=document.createElement("button");
- button.className="primary";
- button.textContent="ENREGISTRER LA RÉPONSE";
-
- const feedback=document.createElement("p");
- feedback.setAttribute("aria-live","polite");
-
- button.addEventListener("click",()=>{
-  if(!area.value.trim()){
-   feedback.textContent="Veuillez écrire une réponse.";
-   return;
-  }
-  safeSet("pmj_answer_"+number,area.value);
-  completed.add(number);
-  feedback.textContent=
-   "Réponse enregistrée sur cet appareil.";
-  updateProgress();
- });
-
- quiz.append(quizTitle,prompt,area,button,feedback);
- section.append(quiz);
- root.append(section);
-
- const navButton=document.createElement("button");
- navButton.textContent=
-  "LEÇON "+String(number).padStart(2,"0")+
-  " — "+lesson.title;
-
- navButton.addEventListener("click",()=>show(number));
- document.getElementById("navButtons").append(navButton);
-});
-
-function show(number,scroll=true){
- if(number<1||number>6)return;
- current=number;
-
- document.querySelectorAll(".lesson").forEach((el,i)=>{
-  el.classList.toggle("active",i===number-1);
- });
-
- document.querySelectorAll("#navButtons button")
- .forEach((el,i)=>{
-  el.classList.toggle("active",i===number-1);
-  el.setAttribute(
-   "aria-current",
-   i===number-1?"step":"false"
-  );
- });
-
- safeSet("pmj_current",String(number));
-
- document.getElementById("prev").disabled=number===1;
- document.getElementById("next").disabled=number===6;
-
- if(scroll){
-  document.getElementById("lesson"+number)
-   .scrollIntoView({behavior:"smooth"});
- }
+function setLang(l){
+  lang=l;
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const key=el.dataset.i;
+    if(t[l][key])el.textContent=t[l][key];
+  });
+  document.querySelectorAll("[data-lang]").forEach(btn=>{
+    btn.classList.toggle("active",btn.dataset.lang===l);
+    btn.setAttribute("aria-pressed",String(btn.dataset.lang===l));
+  });
+  document.getElementById("status").textContent="";
+  document.getElementById("course-result").textContent="";
 }
 
-function updateProgress(){
- document.getElementById("progress").textContent=
-  completed.size+
-  " / 6 exercices enregistrés sur cet appareil.";
-}
-
-const examContainer=document.getElementById("examQuestions");
-
-questions.forEach(([question,options],i)=>{
- const field=document.createElement("fieldset");
- field.className="quiz";
-
- const legend=document.createElement("legend");
- legend.textContent=(i+1)+". "+question;
- field.append(legend);
-
- options.forEach((option,j)=>{
-  const label=document.createElement("label");
-  const radio=document.createElement("input");
-
-  radio.type="radio";
-  radio.name="q"+i;
-  radio.value=j;
-
-  label.append(
-   radio,
-   document.createTextNode(" "+option)
-  );
-  field.append(label);
- });
-
- examContainer.append(field);
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+  btn.addEventListener("click",()=>setLang(btn.dataset.lang));
 });
 
-document.getElementById("examForm")
-.addEventListener("submit",event=>{
- event.preventDefault();
+document.getElementById("year").textContent=new Date().getFullYear();
 
- let score=0;
- let answered=0;
- const corrections=[];
-
- questions.forEach(([question,options,right],i)=>{
-  const checked=document.querySelector(
-   'input[name="q'+i+'"]:checked'
-  );
-
-  if(checked){
-   answered++;
-   if(Number(checked.value)===right)score++;
-  }
-
-  corrections.push((i+1)+". "+options[right]);
- });
-
- const result=document.getElementById("examResult");
- result.classList.remove("hidden");
-
- if(answered<6){
-  result.textContent=
-   "Répondez aux six questions avant de soumettre.";
-  return;
- }
-
- result.textContent=
-  "Résultat : "+score+"/6. "+
-  (score>=5
-   ?"Examen réussi."
-   :"Révisez les leçons et réessayez.")+
-  " Réponses correctes : "+corrections.join(" | ");
-
- safeSet("pmj_exam_score",String(score));
+document.getElementById("reg").addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!this.reportValidity())return;
+  const d=new FormData(this);
+  const lines=[
+    "PRO-MAX ACADÉMIE — ÉCOLE DE JOURNALISME",
+    ...["name","email","phone","country","program","level"]
+      .map(k=>k+": "+d.get(k))
+  ].join("\n");
+  document.getElementById("status").textContent=t[lang].ready;
+  window.prompt(t[lang].ready,lines);
 });
 
-document.getElementById("examForm")
-.addEventListener("reset",()=>{
- document.getElementById("examResult")
-  .classList.add("hidden");
+document.getElementById("course-quiz").addEventListener("submit",function(e){
+  e.preventDefault();
+  const d=new FormData(this);
+  const answers={q1:"b",q2:"a",q3:"b"};
+  let score=0;
+  Object.keys(answers).forEach(k=>{
+    if(d.get(k)===answers[k])score++;
+  });
+  const messages={
+    ht:`Rezilta ou: ${score}/3. ${score===3?"Bravo! Ou metrize prensip verifikasyon yo.":"Revize leson yo epi eseye ankò."}`,
+    fr:`Résultat : ${score}/3. ${score===3?"Bravo ! Vous maîtrisez les bases de la vérification.":"Relisez les leçons et réessayez."}`,
+    en:`Your score: ${score}/3. ${score===3?"Great work! You understand verification basics.":"Review the lessons and try again."}`
+  };
+  document.getElementById("course-result").textContent=messages[lang];
 });
 
-function setLanguage(lang){
- if(!translations[lang])return;
- language=lang;
- document.documentElement.lang=lang;
-
- const words=translations[lang];
-
- [
-  ["school","school"],
-  ["courseTitle","course"],
-  ["intro","intro"],
-  ["programTitle","program"],
-  ["progressTitle","progress"],
-  ["examTitle","exam"],
-  ["langNote","note"],
-  ["prev","previous"],
-  ["next","next"]
- ].forEach(([id,key])=>{
-  document.getElementById(id).textContent=words[key];
- });
-
- document.querySelectorAll("[data-lang]").forEach(button=>{
-  button.classList.toggle(
-   "active",
-   button.dataset.lang===lang
-  );
- });
-
- safeSet("pmj_language",lang);
-}
-
-document.querySelectorAll("[data-lang]").forEach(button=>{
- button.addEventListener("click",()=>{
-  setLanguage(button.dataset.lang);
- });
-});
-
-document.getElementById("prev")
-.addEventListener("click",()=>show(current-1));
-
-document.getElementById("next")
-.addEventListener("click",()=>show(current+1));
-
-document.getElementById("printBtn")
-.addEventListener("click",()=>window.print());
-
-updateProgress();
-setLanguage(safeGet("pmj_language")||"fr");
-
-show(
- Math.min(
-  6,
-  Math.max(1,Number(safeGet("pmj_current"))||1)
- ),
- false
-);
+setLang("ht");
 </script>
 </body>
 </html>
